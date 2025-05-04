@@ -5,7 +5,7 @@ about:
   template: trestles
   image: DSC08240.jpg
   image-shape: rectangle
-  image-width: 15em
+  image-width: 30em
   links:
     - text: Kerry Back
       href: https://kerryback.com

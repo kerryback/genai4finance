@@ -8,6 +8,7 @@ listing:
   categories: false
   sort-ui: false
   filter-ui: false
+  image-align: left
 page-layout: full
 title-block-banner: false
 ---
