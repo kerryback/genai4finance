@@ -1,0 +1,8 @@
+---
+title: "Vector Embeddings"
+author: "Kerry Back"
+date: "2025-05-13"
+categories: [Julius, Coding]
+image: "thumbnail.jpg"  # You can add an image later
+---
+

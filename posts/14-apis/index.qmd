@@ -1,0 +1,8 @@
+---
+title: "Apps with API Calls"
+author: "Kerry Back"
+date: "2025-05-10"
+categories: [Julius, Coding]
+image: "thumbnail.jpg"  # You can add an image later
+---
+

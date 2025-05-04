@@ -1,0 +1,7 @@
+---
+title: "Online Data and Data Readers"
+author: "Kerry Back"
+date: "2025-04-07"
+image: "thumbnail.jpg"  # You can add an image later
+---
+

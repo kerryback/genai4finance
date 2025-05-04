@@ -1,16 +1,20 @@
 ---
 title: "About"
-image: photo2.jpg
+title-block-banner: true
 about:
-  template: jolla
+  template: trestles
+  image: DSC08240.jpg
+  image-shape: rectangle
+  image-width: 15em
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/yourusername
+    - text: Kerry Back
+      href: https://kerryback.com
+    - text: Email Me
+      href: mailto:kerryback@gmail.com
 ---
 
-Welcome to my Finance Education Technology blog! This site is dedicated to helping finance instructors at undergraduate, masters, and MBA levels incorporate modern technology tools into their teaching.
+My goal for this site is to communicate things I've learned about teaching MBA students at Rice University how to do financial analyses with "AI + coding" and more broadly how generative AI can and is being used in the finance industry.  It is intended to be a resource for finance instructors at the undergraduate, MBA, and MSF levels.  
 
-Here, you'll find practical tutorials, teaching resources, and code examples that bridge the gap between finance theory and practical implementation. I focus on creating interactive applications, using modern tools like Python, R, and Streamlit to help students better understand complex financial concepts.
+My view is that we are at the beginning of a transition from spreadsheet programs to AI + coding that will be very similar to the transition from financial calculators to spreadsheet programs.  Already, AI + coding is a better tool for many things that we now teach using spreadsheets, and I believe the improvement in large language models (LLMs) and the proliferation of tools for applying them will eventually result in the near-obsolescence of spreadsheets, much as financial calculators are effectively obsolete now.  To prepare our students for this world, we should start teaching them now about what is likely to lie ahead.
 
-Whether you're looking to modernize your portfolio management class, create interactive demonstrations of financial theories, or find new ways to engage students with quantitative finance, you'll find resources here to support your teaching journey. 
+We all face a difficult job keeping up in this rapidly evolving environment.  Hopefully, this site will make that job easier.  I would be happy to host guest bloggers or to link content from others to make this a shared resource.

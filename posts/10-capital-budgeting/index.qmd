@@ -1,0 +1,8 @@
+---
+title: "Julius and the Democratization of Coding"
+author: "Kerry Back"
+date: "2025-04-28"
+categories: []
+image: "thumbnail.jpg"  # You can add an image later
+---
+

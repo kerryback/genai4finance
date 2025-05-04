@@ -1,0 +1,8 @@
+---
+title: "Pro Formas and Valuation"
+author: "Kerry Back"
+date: "2025-05-01"
+categories: []
+image: "thumbnail.jpg"  # You can add an image later
+---
+

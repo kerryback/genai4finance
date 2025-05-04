@@ -1,0 +1,8 @@
+---
+title: "CAPM and Cost of Equity"
+author: "Kerry Back"
+date: "2024-04-13"
+categories: []
+image: "thumbnail.jpg"  # You can add an image later
+---
+

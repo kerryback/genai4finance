@@ -1,0 +1,6 @@
+---
+title: "Prompt Engineering (or Not)"
+author: "Kerry Back"
+date: "2025-04-01"
+image: "thumbnail.jpg"  # You can add an image later
+---
