@@ -1,5 +1,5 @@
 ---
-title: "Finance Education Technology"
+title: "Teaching AI-Assisted Financial Analysis"
 listing:
   contents: posts
   sort: "date desc"
@@ -11,4 +11,6 @@ page-layout: full
 title-block-banner: true
 ---
 
-Welcome to my Finance Education Technology blog! Here you'll find tutorials and resources for incorporating modern technology tools into finance education. 
+My goal here is to communicate things I've learned about teaching MBA students at Rice University about how to do financial analyses with "AI + coding" and more broadly how generative AI can and is being used in the finance industry.  It is intended to be a resource for finance instructors at the undergraduate, MBA, and MSF levels.  
+
+My view is that we at the beginning of a transition from spreadsheet programs to AI + coding that will be very similar to the transition from financial calculators to spreadsheet programs.  Already, AI + coding is a better tool for many things that we now teach using spreadsheets, and I believe the improvement in large language models (LLMs) and the proliferation of tools for applying them will eventually result in the near-obsolescence of spreadsheets.  We all face a difficult job in keeping up with this rapidly evolving environment.  Hopefully, this site will provide some assistance.  I would be happy to host "guest bloggers" or to link content from others to make this a shared resource.
