@@ -2,7 +2,8 @@
 title: "Julius and the Democratization of Coding"
 author: "Kerry Back"
 date: "2025-04-04"
-image: "julius.jpg"  
+image: "julius.jpg"
+image-height: "50%"    # This will make the image 50% of its original height
 ---
 
 The world is aware that generative AI has made coders more efficient, but I'm not sure there is as much recognition of the arguably more important fact that gen AI has made coding accessible to non-coders. I expect this to change rapidly by word of mouth (can we still call it that in this era of social media?).  Once exposed to the wonder of coding with gen AI, one cannot help but want to share the word.
