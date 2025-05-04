@@ -1,0 +1,24 @@
+---
+title: "Creating a Mean-Variance Optimization App with Streamlit and Julia"
+author: "Your Name"
+date: "2024-03-14"
+categories: [Julia, Portfolio Optimization, Streamlit]
+image: "thumbnail.jpg"  # You can add an image later
+---
+
+In this post, I'll demonstrate how to create an interactive Streamlit application that performs mean-variance portfolio optimization using Julia. This tool is perfect for teaching modern portfolio theory in investment courses, allowing students to visualize the efficient frontier and experiment with different portfolio constraints.
+
+We'll cover:
+- Setting up Julia and Streamlit
+- Implementing the mean-variance optimization algorithm
+- Creating an interactive user interface
+- Visualizing the efficient frontier
+- Adding constraints and risk-free assets
+
+This application will help students:
+- Understand the relationship between risk and return
+- Visualize portfolio diversification benefits
+- Experiment with different asset combinations
+- See how constraints affect optimal portfolios
+
+Stay tuned for the complete tutorial where we'll build this educational tool step by step! 

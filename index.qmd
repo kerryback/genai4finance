@@ -1,0 +1,14 @@
+---
+title: "Finance Education Technology"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+Welcome to my Finance Education Technology blog! Here you'll find tutorials and resources for incorporating modern technology tools into finance education. 

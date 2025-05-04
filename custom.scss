@@ -1,0 +1,21 @@
+/*-- scss:defaults --*/
+// Add any custom color overrides here
+
+/*-- scss:rules --*/
+.navbar {
+  background-color: #4a4a4a !important;  // Gray banner color
+}
+
+// Remove or modify these rules as they might be interfering
+// with the Welcome banner
+/* .navbar-dark .navbar-brand {
+  color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff;
+} */ 

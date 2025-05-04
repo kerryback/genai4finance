@@ -1,0 +1,16 @@
+---
+title: "About"
+image: photo2.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/yourusername
+---
+
+Welcome to my Finance Education Technology blog! This site is dedicated to helping finance instructors at undergraduate, masters, and MBA levels incorporate modern technology tools into their teaching.
+
+Here, you'll find practical tutorials, teaching resources, and code examples that bridge the gap between finance theory and practical implementation. I focus on creating interactive applications, using modern tools like Python, R, and Streamlit to help students better understand complex financial concepts.
+
+Whether you're looking to modernize your portfolio management class, create interactive demonstrations of financial theories, or find new ways to engage students with quantitative finance, you'll find resources here to support your teaching journey. 

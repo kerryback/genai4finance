@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Your Blog Title"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/yourusername
+    background: dark
+    search: true
+  page-footer:
+    right: "Built with [Quarto](https://quarto.org/)"
+    left: "&copy; Copyright 2024, Your Name"
+
+format:
+  html:
+    theme: 
+      - superhero
+      - custom.scss
+    toc: true
+
+execute:
+  freeze: auto 
