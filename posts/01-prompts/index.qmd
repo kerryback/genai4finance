@@ -3,5 +3,7 @@ title: "Prompt Engineering (or Not)"
 author: "Kerry Back"
 date: "2025-04-04"
 categories: ["AI Overview"]
-image: "thumbnail.jpg"  # You can add an image later
+image: "engineering.png"  # You can add an image later
 ---
+
+![](engineering.png){width=30% fig-align="center"}

@@ -9,7 +9,7 @@ listing:
   sort-ui: true
   filter-ui: false
   image-align: left
-  image-height: "8em"
+  image-height: "10em"
 page-layout: full
 title-block-banner: false
 ---

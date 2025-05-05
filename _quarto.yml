@@ -1,6 +1,13 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "*.qmd"
+    - "!/notebooks/*.*"
+    - "!.ipynb_checkpoints/"  # exclude ipynb checkpoints
+    - "!*/.ipynb_checkpoints/" # exclude in subdirectories
+    - "!.DS_Store"
+    - "!*/.DS_Store"
 
 website:
   title: "Teaching AI-Assisted Financial Analysis"
