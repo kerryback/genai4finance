@@ -1,7 +1,8 @@
 ---
-title: "Online Data and Data Readers"
+title: "Online Data and Visualization"
 author: "Kerry Back"
-date: "2025-04-07"
+date: "2025-04-02"
+categories: ["Finance"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

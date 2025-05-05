@@ -17,10 +17,22 @@ website:
 
 format:
   html:
-    theme: 
-      - superhero
-      - custom.scss
+    theme:
+      light: flatly
+      dark: superhero
     toc: true
 
 execute:
-  freeze: auto 
+  freeze: auto
+
+comments:
+  giscus:
+    repo: finance-with-ai/blog
+    repo-id: R_kgDOOkPrbQ
+    category: General
+    category-id: DIC_kwDOOkPrbc4Cpylb
+    mapping: pathname
+    reactions-enabled: true
+    loading: lazy
+    input-position: bottom
+    theme: preferred_color_scheme 

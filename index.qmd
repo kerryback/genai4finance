@@ -3,12 +3,13 @@ title: ""
 listing:
   contents: 
     - "posts/*/index.qmd"
-  sort: "date"
+  sort: "date asc"
   type: default
-  categories: false
-  sort-ui: false
+  categories: true
+  sort-ui: true
   filter-ui: false
   image-align: left
+  image-height: "8em"
 page-layout: full
 title-block-banner: false
 ---
