@@ -18,7 +18,7 @@ website:
     right:
       - welcome.qmd
       - text: "Course Materials"
-        href: https://github.com/kerryback/mgmt675-2025
+        href: https://mgmt675-2024.kerryback.com
       - icon: github
         href: https://github.com/finance-with-ai
     background: dark
