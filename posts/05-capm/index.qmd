@@ -1,8 +1,9 @@
 ---
-title: "CAPM and Cost of Equity"
+title: "CAPM and Cost of Equity (TBD)"
 author: "Kerry Back"
-date: "2025-04-03"
+date: "2025-05-06"
 categories: ["Finance"]
-image: "thumbnail.jpg"  # You can add an image later
+image: "capm.png"  # You can add an image later
 ---
 
+![](capm.png){width=30% fig-align="center"}

@@ -1,7 +1,7 @@
 ---
 title: "Julius and the Democratization of Coding"
 author: "Kerry Back"
-date: "2025-04-01"
+date: "2025-05-04"
 categories: ["AI tools"]
 image: "julius.jpg"
 listing-image-preview-height: "150px"    # Adjust this value to control thumbnail size

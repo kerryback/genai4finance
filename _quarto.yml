@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "!/notebooks/*.*"
+    - "!/forthcoming/*.*"
     - "!.ipynb_checkpoints/"  # exclude ipynb checkpoints
     - "!*/.ipynb_checkpoints/" # exclude in subdirectories
     - "!.DS_Store"
@@ -13,7 +14,9 @@ website:
   title: "Teaching AI-Assisted Financial Analysis"
   navbar:
     right:
-      - about.qmd
+      - welcome.qmd
+      - text: "Course Materials"
+        href: https://github.com/kerryback/mgmt675-2025
       - icon: github
         href: https://github.com/finance-with-ai
     background: dark

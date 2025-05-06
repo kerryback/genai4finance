@@ -1,7 +1,7 @@
 ---
-title: "Prompt Engineering (or Not)"
+title: "Prompt Engineering (or Not!)"
 author: "Kerry Back"
-date: "2025-04-04"
+date: "2025-05-07"
 categories: ["AI Overview"]
 image: "engineering.png"  # You can add an image later
 ---
