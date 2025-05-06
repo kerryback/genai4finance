@@ -1,20 +1,3 @@
-/* Base font sizes */
-body {
-    font-size: 1.3rem !important;  /* Increase base font size */
-}
-
-/* Increase size of specific elements */
-p, li, td {
-    font-size: 1.3rem !important;
-}
-
-h1 {
-    font-size: 2.1rem !important;
-}
-
-h2 {
-    font-size: 1.7rem !important;
-}
 
 /* Styles for both themes */
 .navbar {
