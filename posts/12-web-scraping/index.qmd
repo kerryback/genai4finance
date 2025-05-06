@@ -1,8 +1,8 @@
 ---
-title: "Apps with API Calls"
+title: "Web Scraping"
 author: "Kerry Back"
-date: "2025-05-10"
-categories: [Julius, Coding]
+date: "2025-05-16"
+categories: ["Python Tools"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

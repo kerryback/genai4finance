@@ -1,7 +1,8 @@
 ---
-title: "Fama-French Model"
+title: "Capital Budgeting"
 author: "Kerry Back"
-date: "2025-04-22"
-categories: []
+date: "2025-05-13"
+categories: ["Finance"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
+

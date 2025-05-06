@@ -1,8 +1,8 @@
 ---
 title: "Mean-Variance Optimization"
 author: "Kerry Back"
-date: "2025-04-19"
-categories: []
+date: "2025-05-10"
+categories: ["Finance"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

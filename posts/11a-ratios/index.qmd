@@ -1,8 +1,8 @@
 ---
-title: "Vector Embeddings"
+title: "Pro Formas and Valuation"
 author: "Kerry Back"
-date: "2025-05-13"
-categories: [Julius, Coding]
+date: "2025-05-14"
+categories: ["Finance"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

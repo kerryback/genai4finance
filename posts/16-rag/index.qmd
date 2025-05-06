@@ -1,8 +1,8 @@
 ---
 title: "Retrieval Augmented Generation"
 author: "Kerry Back"
-date: "2025-05-16"
-categories: []
+date: "2025-05-20"
+categories: ["AI Overview"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "Web Scraping"
+title: "Financial Ratios"
 author: "Kerry Back"
-date: "2025-05-04"
+date: "2025-05-15"
 categories: []
 image: "thumbnail.jpg"  # You can add an image later
 ---

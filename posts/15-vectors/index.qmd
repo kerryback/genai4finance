@@ -1,0 +1,8 @@
+---
+title: "Vector Embeddings"
+author: "Kerry Back"
+date: "2025-05-19"
+categories: ["AI Overview"]
+image: "thumbnail.jpg"  # You can add an image later
+---
+

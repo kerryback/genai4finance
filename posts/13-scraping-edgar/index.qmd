@@ -1,8 +1,8 @@
 ---
-title: "Simulating Retirement Plans"
+title: "Scraping EDGAR"
 author: "Kerry Back"
-date: "2025-04-16"
-categories: []
+date: "2025-05-17"
+categories: ["Finance", "Python Tools"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Mutual Fund Performance Evaluation"
 author: "Kerry Back"
-date: "2025-04-25"
-categories: [Julius, Coding]
+date: "2025-05-12"
+categories: ["Finance"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

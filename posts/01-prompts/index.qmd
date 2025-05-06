@@ -1,5 +1,5 @@
 ---
-title: "Prompt Engineering (or Not!)"
+title: "Prompt Engineering (or Not)"
 author: "Kerry Back"
 date: "2025-05-07"
 categories: ["AI Overview"]
