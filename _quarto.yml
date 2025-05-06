@@ -12,6 +12,8 @@ project:
 
 website:
   title: "Teaching AI-Assisted Financial Analysis"
+  site-url: https://finance-with-ai.org
+  description: "Teaching how to use generative AI in finance"
   navbar:
     right:
       - welcome.qmd

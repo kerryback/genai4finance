@@ -2,6 +2,7 @@
 title: "Scraping EDGAR"
 author: "Kerry Back"
 date: "2025-05-17"
+draft: true
 categories: ["Finance", "Python Tools"]
 image: "thumbnail.jpg"  # You can add an image later
 ---

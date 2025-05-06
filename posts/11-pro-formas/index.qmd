@@ -2,7 +2,8 @@
 title: "Financial Ratios"
 author: "Kerry Back"
 date: "2025-05-15"
-categories: []
+categories: ["Finance"]
+draft: true
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

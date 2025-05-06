@@ -3,6 +3,7 @@ title: "Simulating Retirement Plans"
 author: "Kerry Back"
 date: "2025-05-09"
 categories: ["Finance"]
+draft: true
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

@@ -3,6 +3,7 @@ title: "CAPM and Cost of Equity"
 author: "Kerry Back"
 date: "2025-05-06"
 categories: ["Finance"]
+draft: true
 image: "capm.jpg"  # You can add an image later
 ---
 
