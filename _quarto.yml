@@ -21,6 +21,7 @@ website:
         href: https://mgmt675-2025.kerryback.com
       - icon: github
         href: https://github.com/finance-with-ai
+      
     background: dark
     search: true
   page-footer:

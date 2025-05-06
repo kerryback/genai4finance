@@ -1,0 +1,7 @@
+---
+title: "Subscribe"
+---
+
+Subscribe to receive email notifications of new posts.
+
+<!-- Paste your Mailchimp form HTML here --> 
