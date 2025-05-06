@@ -6,7 +6,7 @@
 }
 
 .navbar-brand img {
-    max-height: 200px;  /* Set logo height to 200px */
+    max-height: 150px;  /* Set logo height to 200px */
     width: auto;
     margin-top: -1rem;  /* Adjust vertical position if needed */
     margin-bottom: -1rem;
