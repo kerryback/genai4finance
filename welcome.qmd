@@ -1,6 +1,6 @@
 ---
-title: "Welcome"
-title-block-banner: true
+title: Welcome
+title-block-banner: false
 about:
   template: trestles
   image: DSC08231.jpg
@@ -12,6 +12,8 @@ about:
     - text: Email Me
       href: mailto:kerryback@gmail.com
 ---
+
+
 
 ## About this Blog
 
