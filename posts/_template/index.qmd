@@ -1,0 +1,21 @@
+---
+title: "Post Title"
+description: "Post description"
+author: "Your Name"
+date: "2024-01-01"
+categories: [category1, category2]
+image: "thumbnail.png"
+format:
+  html:
+    include-in-header:
+      text: |
+        <!-- Any custom HTML/CSS needed for your website -->
+  substack:
+    output: true
+---
+
+<!-- Content here -->
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 

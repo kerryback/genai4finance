@@ -1,0 +1,33 @@
+name: Convert Posts for Substack
+
+on:
+  push:
+    paths:
+      - 'posts/*/index.qmd'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: |
+          pip install markdown2 python-frontmatter pyyaml
+          
+      - name: Convert changed posts
+        run: |
+          for file in $(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep 'posts/.*index.qmd'); do
+            python scripts/quarto_to_substack.py "$file" --output "${file%.qmd}_substack.html"
+          done
+          
+      - name: Upload converted files
+        uses: actions/upload-artifact@v2
+        with:
+          name: substack-posts
+          path: posts/**/*_substack.html 
