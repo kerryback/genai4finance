@@ -2,7 +2,7 @@
 title: "Teaching Finance with AI"
 author: "Kerry Back"
 date: "2025-05-03"
-categories: ["AI tools"]
+categories: 
 image: "teaching_finance_with_ai_logo.png"
 listing-image-preview-height: "150px"    # Adjust this value to control thumbnail size
 ---
