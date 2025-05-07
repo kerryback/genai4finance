@@ -15,7 +15,6 @@ The current effectiveness of AI + coding varies somewhat between corporate finan
 
 Even in capital budgeting, financial statement analysis, and pro forma financial valuation, AI is already very valuable.  It is not yet ready to replace spreadsheets, but it can be a useful complement to spreadsheets.  AI can be used as a collaborator -- "tell me how you would do this" or "you do it your way, and I'll do it my way, and then we can compare answers."  As the models improve, I expect the world to shift more and more to AI in lieu of spreadsheets even for corporate finance applications.  Of course, Hewlett-Packard is still making the 12C financial calculator, and Microsoft will undoubtedly sell Excel for many years to come, but I think AI + coding will eventually dominate.  To prepare our students for that world, we should start teaching them now about what is likely to lie ahead.
 
-![](31-small-square.jpg){width=40% fig-align="center"}
 
 Kerry Back<br>
 J. Howard Creekmore Professor of Finance and Professor of Economics<br>
