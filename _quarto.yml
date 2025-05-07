@@ -11,7 +11,7 @@ project:
     - "!*/.DS_Store"
 
 website:
-  
+  title: ""
   site-url: https://finance-with-ai.org
   description: "Teaching how to use generative AI in finance"
   navbar:
@@ -19,7 +19,6 @@ website:
     background: primary
     right:
       - welcome.qmd
-      - subscribe.qmd
       - icon: rss
         href: index.xml
   page-footer:
@@ -51,7 +50,9 @@ comments:
     theme: preferred_color_scheme 
 
 site:
+  title: "Teaching Finance with AI"
+  site-url: https://finance-with-ai.org
   feed:
     type: rss2
-    categories: [finance, AI]
+  description: "Teaching the use of generative AI in finance"
  
