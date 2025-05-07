@@ -49,3 +49,9 @@ comments:
     loading: lazy
     input-position: bottom
     theme: preferred_color_scheme 
+
+site:
+  feed:
+    type: rss2
+    categories: [finance, AI]
+ 
