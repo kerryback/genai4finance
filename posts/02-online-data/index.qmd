@@ -2,7 +2,7 @@
 title: "Online Data and Visualization"
 author: "Kerry Back"
 date: "2025-05-05"
-categories: ["Finance"]
+categories: ["Finance", "Python Tools"]
 image: "spy-returns.jpg"  # You can add an image later
 ---
 
