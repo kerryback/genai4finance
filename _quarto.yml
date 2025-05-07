@@ -25,6 +25,8 @@ site:
     right:
       - text: "About"
         href: about.qmd
+      - text: "Subscribe"
+        href: subscribe.qmd
       - text: Course Materials
         href: https://mgmt675-2025.kerryback.com
   page-footer:
