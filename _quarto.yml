@@ -3,6 +3,7 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
+    - "!/assets/*.*"
     - "!/notebooks/*.*"
     - "!/forthcoming/*.*"
     - "!.ipynb_checkpoints/"  # exclude ipynb checkpoints
@@ -56,6 +57,8 @@ comments:
     loading: lazy
     input-position: bottom
     theme: preferred_color_scheme 
+
+
 
 
  
