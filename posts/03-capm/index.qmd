@@ -2,7 +2,7 @@
 title: "CAPM and PowerPoint"
 author: "Kerry Back"
 date: "2025-05-06"
-categories: ["Finance"]
+categories: ["Finance", "Python Tools"]
 draft: false
 image: "capm.jpg"  # You can add an image later
 ---

@@ -10,17 +10,23 @@ project:
     - "!.DS_Store"
     - "!*/.DS_Store"
 
-website:
-  title: ""
+site:
+  title: "Teaching Finance with AI"
   site-url: https://finance-with-ai.org
-  description: "Teaching how to use generative AI in finance"
+  feed:
+    type: rss2
+  description: "Teaching the use of generative AI in finance"
+
+
   navbar:
+    title: ""
     logo: "teaching_finance_with_ai_logo.png"
     background: primary
     right:
-      - welcome.qmd
-      - icon: rss
-        href: index.xml
+      - text: "About"
+        href: about.qmd
+      - text: Course Materials
+        href: https://mgmt675-2025.kerryback.com
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
     left: "&copy; Copyright 2025, Kerry Back"
@@ -49,10 +55,5 @@ comments:
     input-position: bottom
     theme: preferred_color_scheme 
 
-site:
-  title: "Teaching Finance with AI"
-  site-url: https://finance-with-ai.org
-  feed:
-    type: rss2
-  description: "Teaching the use of generative AI in finance"
+
  

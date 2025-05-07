@@ -1,0 +1,22 @@
+---
+title: "Teaching Finance with AI"
+author: "Kerry Back"
+date: "2025-05-03"
+categories: ["AI tools"]
+image: "teaching_finance_with_ai_logo.png"
+listing-image-preview-height: "150px"    # Adjust this value to control thumbnail size
+---
+
+![](teaching_finance_with_ai_logo.png){width=40% fig-align="center"}
+
+The purpose of this blog and the site [finance-with-ai.org](https://finance-with-ai.org) is to communicate things I've learned about teaching MBA students at Rice University how to do financial analyses using "AI + coding" and more broadly how generative AI can and is being used in the finance industry.  I will post short notes on what I've learned about teaching this topic and on related things I find interesting.  The blog is intended to be a resource for finance instructors at the undergraduate, MBA, and MSF levels. 
+
+The current effectiveness of AI + coding varies somewhat between corporate finance and investments applications.  Here, I lump fundamental security analysis with corporate finance.  There are many topics in the investments area for which spreadsheets were never well equipped and for which spreadsheets are seldom used in practice.  Previously, it was difficult to teach those topics by example, but now students can prompt an LLM to generate code for them.
+
+Even in capital budgeting, financial statement analysis, and pro forma financial valuation, AI is already very valuable.  It is not yet ready to replace spreadsheets, but it can be a useful complement to spreadsheets.  AI can be used as a collaborator -- "tell me how you would do this" or "you do it your way, and I'll do it my way, and then we can compare answers."  As the models improve, I expect the world to shift more and more to AI in lieu of spreadsheets even for corporate finance applications.  Of course, Hewlett-Packard is still making the 12C financial calculator, and Microsoft will undoubtedly sell Excel for many years to come, but I think AI + coding will eventually dominate.  To prepare our students for that world, we should start teaching them now about what is likely to lie ahead.
+
+![](31-small-square.jpg){width=40% fig-align="center"}
+
+Kerry Back<br>
+J. Howard Creekmore Professor of Finance and Professor of Economics<br>
+Rice University
