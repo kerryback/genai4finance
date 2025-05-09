@@ -15,7 +15,9 @@ The current effectiveness of AI + coding varies somewhat between corporate finan
 
 Even in capital budgeting, financial statement analysis, and pro forma financial valuation, AI is already very valuable.  It is not yet ready to replace spreadsheets, but it can be a useful complement to spreadsheets.  AI can be used as a collaborator -- "tell me how you would do this" or "you do it your way, and I'll do it my way, and then we can compare answers."  As the models improve, I expect the world to shift more and more to AI in lieu of spreadsheets even for corporate finance applications.  Of course, Hewlett-Packard is still making the 12C financial calculator, and Microsoft will undoubtedly sell Excel for many years to come, but I think AI + coding will eventually dominate.  To prepare our students for that world, we should start teaching them now about what is likely to lie ahead.
 
-What do you think?  Let us know in the comments below.
+In the Rice MBA program, a full semester core class in the fall of the first year is followed by two half-semester electives: a spreadsheet-based course in applied finance and then my course in AI-assisted finance.  We cover some of the same topics in all three courses: capital budgeting, mean-variance efficiency, the CAPM, ...  This is a good arrangement.  Students' understanding of the topics is reinforced and deepened throughout the sequence.  Each course also introduces new topics, expanding the frontier of students' knowledge.  I mention this here mainly to provide context.  I view the role of my course as four-fold: to show students how to use the new tool of AI + coding, to show students something about how AI is implemented and used in the finance industry, to deepen students' understanding of core finance topics, and to introduce students to some important finance topics they may have not yet encountered (without stepping too much on the toes of second-year instructors!).  I hope that my recounting of my attempts to accomplish this may be of some help to others.
+
+What do you think?  Please share your thoughts in the comments below.
 
 ---
 
