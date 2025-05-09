@@ -25,7 +25,3 @@ This is a nice example to build into an app.  Everyone needs to do retirement pl
 
 *First published on [finance-with-ai.org](https://finance-with-ai.org)* 
 
-Mean-variance optimization is one of those topics that was always awkward to teach with spreadsheets.  It is clunky to define the portfolio variance in a spreadsheet for more than two assets, and we are forced to use Solver to find efficient portfolios or to deal with the further clunkiness of matrix inversion in a spreadsheet.    Also, if we create an example for three assets and someone asks about four, then we have to almost entirely reengineer the spreadsheet.  Luckily, the leading models have been trained on enough mean-variance material to know  the formula $\Sigma^{-1}\mu$ and to correctly implement it each time.  For these reasons, mean-variance optimization provides a very nice example to demonstrate the power of AI + python.
-
-If we want to implement constraints or to find the efficient frontier without a risk-free asset, then there are alternate routes the models may take, so it pays to be familiar with those before launching into live demos in class.
-
