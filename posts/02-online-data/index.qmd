@@ -3,10 +3,10 @@ title: "Online Data and Visualization"
 author: "Kerry Back"
 date: "2025-05-05"
 categories: ["Finance", "Python Tools"]
-image: "spy-returns.jpg"  # You can add an image later
+image: "returns.png"  # You can add an image later
 ---
 
-![](spy-returns.jpg){width=40% fig-align="center"}
+![](returns.png){width=40% fig-align="center"}
 
 Grabbing and visualizing online data is a good place to start to demonstrate to students the power and simplicity of AI + python.  [Yahoo Finance](https://finance.yahoo.com/) is a great source of free online data about stock and option prices and corporate financial statements.  The yfinance library is the best python library for retrieving it.  [FRED](https://fred.stlouisfed.org/) (Federal Reserve Economic Data) is a great source for macroeconomic data, including GDP, exchange rates, Treasury and corporate bond yields, crude oil prices, etc.  The pandas-datareader library is the best python library for accessing FRED.  Neither yfinance nor pandas-datareader requires you to obtain an API key.  
 
