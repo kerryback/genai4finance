@@ -1,0 +1,17 @@
+---
+title: "API Calls"
+author: "Kerry Back"
+date: "2025-05-11"
+categories: ["AI Overview"]
+draft: true
+image: "apis.png"  # You can add an image later
+---
+
+
+![](apis.png){width=40% fig-align="center"}
+
+
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 

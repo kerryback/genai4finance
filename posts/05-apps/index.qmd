@@ -4,10 +4,10 @@ author: "Kerry Back"
 date: "2025-05-08"
 categories: ["Python Tools"]
 draft: false
-image: "code_launch_logo_gray_wide.png"  
+image: "code_launch_logo_gray_wide2.png"  
 ---
 
-![](code_launch_logo_gray_wide.png){width=40% fig-align="center"}
+![](code_launch_logo_gray_wide2.png){width=40% fig-align="center"}
 
 After the last session of my class in the spring, a student came up to me and said "I want to thank you.  I never knew anything about programming, and now I can create apps.  It's amazing!"  We have a few years, I think, when we can be the first to show students the power of AI + coding and have these rewarding moments.  But soon everyone will know, and I'm not sure what we'll do then.  Maybe [AI will teach our courses](https://www.chronicle.com/article/are-you-ready-for-the-ai-university).
 

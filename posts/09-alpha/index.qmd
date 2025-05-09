@@ -1,9 +1,9 @@
 ---
-title: "Scraping EDGAR"
+title: "Jensen's Alpha"
 author: "Kerry Back"
-date: "2025-05-17"
+date: "2025-05-12"
+categories: ["Finance"]
 draft: true
-categories: ["Finance", "Python Tools"]
 image: "thumbnail.jpg"  # You can add an image later
 ---
 

@@ -9,7 +9,7 @@ image: "monte-carlo.png"  # You can add an image later
 
 ![](monte-carlo.png){width=40% fig-align="center"}
 
-Simulation can be done in a spreadsheet with @Risk (though not on a Mac!) but is better done elsewhere.  An easy example of the AI + coding approach is to simulate a retirement plan.
+Simulation can be done in a spreadsheet but is better done elsewhere.  An easy example of the AI + coding approach is to simulate a retirement plan.
 
 A simple retirement plan specifies an initial account balance, the number of years and the amount to be saved each year until retirement, the number of years and the amount to be withdrawn each year after retirement, and an investment return each year.  We can bypass worrying about inflation by doing everything in real terms: the deposits and withdrawals should be specified in today's dollars, and the investment return should be the real rate of return.  Taxes are complicated and important.  It would certainly be feasible to do a detailed analysis of taxes for different investment vehicles (along the lines of [this](https://learn-investments.rice-business.org/taxes/tax_vehicles)), but, since teaching personal finance is not my real goal, I just tell students to think of the deposits and withdrawals as being pre-tax, as in a 401k. 
 
