@@ -13,13 +13,13 @@ This [HBS case](https://hbsp.harvard.edu/product/HEC382-PDF-ENG), about implemen
 
 To create this, we need an API key from an LLM provider.  As of this writing, OpenAI provides keys even on free accounts.  Billing is on a per-use basis, and it is miniscule at demonstration scales.  As I will explain, there are also API keys for LLMs that are completely free.  Julius provides a facility for storing an API key as a "secret key."  It is not exposed to the LLM during the coding that creates the custom chatbot.  
 
-To start the exercise, it is useful to show students the code that executes an API call without all the surrounding code that creates an app.  I gave Julius the following example prompt:^[Pig Latin is a very old English language variation, mostly of interest to children, that moves any initial consonant phoneme of a word to the end and also adds "ay" to the end of each word.  I think I should credit this example to some blog post that I read sometime, but which post escapes me.] "send the following to openAI GPT-4 using my api key - What is the best type of pizza?  Answer in pig Latin." Here is the code that Claude 3.5 wrote in response:
+To start the exercise, it is useful to show students the code that executes an API call without all the surrounding code that creates an app.  I gave Julius the following example prompt:^[Pig Latin is a very old English language variation, mostly of interest to children, that moves any initial consonant phoneme of a word to the end and also adds "ay" to the end of each word.  I think I should credit this example to some blog post that I read sometime, but which post escapes me.] "send the following to openAI GPT-4 using my api key that is stored as a secret key - What is the best type of pizza?  Answer in pig Latin." Here is the code that Claude 3.5 wrote in response:
 
 ```
 from openai import OpenAI
 import os
 
-# Initialize the OpenAI client with the API key from environment variable
+# Initialize the OpenAI client with the API key
 client = OpenAI(api_key=os.environ.get('OPEN_AI_KEY'))
 
 # Send the query
