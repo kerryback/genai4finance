@@ -4,10 +4,10 @@ author: "Kerry Back"
 date: "2025-05-06"
 categories: ["Finance", "Python Tools"]
 draft: false
-image: "capm.jpg"  # You can add an image later
+image: "capm.png"  # You can add an image later
 ---
 
-![](capm.jpg){width=40% fig-align="center"}
+![](capm.png){width=40% fig-align="center"}
 
 Calculating betas is another easy exercise to do with Julius.  We can also estimate the market risk premium, and we can get the risk-free rate from FRED, so we can estimate the cost of equity capital according to the CAPM.  This exercise provides the opportunity to explore [Ken French's data library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) while getting market excess returns and risk-free rates.
 
