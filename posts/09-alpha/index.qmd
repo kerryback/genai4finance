@@ -4,6 +4,11 @@ author: "Kerry Back"
 date: "2025-05-12"
 categories: ["Finance"]
 draft: true
-image: "thumbnail.jpg"  # You can add an image later
+image: "alpha.png"  # You can add an image later
 ---
 
+![](alpha.png){width=40% fig-align="center"}
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 

@@ -1,13 +1,13 @@
 ---
-title: "Scraping Form 4's"
+title: "Fama-French Factors"
 author: "Kerry Back"
-date: "2025-05-13"
+date: "2025-05-14"
 draft: true
 categories: ["Finance"]
-image: "form4.png"  # You can add an image later
+image: "ff2.png"  # You can add an image later
 ---
 
-![](form4.png){width=40% fig-align="center"}
+![](ff2.png){width=40% fig-align="center"}
 
 ---
 

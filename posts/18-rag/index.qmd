@@ -1,0 +1,14 @@
+---
+title: "Retrieval Augmented Generation"
+author: "Kerry Back"
+date: "2025-05-21"
+draft: true
+categories: []
+image: "image.png"  # You can add an image later
+---
+
+![](image.png){width=40% fig-align="center"}
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 

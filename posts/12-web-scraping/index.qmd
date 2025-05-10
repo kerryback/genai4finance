@@ -1,9 +1,0 @@
----
-title: "Web Scraping"
-author: "Kerry Back"
-date: "2025-05-16"
-categories: ["Python Tools"]
-draft: true
-image: "thumbnail.jpg"  # You can add an image later
----
-
