@@ -3,11 +3,11 @@ title: "Teaching Finance with AI"
 author: "Kerry Back"
 date: "2025-05-03"
 categories: 
-image: "teaching_finance_with_ai_logo.png"
+image: "logo.png"
 listing-image-preview-height: "150px"    # Adjust this value to control thumbnail size
 ---
 
-![](teaching_finance_with_ai_logo.png){width=40% fig-align="center"}
+![](logo.png){width=40% fig-align="center"}
 
 The purpose of this blog and the site [finance-with-ai.org](https://finance-with-ai.org) is to communicate things I've learned about teaching MBA students at Rice University how to do financial analyses using "AI + coding" and more broadly how generative AI can and is being used in the finance industry.  I will post short notes on what I've learned about teaching this topic and on related things I find interesting.  The blog is intended to be a resource for finance instructors at the undergraduate, MBA, and MSF levels. 
 
