@@ -4,12 +4,12 @@ author: "Kerry Back"
 date: "2025-05-10"
 categories: ["Finance"]
 draft: false
-image: "tangency.png"  # You can add an image later
+image: "mean-variance.png"  # You can add an image later
 ---
 
-![](tangency.png){width=40% fig-align="center"}
+![](mean-variance.png){width=40% fig-align="center"}
 
-Mean-variance optimization is one of those topics that was always awkward to teach with spreadsheets.  It is messy to define the portfolio variance in a spreadsheet for more than two assets, and we are forced to use Solver to find efficient portfolios or to deal with Excel's matrix algebra functions that operate on arrays.  Also, if we create an example for three assets and someone asks about four, then we have to almost entirely reengineer the spreadsheet.  I don't think we actually expect students to do mean-variance analysis in a spreadsheet after they graduate - we're just teaching the concept (I think).  But, we can now teach the concept without the clunkiness of setting it up in a spreadsheet.
+Mean-variance optimization is one of those topics that has always been awkward to teach with spreadsheets.  It is messy to define the portfolio variance in a spreadsheet for more than two assets, and we are forced to use Solver to find efficient portfolios or to deal with Excel's matrix algebra functions that operate on arrays.  Also, if we create an example for three assets and someone asks about four, then we have to almost entirely reengineer the spreadsheet.  I don't think we actually expect students to do mean-variance analysis in a spreadsheet after they graduate - we're just teaching the concept (I think).  But, we can now teach the concept without the clunkiness of setting it up in a spreadsheet.
 
 We want to generate the classic figure above and to find the portfolios crresponding to the efficient mean-variance combinations.  I prefer to start with the tangency portfolio, because it is simpler than finding the frontier of only risky assets, and because it is where we want to end up anyway.  We can specify the risk-free rate, the expected returns of the assets, the standard deviations of the assets and their correlations and just ask Julius to compute the tangency portfolio.  The LLMs know how to do it.  With high probability, they will generate code to compute the familiar Sigma inverse times mu and then divide by the sum of the elements of that vector so the weights sum to one (it is possible but much less likely that they will use a numerical optimization algorithm from scipy to maximize the Sharpe ratio).  This means that we have to explain Sigma inverse times mu.
 

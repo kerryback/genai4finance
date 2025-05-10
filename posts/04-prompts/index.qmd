@@ -4,10 +4,10 @@ author: "Kerry Back"
 date: "2025-05-07"
 categories: ["AI Overview"]
 draft: false
-image: "engineering.png"  # You can add an image later
+image: "prompts.png"  # You can add an image later
 ---
 
-![](engineering.png){width=40% fig-align="center"}
+![](prompts.png){width=40% fig-align="center"}
 
 I use [Menti](https://mentimeter.com/) surveys periodically to ask students what they would like to learn more about, and how to write effective prompts frequently shows up.  In the first bit of time after ChatGPT 3.5 was introduced, there was a lot of chatter online about prompt engineering  This seems to have died down somewhat, and for good reason.  The models are so good now that they don't generally require any special prompting.  In particular, you do not need to tell Julius "you are an expert coder ..."  If any role-setting is even needed now, which is doubtful, I think it must be supplied in the context provided by Julius to the LLMs.
 
