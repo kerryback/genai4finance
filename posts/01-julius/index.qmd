@@ -3,11 +3,11 @@ title: "Julius and the Democratization of Coding"
 author: "Kerry Back"
 date: "2025-05-04"
 categories: ["AI Overview"]
-image: "julius.jpg"
+image: "julius2.png"
 listing-image-preview-height: "150px"    # Adjust this value to control thumbnail size
 ---
 
-![](julius.jpg){width=30% fig-align="center"}
+![](julius2.pngg){width=30% fig-align="center"}
 
 The world is aware that generative AI has made coders more efficient, but I don't know if there is as much recognition of the more important fact that gen AI has made coding accessible to non-coders. I expect this to change rapidly by word of mouth: Once exposed to the wonder of coding with gen AI, one cannot help but want to share the word.  We can accelerate that change for our students.
 
