@@ -4,10 +4,10 @@ author: "Kerry Back"
 date: "2025-05-10"
 categories: ["Finance"]
 draft: false
-image: "mean-variance.png"  # You can add an image later
+image: "mv2.png"  # You can add an image later
 ---
 
-![](mean-variance.png){width=40% fig-align="center"}
+![](mv2.png){width=40% fig-align="center"}
 
 Mean-variance optimization is one of those topics that has always been awkward to teach with spreadsheets.  It is messy to define the portfolio variance in a spreadsheet for more than two assets, and we are forced to use Solver to find efficient portfolios or to deal with Excel's matrix algebra functions that operate on arrays.  Also, if we create an example for three assets and someone asks about four, then we have to almost entirely reengineer the spreadsheet.  I don't think we actually expect students to do mean-variance analysis in a spreadsheet after they graduate - we're just teaching the concept (I think).  But, we can now teach the concept without the clunkiness of setting it up in a spreadsheet.
 

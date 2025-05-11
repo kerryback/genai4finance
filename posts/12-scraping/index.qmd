@@ -1,0 +1,17 @@
+---
+title: "Web Scraping"
+author: "Kerry Back"
+date: "2025-05-15"
+draft: true
+categories: ["Python Tools"]
+image: "scraping.png"  # You can add an image later
+---
+
+![](scraping.png){width=40% fig-align="center"}
+
+https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* <br>
+*Also on substack at [kerryback.substack.com](https://kerryback.substack.com)*

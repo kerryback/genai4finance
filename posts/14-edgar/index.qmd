@@ -1,13 +1,13 @@
 ---
-title: "Scraping Form 4's"
+title: "SEC EDGAR"
 author: "Kerry Back"
-date: "2025-05-13"
+date: "2025-05-17"
 draft: true
 categories: ["Finance"]
-image: "form4s.png"  # You can add an image later
+image: "image.png"  # You can add an image later
 ---
 
-![](form4s.png){width=40% fig-align="center"}
+![](image.png){width=40% fig-align="center"}
 
 This spring, while Tesla was in the midst of a 50% freefall, the news media reported that Tesla insiders had been selling shares.  Here, "insiders" means individuals required to file a Form 4 with the SEC when they trade: directors, officers, and owners of very large stakes (more than 10% of outstanding shares).  This was a good motivation for beginning to look at scraping the SEC EDGAR site.  I will look at scraping corporate financial statements in a later post.  Financial statements are complicated, because there are different levels of aggregation of reported items that can be applied.  Form 4's are more straightforward.  
 

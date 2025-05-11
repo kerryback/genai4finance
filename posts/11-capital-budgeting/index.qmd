@@ -1,13 +1,13 @@
 ---
-title: "Scraping FINRA"
+title: "Capital Budgeting"
 author: "Kerry Back"
-date: "2025-05-15"
+date: "2025-05-14"
 draft: true
 categories: []
-image: "image.png"  # You can add an image later
+image: "capital-budgeting.png"  # You can add an image later
 ---
 
-![](image.png){width=40% fig-align="center"}
+![](capital-budgeting.png){width=40% fig-align="center"}
 
 ---
 

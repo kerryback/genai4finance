@@ -1,15 +1,13 @@
 ---
-title: "Scraping Financial Statements"
+title: "Short Sales Data"
 author: "Kerry Back"
-date: "2025-05-17"
+date: "2025-05-16"
 draft: true
 categories: []
 image: "image.png"  # You can add an image later
 ---
 
 ![](image.png){width=40% fig-align="center"}
-
-https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 
 ---
 

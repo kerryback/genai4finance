@@ -1,13 +1,13 @@
 ---
 title: "Fama-French Factors"
 author: "Kerry Back"
-date: "2025-05-14"
+date: "2025-05-13"
 draft: true
 categories: ["Finance"]
-image: "ff.png"  # You can add an image later
+image: "factors.png"  # You can add an image later
 ---
 
-![](ff.png){width=40% fig-align="center"}
+![](factors.png){width=40% fig-align="center"}
 
 ---
 
