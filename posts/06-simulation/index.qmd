@@ -23,5 +23,5 @@ This is a nice example to build into an app.  Everyone needs to do retirement pl
 
 ---
 
-*First published on [finance-with-ai.org](https://finance-with-ai.org)* 
+*Also on substack at [kerryback.substack.com](https://kerryback.substack.com)*
 

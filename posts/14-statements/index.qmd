@@ -9,6 +9,9 @@ image: "image.png"  # You can add an image later
 
 ![](image.png){width=40% fig-align="center"}
 
+https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+
 ---
 
-*First published on [finance-with-ai.org](https://finance-with-ai.org)* 
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* <br>
+*Also on substack at [kerryback.substack.com](https://kerryback.substack.com)*
