@@ -15,5 +15,5 @@ page-layout: full
 title-block-banner: false
 ---
 
-[![Substack logo](substack.png){width=50px}](https://kerryback.substack.com)
+Follow on [Substack](https://kerryback.substack.com)
 <br><br><br>
