@@ -4,10 +4,10 @@ author: "Kerry Back"
 date: "2025-05-13"
 draft: true
 categories: ["Finance"]
-image: "form4.png"  # You can add an image later
+image: "form4s.png"  # You can add an image later
 ---
 
-![](form4.png){width=40% fig-align="center"}
+![](form4s.png){width=40% fig-align="center"}
 
 ---
 
