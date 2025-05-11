@@ -26,8 +26,7 @@ client = OpenAI(api_key=os.environ.get('OPEN_AI_KEY'))
 response = client.chat.completions.create(
     model="gpt-4",
     messages=[
-        {"role": "user", "content": "What is the best type of pizza? \
-        Answer in pig Latin."}
+        {"role": "user", "content": "What is the best type of pizza?  Answer in pig Latin."}
     ]
 )
 
@@ -35,10 +34,10 @@ response = client.chat.completions.create(
 print("Response:", response.choices[0].message.content)
 ```
 
-We can see from the code that the messages will be sent to OpenAI's GPT-4 (note that the LLM you're using in Julius will balk if you ask for an API call to an LLM that appeared after the training of your Julius LLM - for example, you can't get GPT-o3 using Claude 3.5 - but you can edit the code in Julius to select the model you want).  The messages object is a list containing a single dictionary (it can have many more, as we will see in a moment).  The dictionary has two keys: "role" and "content."  The response object contains the LLM's response, and the content of the response is accessed as response.choices[0].message.content.  When the code is executed, the computer executing it sends the messages, gets the response, and prints the content of the response.  All of the work is done by the client object, which is created by the OpenAI function, using my API key that is read from its "secret key" storage by the os.environ.get function.  What I got from Julius after the code executed was "The GPT-4 model responded with:  Response: Epperonipay.""
+We can see from the code that the messages will be sent to OpenAI's GPT-4 (note that the LLM you're using in Julius will balk if you ask for an API call to an LLM that appeared after the training of your Julius LLM - for example, you can't get GPT-o3 using Claude 3.5 - but you can edit the code in Julius to select the model you want).  The messages object is a list containing a single dictionary (it can have many more, as we will see in a moment).  The dictionary has two keys: "role" and "content."  The response object contains the LLM's response, and the content of the response is accessed as response.choices[0].message.content.  When the code is executed, the computer executing it sends the messages, gets the response, and prints the content of the response.  All of the work is done by the client object, which is created by the OpenAI function, using my API key that ithe os.environ.get function reads from its "secret key" storagen.  What I got from Julius after the code executed was "The GPT-4 model responded with:  Response: Epperonipay.""
 
 
-To create a custom chatbot, it is enough to say something like "Create a custom chatbot as a streamlit app.  It should send prompts to GPT-4 using my openai key that is stored as a secret key.  The following additional context should be provided:  You are a business professional.  Answer in a business-like fashion.""   Of course, you could also do more interesting things, like requesting an answer in Pig Latin perhaps.  The heart of the code that Claude 3.5 wrote for me is
+To create a custom chatbot, it is enough to say something like "Create a custom chatbot as a streamlit app.  It should send prompts to GPT-4 using my openai api key that is stored as a secret key.  The following additional context should be provided:  You are a business professional.  Answer in a business-like fashion."   Of course, you could also do more interesting things, like requesting an answer in Pig Latin perhaps.  The heart of the code that Claude 3.5 wrote for me is
 
 ```
 messages = [
@@ -91,7 +90,7 @@ We can get free access to a number of open source LLMs via services like [Huggin
 
 The essence of the Open Router service is that we get an API key from the provider(s) we want to use, store the key(s) at Open Router, and also get an API key from Open Router.  We direct all of our API calls to Open Router, specifying an LLM to use, and Open Router forwards the call to the LLM.  This provides a unified syntax for API calls (Open Router uses the OpenAI standard) and also unified billing (the LLM providers charge Open Router which then charges us).  For someone who is not a heavy user of API calls, the prime benefit of using Open Router is that it provides free access to many open source LLMs. 
 
-I take this discussion as an opportunity to show students [Replit](https://replit.com/~), which is an AI + coding platform focused on app creation.  Before class, as an illustration, I created a [chatbot app]((https://guardian-pulse-kerryback.replit.app/)) that scrapes headlines from [The Guardian](https://www.theguardian.com/us) and sends them to the free LLama 4 Scout model for a determination as to whether it is a good, bad, or mixed news day and then allows for additional chatting.  It is, of course, just a toy, but it is a concrete example of the chatbot creation process.  By the way, I was happy I did this before class, because Replit experienced a frustrating amount of confusion between OPENAI_API_KEY and OPEN_ROUTER_API_KEY.  To be so smart, AI can sometimes be surprisingly dumb. 
+I take this discussion as an opportunity to show students [Replit](https://replit.com/~), which is an AI + coding platform focused on app creation.  Before class, as an illustration, I created a [chatbot app]((https://guardian-pulse-kerryback.replit.app/)) that scrapes headlines from [The Guardian](https://www.theguardian.com/us) and sends them to the free LLama 4 Scout model for a determination as to whether it is a good, bad, or mixed news day and then allows for additional chatting.  It is, of course, just a toy, but it is a concrete example of the chatbot creation process.  By the way, I was happy I did this before class, because Replit experienced a frustrating amount of confusion between OPENAI_API_KEY and OPEN_ROUTER_API_KEY.  LLMs are usually very smart but can sometimes be surprisingly dumb. 
 
 ---
 
