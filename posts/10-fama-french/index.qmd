@@ -9,6 +9,7 @@ image: "factors.png"  # You can add an image later
 
 ![](factors.png){width=40% fig-align="center"}
 
+
 ---
 
 *First published on [finance-with-ai.org](https://finance-with-ai.org)* 
