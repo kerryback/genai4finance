@@ -1,7 +1,7 @@
 ---
 title: "Web Scraping"
 author: "Kerry Back"
-date: "2025-05-15"
+date: "2025-05-19"
 draft: true
 categories: ["Python Tools"]
 image: "scraping.png"  # You can add an image later

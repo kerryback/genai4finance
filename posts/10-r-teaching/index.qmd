@@ -1,0 +1,15 @@
+---
+title: "Teaching in the Age of AI"
+author: "Kerry Back"
+date: "2025-05-16"
+draft: false
+categories: ["AI Overview"]
+image: "teaching.png"  
+---
+
+![](teaching.png){width=40% fig-align="center"}
+
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 

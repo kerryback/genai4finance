@@ -1,7 +1,7 @@
 ---
 title: "Vector Embeddings"
 author: "Kerry Back"
-date: "2025-05-20"
+date: "2025-05-24"
 draft: true
 categories: []
 image: "image.png"  # You can add an image later

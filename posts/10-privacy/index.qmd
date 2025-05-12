@@ -1,0 +1,18 @@
+---
+title: "Apps, Data Privacy, and Dashboards"
+author: "Kerry Back"
+date: "2025-05-14"
+draft: false
+categories: ["Python Tools"]
+image: "dashboards.png"  
+---
+
+![](dashboards.png){width=40% fig-align="center"}
+
+As discussed in a [previous post](https://finance-with-ai.org/posts/08-apis), data privacy is a critical concern for corporate implementation of AI.  We can implement the AI + coding method of data analysis in a manner that respects data privacy.  In fact, we can do so without ever sending corporate data to an LLM.  This can be done by creating an app as discussed [here](https://finance-with-ai.org/posts/05-apps).  We can send a small artificial dataset to Julius, for example, to use when writing code and building the app, and then we can run the app locally with our actual data.  We would need to include a data upload feature in the app, which is easy to do, and then upload our data into the app while running it locally.  In this way, we get the benefit of AI + coding without our data ever leaving our computer - we could disconnect our computer from the internet and the app would still work with our data.
+
+If we have already shown app creation to students, then adding the upload feature is not a big enough step to make for an interesting class session.  But, we could something else new as well.  My suggestion is to have the app generate an interactive dashboard.  
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 

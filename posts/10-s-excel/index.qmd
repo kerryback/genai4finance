@@ -1,0 +1,15 @@
+---
+title: "Excel Bots"
+author: "Kerry Back"
+date: "2025-05-17"
+draft: false
+categories: ["AI Overview"]
+image: "excel.png"  
+---
+
+![](excel.png){width=40% fig-align="center"}
+
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 

@@ -1,7 +1,7 @@
 ---
 title: "Valuation"
 author: "Kerry Back"
-date: "2025-05-19"
+date: "2025-05-23"
 draft: true
 categories: []
 image: "image.png"  # You can add an image later

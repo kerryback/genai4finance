@@ -1,0 +1,15 @@
+---
+title: "Databases"
+author: "Kerry Back"
+date: "2025-05-15"
+draft: false
+categories: ["Python Tools"]
+image: "databases.png"  
+---
+
+![](databases.png){width=40% fig-align="center"}
+
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 
