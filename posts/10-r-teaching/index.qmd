@@ -1,14 +1,21 @@
 ---
-title: "Teaching in the Age of AI"
+title: "AI-Assisted Teaching"
 author: "Kerry Back"
 date: "2025-05-16"
-draft: false
+draft: true
 categories: ["AI Overview"]
 image: "teaching.png"  
 ---
 
 ![](teaching.png){width=40% fig-align="center"}
 
+All of academe is concerned about how to grade when AI can do assignments.  The primary purpose of grading is of course to motivate students - to encourage them to ignore the many possible distractions and spend time on scholarship.  The distractions are obviously more tempting to students when they can delegate assignments to AI.
+
+A second question is what our role should be when students can acquire information whenever they need it by asking AI.  One perspective is that our job is to tell students what they need to learn - whether we should then teach it to them or direct them to learn it by chatting with an LLM is perhaps a case-by-case decision.  Putting aside the question of motivation, we should be able to teach more effectively with AI being available, just as workers elsewhere are more efficient with AI.
+
+In trying to teach how AI can assist in financial analyses, I think I've stumbled into some understanding of how AI can assist in teaching.  I want to share one thing that I've found effective.  I frequently pose some task to students and ask them to chat with Julius to accomplish it, giving them a few minutes in class to do it.  Rice uses Canvas, which has a chat feature, so I ask them to post links to their chats in Canvas.  I then open up a few, and we discuss what the AI recommended or did in each case, and I ask other students to chime in about how their chats differed or were similar.  It occurred to me that this should be effective in many other circumstances.  For example, if I'm beginning a session on hedging, I could ask students to chat with AI about the advantages and disadvantages of hedging some risk with futures or options and to come up with a recommendation.  After discussing a few of the chats, I could "summarize" the discussion with a condensed version of the lecture that I've always given.  Now, they would not be learning from me alone.  They would also have heard the voices of AI and the voices of each other in discussing the AI recommendations, reinforcing the lesson.
+
+Maybe this suggestion will be helpful.  As to the question at the top of this post, I unfortunately have little to say.  I think the right approach is to assign more open-ended projects that require creativity, allowing AI assistance.  But, it is certainly a difficult question.  Please share your thoughts in the comments below.
 
 ---
 

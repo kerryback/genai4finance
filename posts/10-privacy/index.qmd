@@ -2,7 +2,7 @@
 title: "Apps, Data Privacy, and Dashboards"
 author: "Kerry Back"
 date: "2025-05-14"
-draft: false
+draft: true
 categories: ["Python Tools"]
 image: "dashboards.png"  
 ---
