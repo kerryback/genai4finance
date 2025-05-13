@@ -1,21 +1,15 @@
 ---
-title: "Post Title"
-description: "Post description"
-author: "Your Name"
-date: "2024-01-01"
-categories: [category1, category2]
-image: "thumbnail.png"
-format:
-  html:
-    include-in-header:
-      text: |
-        <!-- Any custom HTML/CSS needed for your website -->
-  substack:
-    output: true
+title: ""
+author: "Kerry Back"
+date: "3000-01-01"
+draft: true
+categories: []
+image: "image.png"  # You can add an image later
 ---
 
-<!-- Content here -->
+![](image.png){width=40% fig-align="center"}
 
 ---
 
-*First published on [finance-with-ai.org](https://finance-with-ai.org)* 
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* <br>
+*Also on substack at [kerryback.substack.com](https://kerryback.substack.com)*
