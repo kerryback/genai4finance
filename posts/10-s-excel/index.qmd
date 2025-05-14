@@ -1,7 +1,7 @@
 ---
 title: "Excel Bots"
 author: "Kerry Back"
-date: "2025-05-14"
+date: "2026-05-14"
 draft: true
 categories: ["AI Overview"]
 image: "excel.png"  
