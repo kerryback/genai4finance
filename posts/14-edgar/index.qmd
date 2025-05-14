@@ -9,6 +9,10 @@ image: "image.png"  # You can add an image later
 
 ![](image.png){width=40% fig-align="center"}
 
+https://www.sec.gov/search-filings,
+
+https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json
+
 This spring, while Tesla was in the midst of a 50% freefall, the news media reported that Tesla insiders had been selling shares.  Here, "insiders" means individuals required to file a Form 4 with the SEC when they trade: directors, officers, and owners of very large stakes (more than 10% of outstanding shares).  This was a good motivation for beginning to look at scraping the SEC EDGAR site.  I will look at scraping corporate financial statements in a later post.  Financial statements are complicated, because there are different levels of aggregation of reported items that can be applied.  Form 4's are more straightforward.  
 
 It's useful to work through finding Form 4's manually before explaining how to automate it with AI.  Starting at the [EDGAR home page](https://www.sec.gov/search-filings), we can type "Tesla" in the search window, which brings up a dropdown menu showing 15 companies with "Tesla" in their names, some of which are probably subsidiaries.  The ticker TSLA appears beside the name Tesla, Inc., so it is the one we want.  The menu also shows the CIK (Central Index Key) which is the ID used for a company throughout EDGAR.  Selecting TSLA from this menu brings us to the homepage for TSLA on EDGAR.  Selecting "View Filings" here brings us to a page that lists TSLA filings.  We want to choose "Insider Transactions" from the dropdown menu at the top left.  That brings us to a page listing Form 4's, reverse ordered by date. 

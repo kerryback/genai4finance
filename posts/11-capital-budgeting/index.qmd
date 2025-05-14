@@ -1,7 +1,7 @@
 ---
 title: "Capital Budgeting"
 author: "Kerry Back"
-date: "2025-05-18"
+date: "2025-05-15"
 draft: true
 categories: []
 image: "capital-budgeting.png"  # You can add an image later
