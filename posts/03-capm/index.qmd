@@ -9,7 +9,7 @@ image: "capm.png"  # You can add an image later
 
 ![](capm.png){width=40% fig-align="center"}
 
-Calculating betas is another easy exercise to do with Julius.  We can also estimate the market risk premium, and we can get the risk-free rate from FRED, so we can estimate the cost of equity capital according to the CAPM.  This exercise provides the opportunity to explore [Ken French's data library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) while getting market excess returns and risk-free rates.
+Calculating betas is an easy exercise to do with Julius.  We can also estimate the market risk premium, and we can get the risk-free rate from FRED, so we can estimate the cost of equity capital according to the CAPM.  This exercise provides the opportunity to explore [Ken French's data library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) while getting market excess returns and risk-free rates.
 
 A big advantage of using AI is that things can be automated.  A student this spring told me that a friend of his in the finance industry had just used AI to reduce the time required for a certain task he often had to do from two days to two hours.  There are many stories like that.  To illustrate automation in a simple setting, I use the CAPM calculation to show how PowerPoint decks can be created with AI + python.  In a future post, I will explain how to use AI + python to build a web app that estimates a beta, calculates the cost of equity, and generates a PowerPoint deck - the user only has to input a ticker.  And, the builder of the app only has to chat with Julius.
 
