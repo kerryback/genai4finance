@@ -1,0 +1,24 @@
+---
+title: "Building Stuff"
+author: "Kerry Back"
+date: "2025-05-07"
+categories: ["Finance", "Python Tools"]
+draft: false
+image: "building.png"  # You can add an image later
+---
+
+![](building.png){width=40% fig-align="center"}
+
+A big advantage of coding (and using AI to write code) is that things can be automated.  A student this spring told me that a friend of his in the finance industry had just used AI to reduce the time required for a certain task he often had to do from two days to two hours.  There are many stories like that.  To illustrate automation in a simple setting, we can use the [CAPM calculation](https://finance-with-ai.org/posts/04-capm) to show how PowerPoint decks can be created with AI + python.  
+
+PowerPoint decks can be created in python with the python-pptx library.  The details are not important, because the LLMs know them.  I ask Julius to create a PowerPoint deck with two slides, the first being a scatterplot representing the regression, and the second being a table showing the cost of equity calculation.  Usually, it delivers a nice looking deck without any further prompting, but you may want to fine tune it in an iterative way.  It will probably use the seaborn regplot function to produce the scatterplot with the regression line.  Sometimes it will show a confidence interval band around the regression line representing the standard errors in the coefficient estimates.  When this happens, I ask Julius to remove it, but you may have a different preference.
+
+We can also create Word docs.  It is interesting to ask for the same plot and table and for some discussion of the results to be saved as a Word doc.  Python can create Excel files, with multiple worksheets, but it can only produce tables of data.  It does not write Excel formulas into a workbook.  There are other AI tools for working with Excel files, but they are not the subject of today's post.  
+
+To truly automate the creation of the PowerPoint deck or Word doc, we can embed the code in an app that runs on our computer or in the cloud.  That will be the subject of a later post.
+
+If you try this, let us know how it goes in the comments below.
+
+---
+
+*Also on substack at [kerryback.substack.com](https://kerryback.substack.com)*

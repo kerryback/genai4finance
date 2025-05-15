@@ -1,5 +1,5 @@
 ---
-title: "CAPM and PowerPoint"
+title: "CAPM"
 author: "Kerry Back"
 date: "2025-05-06"
 categories: ["Finance", "Python Tools"]
@@ -11,8 +11,6 @@ image: "capm.png"  # You can add an image later
 
 Calculating betas is an easy exercise to do with Julius.  We can also estimate the market risk premium, and we can get the risk-free rate from FRED, so we can estimate the cost of equity capital according to the CAPM.  This exercise provides the opportunity to explore [Ken French's data library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) while getting market excess returns and risk-free rates.
 
-A big advantage of using AI is that things can be automated.  A student this spring told me that a friend of his in the finance industry had just used AI to reduce the time required for a certain task he often had to do from two days to two hours.  There are many stories like that.  To illustrate automation in a simple setting, I use the CAPM calculation to show how PowerPoint decks can be created with AI + python.  In a future post, I will explain how to use AI + python to build a web app that estimates a beta, calculates the cost of equity, and generates a PowerPoint deck - the user only has to input a ticker.  And, the builder of the app only has to chat with Julius.
-
 To estimate betas, we need stock excess returns and market excess returns.  I follow the usual academic convention of monthly returns over a 5-year period.  To get monthly stock returns we can use yfinance (see [Online Data and Visualization](https://finance-with-ai.org/posts/02-online-data/)).  To get adjusted closing prices at a monthly frequency, simply ask Julius for them (the LLM will either use period="1mo" in yf.download or it will use the pandas resample method to downsample daily prices to monthly prices).  Ask for a bit more than five years, because we may lose some months when merging with the market data.  Then compute returns as percent changes.
 
 To get market excess returns and the risk-free rate, we can use  French's data library.  It's interesting to start by asking Julius to list the datasets available in French's data library.  Then ask Julius to get the monthly three factors using pandas-datareader starting in 1926 and to compute the mean of Mkt-RF for the market risk premium estimate.  You'll want to annualize the market risk premium estimate (or you could just ask for the annual factors and the mean of annual Mkt-RF).  If you don't explicitly ask for pandas-datareader to be used, the LLM may write code to directly read the csv files on French's website into pandas dataframes, which doesn't work well, because each file contains text and contains multiple tables (monthly, annual, etc.).
@@ -20,10 +18,6 @@ To get market excess returns and the risk-free rate, we can use  French's data l
 To estimate betas, we want to first do an inner merge of the Fama-French data with the stock return data.  There are two issues.  First, the stock return data will be in decimals and the Fama-French data is in percents.  The LLM will probably notice that, but it is good to explicitly ask to convert the stock returns to percents or the Fama-French data to decimals (your choice).  The second issue is that the dates will be in different formats.  Pandas-datareader will return the Fama-French dates in what is called the pandas period format, whereas the stock return format will be in the pandas timestamp format.  Julius will figure this out also, but it may speed up the merge to warn it that the date formats will need to be reconciled.  Once the data is merged, keep the last 60 months for which there are no missing data, calculate excess stock returns by subtracting RF (which is in the Fama-French three factor dataset), and then ask Julius to run the regression.
 
 Once the beta is estimated, the final step is to get the current risk-free rate.  I ask Julius to get the latest value of the three-month T-bill yield from FRED, but it can get different rates if you prefer something else.  At this point, you can just ask Julius to compute the cost of equity.  The LLMs know the CAPM formula.
-
-PowerPoint decks can be created in python with the python-pptx library.  The details are not important, because the LLMs know them.  I like to ask Julius to create a PowerPoint deck with two slides, the first being a scatterplot representing the regression, and the second being a table showing the cost of equity calculation.  Usually, it delivers a nice looking deck without any further prompting, but you may want to fine tune it in an iterative way.  It will probably use the seaborn regplot function to produce the scatterplot with the regression line.  Sometimes it will show a confidence interval band around the regression line representing the standard errors in the coefficient estimates.  When this happens, I ask Julius to remove it, but you may have a different preference.
-
-If you try this, let us know how it goes in the comments below.
 
 ---
 

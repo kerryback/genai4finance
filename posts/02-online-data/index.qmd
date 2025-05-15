@@ -14,6 +14,7 @@ Yahoo Finance computes dividend and split adjusted closing prices.  We can compu
 
 A more complex but also more transparent solution to the Close/Adj Close confusion is to prompt the LLM to use the yfinance download function with auto_adjust set to False (this was the old behavior) and to get both the "Close" and "Adj Close."  Percent changes in "Adj Close" are what you want for returns.  To show students the difference between the two, you could ask for percent changes in both and then filter to dates where the percent changes differ by more than 0.00001 or so.  Those dates will be the ex-dividend days.  The difference between the two percent changes on those days is the quarterly dividend yield.
 
+An additional wrinkle with yfinance is that older versions have recently been return "rate limit" errors.  Ask Julius to upgrade yfinance is you encounter that.
 
 [FRED](https://fred.stlouisfed.org/) (Federal Reserve Economic Data) is a standard source for macroeconomic data, including GDP, exchange rates, Treasury and corporate bond yields, crude oil prices, etc.  The pandas-datareader library is the best python library for accessing FRED.  We can go to the FRED website and find the data we want, but Julius is quicker.  For example, "get the history of 10-year Treasury yields from FRED using pandas-datareader at a daily frequency and plot them."  In subsequent posts, we'll explore other online data, including Ken French's data library and the SEC EDGAR site.
 
