@@ -51,7 +51,6 @@ messages = [
         
         # Check for quit command
         if user_input.lower() == 'quit':
-            print("Oodbye-gay! 🐷")
             break
         
     # Add user message to history
