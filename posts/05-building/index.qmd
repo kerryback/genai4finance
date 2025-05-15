@@ -2,7 +2,7 @@
 title: "Building Stuff"
 author: "Kerry Back"
 date: "2025-05-07"
-categories: ["Finance", "Python Tools"]
+categories: ["Python Tools"]
 draft: false
 image: "building.png"  # You can add an image later
 ---
@@ -17,7 +17,6 @@ We can also create Word docs.  It is interesting to ask for the same plot and ta
 
 To truly automate the creation of the PowerPoint deck or Word doc, we can embed the code in an app that runs on our computer or in the cloud.  That will be the subject of a later post.
 
-If you try this, let us know how it goes in the comments below.
 
 ---
 

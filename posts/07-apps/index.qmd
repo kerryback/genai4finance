@@ -13,7 +13,7 @@ After the last session of my class in the spring, a student came up to me and sa
 
 A significant upside to app creation is that it makes the code permanent.  Using AI + python to do a task repeatedly runs into the issue that there is some randomness in LLM code generation.  The code will not be exactly the same each time.  Given that it is important to verify that the code is correct (for example, by running it on small examples), this poses a problem.  Putting working code in an app avoids this problem.  It also makes the process of using the code simpler - there is no need to write a prompt each time.
 
-Another important feature of app creation is that it enables us to ensure data privacy.  By creating an app that is run locally, we can avoid ever exposing our data.  We can use a small artificial dataset when creating the app, and then we can run the app on the real data on our own computer, even if it were disconnected from the internet.
+Another important feature of app creation is that it enables us to ensure data privacy.  By creating an app that is run locally, we can avoid ever exposing our data.  We can use a small artificial dataset when creating the app, and then we can run the app on the real data on our own computer, even if it is disconnected from the internet.
 
 The streamlit, gradio, and dash libraries allow us to create web apps using only python code.  The libraries provide python wrappers around  HTML, CSS, and JavaScript.  AI allows us to create web apps using those libraries just by prompting, because LLMs know the streamlit, gradio, and dash syntax.  There are other tools (like [Replit](https://replit.com/)) that directly take user prompts and write HTML, CSS, and JavaScript as well as python.  I show students Replit but stick primarily with Julius and streamlit or gradio.
 
@@ -29,7 +29,7 @@ Once the app is running on your computer, there is an option to deploy it in the
 
 Cloud deployment is often unnecessary.  If someone creates an app to automate a task, they do not need to deploy it in the cloud. They can simply run it on their own computer each time they need to perform the task.  
 
-Creating apps is not the first thing I would do in a course, because running an app either locally or in the cloud does take a few extra steps.  But, when students begin to get bored because everything is too easy when AI does all of the work, then creating apps is a good way to rekindle interest.  Post in the comments below to let us know how it goes if you try it or to let us know if this post omits some good app-creation options.
+Creating apps is not the first thing I would do in a course, because running an app either locally or in the cloud does take a few extra steps.  But, I think it is an important thing to show students at some point.  Post in the comments below to let us know how it goes if you try it or to let us know if this post omits some good app-creation options.
 
 ---
 
