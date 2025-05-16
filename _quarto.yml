@@ -22,7 +22,6 @@ site:
   navbar:
     title: ""
     logo: "teaching_finance_with_ai_logo.png"
-    background: primary
     right:
       - text: "About"
         href: about.qmd
