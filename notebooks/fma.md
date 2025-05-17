@@ -1,15 +1,4 @@
----
-title: "AI-Assisted Financial Analysis"
-author:
-  - name: Kerry Back
-    affiliations:
-      - name: Rice University
-        department: J. Howard Creekmore Professor of Finance and Professor of Economics
-format: 
-  pdf:
-    fontsize: 12pt
-    linestretch: 1.5
----
+
 
 I believe that one of the most important things we can teach business students today is how they can use AI to be more efficient in the workplace.
 I created a half-semester MBA course at the Jones Graduate School of Business called [AI-Assisted Financial Analysis](https://mgmt675-2025.kerryback.com/). I created the course in Spring 2024 and delivered it again, with substantial revisions, in Spring 2025.  The course caps a first-year sequence of finance courses at Rice:
@@ -33,7 +22,7 @@ The platform that is currently best suited for teaching this course is [Julius.a
 My course is hands-on.  I do some live chatting with Julius in class.  We also have breakout sessions where students work on group projects.  I also often ask students during class to chat for ten minutes with Julius to do some analysis.  I then ask them to share links to their chats,  and we all look at some of them.  This generates an active discussion about the underlying finance topic, the AI chat experience, and the AI model's performance.  
 
 In addition to "AI + coding," I also cover
-generative AI more broadly.  I teach an HBS case on [implementing generative AI at Deloitte Canada](https://hbsp.harvard.edu/product/HEC382-PDF-ENG).   The general strategy for implementation involves creating a custom channel through which all employees chat with an AI model.  To complement the case, I show students that they can use Julius to create a mini version of this, namely a custom chatbot app that adds whatever context they want (e.g., "you are a business professional ...") to each prompt by a user. 
+generative AI more broadly.  I teach an HBS case on [implementing generative AI at Deloitte Canada](https://hbsp.harvard.edu/product/HEC382-PDF-ENG).   The general strategy for implementation involves creating a custom channel through which all employees chat with an AI model.  To complement the case, I show students that they can use Julius to create a mini version of this, namely a custom chatbot app that adds whatever context they want to each prompt by a user.  Another element of corporate implementation is setting up retrieval augmented generation (RAG) for corporate documents and data.  I discuss this also and show students how they can do RAG with Google's Notebook LM.
 
 I do not expect students to have any prior programming experience, but how much python to teach is an important question.  This year, I recorded python instructional videos and posted them for students.  In the future, I will start the course using [Google Colab](https://colab.research.google.com/) and provide basic instruction in python.  Google Colab is a free online JupyterLab environment that now offers very good AI coding assistance (Gemini 2.5).  In Colab, students can either type code themselves or ask the AI to generate it, providing a better environment for learning the basics of python.  Ideally, I would offer a half-semester course on python (using Google Colab) before the AI-Assisted Finance course.
 
