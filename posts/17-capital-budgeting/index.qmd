@@ -1,13 +1,13 @@
 ---
-title: "Financial Ratios"
+title: "Capital Budgeting"
 author: "Kerry Back"
-date: "2025-05-17"
+date: "2025-05-19"
 draft: true
 categories: []
-image: "dupont.png"  # You can add an image later
+image: "capital-budgeting.png"  # You can add an image later
 ---
 
-![](dupont.png){width=40% fig-align="center"}
+![](capital-budgeting.png){width=40% fig-align="center"}
 
 ---
 

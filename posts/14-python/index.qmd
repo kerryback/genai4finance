@@ -1,13 +1,13 @@
 ---
-title: "Capital Budgeting"
+title: "Teaching Python"
 author: "Kerry Back"
-date: "2025-05-15"
+date: "2025-05-16"
 draft: true
 categories: []
-image: "capital-budgeting.png"  # You can add an image later
+image: "python.png"  # You can add an image later
 ---
 
-![](capital-budgeting.png){width=40% fig-align="center"}
+![](python.png){width=40% fig-align="center"}
 
 ---
 
