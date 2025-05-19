@@ -4,10 +4,10 @@ author: "Kerry Back"
 date: "2025-05-24"
 draft: true
 categories: []
-image: "image.png"  # You can add an image later
+image: "vectors2.png"  # You can add an image later
 ---
 
-![](image.png){width=40% fig-align="center"}
+![](vectors2.png){width=40% fig-align="center"}
 
 ---
 

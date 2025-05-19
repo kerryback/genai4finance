@@ -4,10 +4,10 @@ author: "Kerry Back"
 date: "2025-05-26"
 draft: true
 categories: []
-image: "image.png"  # You can add an image later
+image: "net.png"  # You can add an image later
 ---
 
-![](image.png){width=40% fig-align="center"}
+![](net.png){width=40% fig-align="center"}
 
 ---
 

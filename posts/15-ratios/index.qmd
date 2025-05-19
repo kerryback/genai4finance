@@ -1,9 +1,9 @@
 ---
 title: "Financial Ratios"
 author: "Kerry Back"
-date: "2025-05-17"
+date: "2025-05-20"
 draft: true
-categories: []
+categories: ["Finance"]
 image: "dupont.png"  # You can add an image later
 ---
 

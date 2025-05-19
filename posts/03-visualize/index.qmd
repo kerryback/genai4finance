@@ -3,10 +3,10 @@ title: "Data Visualization"
 author: "Kerry Back"
 date: "2025-05-05"
 categories: ["Python Tools"]
-image: "visualize.png"  # You can add an image later
+image: "visualize2.png"  # You can add an image later
 ---
 
-![](visualize.png){width=40% fig-align="center"}
+![](visualize2.png){width=40% fig-align="center"}
 
 
 Python has very versatile plotting libraries.  The primary libraries are matplotlib and seaborn, but there are others - for example, plotly and other libraries create interactive html plots.  All of the standard plot types are available.  For ideas, see [here](https://matplotlib.org/stable/gallery/) for matplotlib examples and [here](https://seaborn.pydata.org/examples/index.html) for seaborn. 
