@@ -9,7 +9,7 @@ image: "capital-budgeting.png"  # You can add an image later
 
 ![](capital-budgeting.png){width=40% fig-align="center"}
 
-Spreadsheets are perfectly suited for capital budgeting exercises.  These exercises involve a minimal amount of data (data = assumptions mostly) and only basic arithmetic, and we would like to view multiple tables (balance sheet, income statement, and cash flows) simultaneously, which we can do in a spreadsheet but not easily in python.  What can AI add?
+Spreadsheets are perfectly suited for capital budgeting exercises.  Those exercises involve a minimal amount of data (data = assumptions mostly) and only basic arithmetic, and we would like to view multiple tables (balance sheet, income statement, and cash flows) simultaneously, which we can do in a spreadsheet but not easily in python.  What can AI add?
 
 I don't think there is a clear-cut answer to that question.  It is worthwhile for students to explore the question, with guidance, and then discuss whether it adds value, where it adds value, and what additional value it might add in the future as models improve.  A good starting point is to provide a basic spreadsheet template, which students likely already have from prior classes (here's [an example](https://www.dropbox.com/scl/fi/n1m8eqauggl5jb65ufxha/template.xlsx?rlkey=dvzxl86c9tafsrb9d1oyrlz30&dl=1)) and then ask students to apply it to a specific situation. I like the [Sneaker 2013](https://hbsp.harvard.edu/product/BAB166-PDF-ENG) case.  It has all of the normal features but no tricky issues like how much to charge for using existing equipment that is surplus now but might have other uses in the future.  
 
