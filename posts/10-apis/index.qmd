@@ -20,7 +20,7 @@ from openai import OpenAI
 import os
 
 # Initialize the OpenAI client with the API key
-client = OpenAI(api_key=os.environ.get('OPEN_AI_KEY'))
+client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
 
 # Send the query
 response = client.chat.completions.create(
@@ -89,7 +89,7 @@ We can get free access to a number of open source LLMs via services like [Huggin
 
 The essence of the Open Router service is that we get an API key from the provider(s) we want to use, store the key(s) at Open Router, and also get an API key from Open Router.  We direct all our API calls to Open Router, specifying an LLM to use, and Open Router forwards the calls to the LLM.  This provides a unified syntax for API calls (Open Router uses the OpenAI standard) and also unified billing (the LLM providers charge Open Router which then charges us).  For someone who is not a heavy user of API calls, the prime benefit of using Open Router is that it provides free access to many open source LLMs. 
 
-I take this discussion as an opportunity to show students [Replit](https://replit.com/~), which is an AI + coding platform focused on app creation.  Before class, as an illustration, I created a [chatbot app]((https://guardian-pulse-kerryback.replit.app/)) that scrapes headlines from [The Guardian](https://www.theguardian.com/us) and sends them to the free LLama 4 Scout model for a determination as to whether it is a good, bad, or mixed news day and then allows for additional chatting.  It is, of course, just a toy, but it is a concrete example of the chatbot creation process.  By the way, I was happy I did this before class rather than during class, because Replit experienced a frustrating amount of confusion between OPENAI_API_KEY and OPEN_ROUTER_API_KEY.  LLMs are usually very smart but can sometimes be surprisingly dumb. 
+I take this discussion as an opportunity to show students [Replit](https://replit.com/~), which is an AI + coding platform focused on app creation.  Before class, as an illustration, I created a [chatbot app](https://guardian-pulse-kerryback.replit.app/) that scrapes headlines from [The Guardian](https://www.theguardian.com/us) and sends them to the free LLama 4 Scout model for a determination as to whether it is a good, bad, or mixed news day and then allows for additional chatting.  It is, of course, just a toy, but it is a concrete example of the chatbot creation process.  By the way, I was happy I did this before class rather than during class, because Replit experienced a frustrating amount of confusion between OPENAI_API_KEY and OPEN_ROUTER_API_KEY.  LLMs are usually very smart but can sometimes be surprisingly dumb. 
 
 ---
 
