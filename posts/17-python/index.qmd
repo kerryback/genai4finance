@@ -9,6 +9,8 @@ image: "python.png"  # You can add an image later
 
 How much python should we try to teach and how should we teach it?  If students have access to a python course, before trying to do financial analysis with "AI + coding," then that is great.  They will have a higher comfort level with AI-generated code.  What if they don't?
 
+
+
 ![](python.png){width=40% fig-align="center"}
 
 ---
