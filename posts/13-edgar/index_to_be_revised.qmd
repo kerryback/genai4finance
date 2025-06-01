@@ -1,0 +1,37 @@
+---
+title: "SEC EDGAR"
+author: "Kerry Back"
+date: "2025-05-14"
+draft: false
+categories: ["Finance"]
+image: "edgar.png"  # You can add an image later
+---
+
+![](edgar.png){width=40% fig-align="center"}
+
+We can get financial statements from Yahoo Finance, but students understandably expect to get data from more professional sources.  There is no source for financial statement data that is more authoritative than [SEC EDGAR](https://www.sec.gov/search-filings), the site to which companies upload their SEC filings.  There are a number of python libraries designed to help with getting data from EDGAR, but I do not recommend them, in part because the different libraries with different syntaxes cause confusion for LLMs.
+
+A point-and-click method to find a 10-K or 10-Q is to enter a ticker at the EDGAR home page linked in the previous paragraph.  That brings up a pop-up window showing the company's CIK (Central Index Key) and the company's name.  Clicking on the company's name brings us to a home page for SEC filings for that company.  Following the links there, we can find 10-K's or 10-Q's that we can read in our browser.  I'll discuss web scraping in a future post, but, for now, I will only say that those pages are not easy for machines to read, because they are dynamically generated.
+
+Fortunately, there is an alternative.  Reading the [EDGAR API docs](https://www.sec.gov/search-filings/edgar-application-programming-interfaces), we see that we can download data by going to a specific URL in a web browser.  To get all financial statement data for a company, we go to  https://data.sec.gov/api/xbrl/companyfacts/CIKxxxxxxxxxx.json.  Here, xxxxxxxxxx should be replaced by the company's 10-digit (zero padded) CIK. 
+For example, we can get Tesla's data from
+[https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json](https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json).  
+This json file is not easy to read when opened in a browser, but it is easy for a machine to read.  All we need to do is to ask Julius to go to https://data.sec.gov/api/xbrl/companyfacts/CIKxxxxxxxxxx.json and to read the json file into a pandas dataframe.  We probably want to also ask it to separate the annual data from the quarterly data. 
+
+Julius will need the CIK to do this.  An alternative to the point-and-click method of finding a CIK described above is to go to [https://www.sec.gov/files/company_tickers.json](https://www.sec.gov/files/company_tickers.json), which contains all (ticker, CIK, company name) triplets and is again easy for a machine to read.  
+
+While playing with this, I decided to create a Streamlit app (as discussed [here](https://finance-with-ai.org/posts/07-apps/)) that encapsulates the process. With Julius' help, I created [edgar.finance-with-ai.org](https://edgar.finance-with-ai.org) that follows the steps described above to get the json file for a user-supplied ticker.  It reads the json file into a pandas dataframe, separates the 10-Q's from the 10-K's and provides download links for Excel files containing the data.  That makes it easy for students to work with the data outside of Julius and python.
+
+This EDGAR-supplied data does not come nicely formatted.  Instead, we get all of the data items that were uploaded to the SEC.  In the examples I've looked at, there are over 400 10-K items and over 200 10-Q items.  These do include the main statement components: revenue, cost of revenue, current assets, etc.  It is a good exercise for finance students to try to build "pretty" statements from these data items.
+
+There is a lot of data on the SEC EDGAR site other than financial statement data.  For example, we can get Form 4's and Schedule 13-F's there.  I'll discuss extracting other data in a future post.
+
+
+
+
+
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* <br>
+*Also on substack at [kerryback.substack.com](https://kerryback.substack.com)*
