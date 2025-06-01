@@ -35,6 +35,7 @@ site:
 
 format:
   html:
+    code-overflow: wrap
     theme:
       light: flatly
       dark: superhero
