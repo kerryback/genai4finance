@@ -7,7 +7,7 @@ categories: ["Finance"]
 image: "form4.png"  
 ---
 
-![](more-edgar.png){width=40% fig-align="center"}
+![](form4.png){width=40% fig-align="center"}
 
 
 This past spring, while Tesla was in the midst of a 50% freefall, the news media reported that Tesla insiders had been selling shares.  Here, "insiders" means individuals required to file a Form 4 with the SEC when they trade: directors, officers, and owners of very large stakes (more than 10% of outstanding shares).  This was a good motivation for scraping the SEC EDGAR website.    
