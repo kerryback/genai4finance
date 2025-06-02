@@ -23,6 +23,7 @@ Of course, an alternative to using online data is to provide data to students.  
 3.  Tell students to ask Julius to install the python library duckdb and to read only the part of the data they want from the csv file at the URL.  For example, they can say "use duckdb to read only the WMT returns."
 
 Duckdb uses SQL syntax to read the file.  We get the convenience of SQL  (you don't need to read the entire file into memory) without having to create a SQL database.  
+
 ---
 
 *Also on substack at [kerryback.substack.com](https://kerryback.substack.com)*
