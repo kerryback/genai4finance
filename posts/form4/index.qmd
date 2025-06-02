@@ -1,0 +1,50 @@
+---
+title: "Form 4's from EDGAR"
+author: "Kerry Back"
+date: "2026-06-02"
+draft: false
+categories: ["Finance"]
+image: "form4.png"  
+---
+
+![](more-edgar.png){width=40% fig-align="center"}
+
+
+This past spring, while Tesla was in the midst of a 50% freefall, the news media reported that Tesla insiders had been selling shares.  Here, "insiders" means individuals required to file a Form 4 with the SEC when they trade: directors, officers, and owners of very large stakes (more than 10% of outstanding shares).  This was a good motivation for scraping the SEC EDGAR website.    
+
+It's useful to work through finding Form 4's manually before explaining how to automate it with AI.  The EDGAR website is a bit labyrinthine, but here is one route to Form 4's.  
+
+1. Input a ticker in the search window at the [EDGAR home page](https://www.sec.gov/search-filings).  That should generate a pop-up window.
+
+2. Click on the company's name in the pop-up window.  That should bring us to a home page for SEC filings for that company.  
+
+3. Select "View Filings" at the bottom left.  
+
+4. We should now be at a page that has a dropdown menu at the top left.  The chosen item when we get to the page is "Exclude Insider Transactions."  Click the dropdown menu and select "Insider Transactions." 
+
+5.  We should now be at a page listing Form 4's, reverse ordered by date. 
+
+There are two ways to select an individual Form 4 from the Insider Transactions page.  The link "Statement of changes in beneficial ownership of securities" opens the Form 4 in our browser.  The other method is to:
+
+1. Click the link labeled "Filing"  or "Open Filing." It should take us to a page with the title "Filing Detail."
+
+2. In the center of the Filing Detail page, we should see a table with three links, having the extensions .html, .xml, and .txt, respectively.  The .xml link is the most useful for scraping.  It contains the same information as the .html link, but it is formatted in a way that is easy for machines to read (though less easy than the .html link for people to read).
+
+Fortunately, we should not need to go through all of this pointing and clicking.  We can ask Julius to do the following:
+
+1.  Go to [https://www.sec.gov/files/company_tickers.json](https://www.sec.gov/files/company_tickers.json) and find the CIK (Central Index Key) for the ticker we want.
+
+2.  Insert the ten-digit (zero-padded) CIK in the following URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik}&type=4&dateb=&owner=include&count=1000.  At that page, use Beautiful Soup to find all links that begin with "/Archives/edgar" and end with "htm."
+
+3.  For each of the links found in step 2, add "https://www.sec.gov" to the front of the URL, go to the page it links to, and find the link on that page that ends with "xml."
+
+4.  Read the .xml files into pandas dataframes and concatenate them.
+
+This may still seem complicated, but the LLM will do all of the work to code it.  Once the dataframe is created, it is simple for Julius to add up all buys and sells in, for example, the same quarter in two successive years.  Consistent with the media reports, Tesla insiders sold a lot more shares in the spring of 2025 than they did in the spring of 2024.
+
+It is yet more complicated to get income statements, etc., from the SEC EDGAR site.  There are a number of python libraries, all with similar sounding names, that are designed to work with EDGAR data.  I have not found any of the free libraries to be easy to use and to work reliably.  The [sec-api](https://sec-api.io/docs/sec-filings-render-api/python-example) package works well, but it provides only 100 free queries and is currently $55 per month afterwards.  I will explain in a future post how to get the XBRL data for financial statements from EDGAR, but that data is not easy to work with.
+
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* 

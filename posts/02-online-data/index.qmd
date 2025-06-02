@@ -19,10 +19,10 @@ A more complex but also more transparent solution to the Close/Adj Close confusi
 Of course, an alternative to using online data is to provide data to students.  For example, we can give them CRSP data instead of using Yahoo Finance.  They will then need to upload the CRSP data to Julius.  There is a way to make large CRSP/Compustat datasets available to students while uploading only a subset of the data to Julius.  This is useful because we may want to look at different tickers or different time periods or different variables in different analyses, but uploading a large dataset into Julius can be slow.  Here are the steps I follow (please share alternatives in the comments below).
 
 1.  Download the dataset from CRSP or Compustat or wherever and save it as a csv file in Dropbox.
-2.  Copy the Dropbox link to the csv file.  Change the last symbol of the URL from 0 to 1 (dl = 0 at the end of the URL means "direct link = False;" dl = 1 means "direct link = True", which is what we want).  Share the revised URL with students.
-3.  Tell students to ask Julius to install the python library duckdb and to read only the part of the data they want from the csv file at the URL.  For example, they can say "use duckdb to read only the WMT returns."
+2.  Copy the csv file's Dropbox link.  Change the last symbol of the URL from 0 to 1 (dl = 0 at the end of the URL means "direct link = False;" dl = 1 means "direct link = True", which is what we want).  Share the revised URL with students.
+3.  Tell students to ask Julius to install the python library DuckDB and to read only the part of the data they want from the csv file at the URL.  For example, they can say "use duckdb to read only the WMT returns."
 
-Duckdb uses SQL syntax to read the file.  We get the convenience of SQL  (you don't need to read the entire file into memory) without having to create a SQL database.  
+DuckDB uses SQL syntax to read the file.  We get the convenience of SQL  (we don't need to read the entire file into memory) without having to create a SQL database.  
 
 ---
 

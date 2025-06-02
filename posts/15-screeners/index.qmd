@@ -1,0 +1,19 @@
+---
+title: "Stock Screeners"
+author: "Kerry Back"
+date: "2025-05-20"
+draft: true
+categories: ["Finance"]
+image: "screener.png"  # You can add an image later
+---
+
+![](screener.png){width=40% fig-align="center"}
+
+AI + coding really shines at automating custom stock screeners.  It is easy to (i) compute financial ratios and growth rates, (ii) filter stocks based on ratios and growth rates, and (iii) do further analysis of the interesting stocks.  The results can be output to Excel, Word, or PowerPoint for further analysis or presentations.
+
+
+
+---
+
+*First published on [finance-with-ai.org](https://finance-with-ai.org)* <br>
+*Also on substack at [kerryback.substack.com](https://kerryback.substack.com)*
