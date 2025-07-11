@@ -14,7 +14,7 @@ Today, I'm departing from my usual topic of teaching and instead am going to dis
 Here's the setup for Windows users.  Mac and Linux users can skip WSL.  You need: 
 
 - Windows Subsystem for Linux (WSL)
-- VS Code based IDE (VS Code itself, Cursor, or Windsurf)
+- VS Code based IDE (VS Code, Cursor, or Windsurf)
 - Claude Pro account
 - GitHub account
 - Overleaf Pro account
