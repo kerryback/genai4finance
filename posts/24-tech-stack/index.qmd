@@ -14,10 +14,10 @@ Today, I'm departing from my usual topic of teaching and instead am going to dis
 Here's the setup for Windows users.  Mac and Linux users can skip WSL.  You need: 
 
 - Windows Subsystem for Linux (WSL)
-- a VS Code based IDE (VS Code itself, Cursor, or Windsurf)
-- A Claude Pro account
-- A GitHub account
-- An Overleaf Pro account
+- VS Code based IDE (VS Code itself, Cursor, or Windsurf)
+- Claude Pro account
+- GitHub account
+- Overleaf Pro account
 
 What can you do with this setup?  Of course, you can use Python for data handling, statistics, machine learning, visualization, and scientific computing.  You can also write and edit papers (in LaTeX) within the same application in which you write and run Python code, which I find very efficient. You can share code with co-authors using GitHub, and you can link a Github repository to Overleaf to create and sync an Overleaf project, in case you or your co-authors sometimes want to write in Overleaf.  What make this the ultimate stack is that Claude Code can manage everything.
 
