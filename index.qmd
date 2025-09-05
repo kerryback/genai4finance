@@ -1,19 +1,8 @@
 ---
 title: ""
-listing:
-  contents: 
-    - "posts/*/index.qmd"
-  sort: "date asc"
-  type: default
-  categories: true
-  feed: true
-  sort-ui: true
-  filter-ui: false
-  image-align: left
-  image-height: "8em"
+
 page-layout: full
 title-block-banner: false
 ---
 
-Follow on [Substack](https://kerryback.substack.com)
-<br><br><br>
+just testing

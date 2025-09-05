@@ -3,18 +3,20 @@ project:
   output-dir: docs
   resources:
     - CNAME
-    - teaching_finance_with_ai_logo.png
-
+  
 site:
   title: "Teaching Finance with AI"
   site-url: https://finance-with-ai.org
   description: "Teaching the use of generative AI in finance"
+
+
   navbar:
     title: ""
     logo: "teaching_finance_with_ai_logo.png"
     right:
-      - text: "Blog"
+      - text: Blog
         href: https://blog.finance-with-ai.org
+  
 
 format:
   html:
@@ -23,3 +25,10 @@ format:
       dark: superhero
     css: styles.css
     toc: true
+
+execute:
+  freeze: auto
+
+
+
+ 

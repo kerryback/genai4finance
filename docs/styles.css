@@ -1,0 +1,23 @@
+
+/* Styles for both themes */
+.navbar {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.navbar-brand img {
+    max-height: 75px;  /* Set logo height to 200px */
+    width: auto;
+    /*margin-top: -1rem;  /* Adjust vertical position if needed */
+    /*margin-bottom: -1rem;
+}
+
+/* Light theme specific styles */
+[data-theme="light"] .navbar-brand img {
+    filter: none;  /* or adjust as needed for light theme */
+}
+
+/* Dark theme specific styles */
+[data-theme="dark"] .navbar-brand img {
+    filter: brightness(0.9);  /* slightly dim for dark theme */
+} 
