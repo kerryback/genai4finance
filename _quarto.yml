@@ -6,15 +6,14 @@ project:
     - teaching_finance_with_ai_logo.png
 
 site:
-  title: "Teaching Finance with AI"
+  title: ""
   site-url: https://finance-with-ai.org
   description: "Teaching the use of generative AI in finance"
   navbar:
-    title: ""
     logo: "teaching_finance_with_ai_logo.png"
     right:
-      - text: "Blog"
-        href: https://blog.finance-with-ai.org
+      - icon: substack
+        href: https://kerryback.substack.com
 
 format:
   html:

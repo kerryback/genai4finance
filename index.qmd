@@ -5,4 +5,66 @@ page-layout: full
 title-block-banner: false
 ---
 
-just testing
+## Introduction
+
+The purpose of this site is to share some experiences and thoughts about teaching MBA  students how generative AI can be used in the financial industry and how they can use it to be more efficient in the workplace.  We are all learning this on the fly, and of course things are evolving very quickly, so I'm hoping that sharing will be useful.  I invite everyone to share in the comment section below.  
+
+I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year.  For the most part, I do not teach new financial concepts in the course, because we have other courses for those.  However, I try to reinforce students' understanding of concepts they have already seen by approaching them with a different tool (AI + coding).  The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an 'Applied Finance' course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets.  I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.
+
+## Course Intro
+
+A good demonstration at the start of a course on Finance with AI is to upload a company's annual report to ChatGPT (or a different chatbot) and ask it for an investment analysis in the form of a Word document.  You can ask the chatbot to include the following:
+
+- a summary of the annual report 
+- a comparison of the firm to peer firms
+- a two-stage DCF analysis formed by extrapolating trends 
+- a sensitivity analysis focused on the items for which extrapolation might be most unreasonable 
+- a buy/hold/sell recommendation 
+
+This example illustrates the power of AI 'out of the box' for financial analysis.  It also explains why we are seeing so many stories about the demise of junior financial analysts.  Of course, the AI is not perfect.  We can engage our students in a discussion of how the report can be improved.  Collect the responses and use them later in the course to design a custom chatbot that produces better investment reports.  Students who can do that will bring real value to the companies they join.
+
+## Main Topics 
+
+My course is focused on three topics, each of which builds on the previous one and each of which culminates in a group project requirement.
+
+1. Using AI to write code for financial analysis, visualization, and report generation
+2. Using AI to create apps to automate the above
+3. Using AI to create custom chatbots for the above 
+
+The first two topics comprise roughly the first three weeks of the course, and the last half of the course is dedicated to the third topic.  
+
+## Tools
+
+Currently, the best tool for my course is Google Colab.  It is free Python environment in the cloud and has built-in Gemini assistance.  There is no software to install, so there is no set-up required.  Students need a little instruction in how to navigate Jupyter notebooks.  I'll say more about that below.
+
+In previous years, I used [Julius.ai](https://julius.ai).  It is a bit simpler to use, because it simple chatbot interface rather than a Jupyter notebook See my [blog post about Julius](https://kerryback.substack.com/p/07-mean-variance-analysis).  It also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini.  However, while Anthropic's Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice.  Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud. 
+
+## First Topic: Writing Code
+
+Two good exercises for the first topic are mean-variance analysis and CAPM cost of capital calculations.  We could demo one of them and assign the other.  AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis.  We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data), [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
+
+There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualizations](https://kerryback.substack.com/p/03-visualize).    
+
+There is a lot that could be done on option pricing if students have seen options already.  As remarked above, I teach a first-year class, and I can't preempt what will be taught to second-year students.  Except for that issue, I would certainly spend some time on options.
+
+## Second Topic: Building Apps
+
+Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  I posted about creating apps [here](https://substack.com/home/post/p-163644611).
+
+Streamlit apps can be deployed to the cloud from Google Colab using the free ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
+and get an [authorization token](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
+
+Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment.  It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex.  The best solution I have found is to install [Claude Code](https://www.anthropic.com/claude-code) and ask it to do it. However, students will need assistance even to install and use Claude Code.  See my discussion of that [here](https://substack.com/home/post/p-163644611).  
+
+## Third Topic: Building Chatbots
+
+Custom chatbots require 
+
+- A user interface in which users can enter prompts and see responses, perhaps with the facilities to upload documents and download results 
+- An API connection to an LLM
+- A process to customize user prompts by including additional information and instructions to each prompt
+
+The user interface can be a Streamlit app deployed by Colab with ngrok, so the lessons learned in the second part of the course carry over here.  
+
+The API connection can be to OpenAI,Gemini, Claude, or any other LLM.  
+

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index</title>
+<title>Running Streamlit on Google Colab with pyngrok – Teaching Finance with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -248,6 +283,9 @@ ul.task-list li input[type="checkbox"] {
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./teaching_finance_with_ai_logo.png" alt="" class="navbar-logo">
     </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Teaching Finance with AI</span>
+    </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -269,88 +307,101 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#course-intro" id="toc-course-intro" class="nav-link" data-scroll-target="#course-intro">Course Intro</a></li>
-  <li><a href="#main-topics" id="toc-main-topics" class="nav-link" data-scroll-target="#main-topics">Main Topics</a></li>
-  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
-  <li><a href="#first-topic-writing-code" id="toc-first-topic-writing-code" class="nav-link" data-scroll-target="#first-topic-writing-code">First Topic: Writing Code</a></li>
-  <li><a href="#second-topic-building-apps" id="toc-second-topic-building-apps" class="nav-link" data-scroll-target="#second-topic-building-apps">Second Topic: Building Apps</a></li>
-  <li><a href="#third-topic-building-chatbots" id="toc-third-topic-building-chatbots" class="nav-link" data-scroll-target="#third-topic-building-chatbots">Third Topic: Building Chatbots</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Running Streamlit on Google Colab with pyngrok</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The purpose of this site is to share some experiences and thoughts about teaching MBA students how generative AI can be used in the financial industry and how they can use it to be more efficient in the workplace. We are all learning this on the fly, and of course things are evolving very quickly, so I’m hoping that sharing will be useful. I invite everyone to share in the comment section below.</p>
-<p>I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year. For the most part, I do not teach new financial concepts in the course, because we have other courses for those. However, I try to reinforce students’ understanding of concepts they have already seen by approaching them with a different tool (AI + coding). The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an ‘Applied Finance’ course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets. I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.</p>
-</section>
-<section id="course-intro" class="level2">
-<h2 class="anchored" data-anchor-id="course-intro">Course Intro</h2>
-<p>A good demonstration at the start of a course on Finance with AI is to upload a company’s annual report to ChatGPT (or a different chatbot) and ask it for an investment analysis in the form of a Word document. You can ask the chatbot to include the following:</p>
-<ul>
-<li>a summary of the annual report</li>
-<li>a comparison of the firm to peer firms</li>
-<li>a two-stage DCF analysis formed by extrapolating trends</li>
-<li>a sensitivity analysis focused on the items for which extrapolation might be most unreasonable</li>
-<li>a buy/hold/sell recommendation</li>
-</ul>
-<p>This example illustrates the power of AI ‘out of the box’ for financial analysis. It also explains why we are seeing so many stories about the demise of junior financial analysts. Of course, the AI is not perfect. We can engage our students in a discussion of how the report can be improved. Collect the responses and use them later in the course to design a custom chatbot that produces better investment reports. Students who can do that will bring real value to the companies they join.</p>
-</section>
-<section id="main-topics" class="level2">
-<h2 class="anchored" data-anchor-id="main-topics">Main Topics</h2>
-<p>My course is focused on three topics, each of which builds on the previous one and each of which culminates in a group project requirement.</p>
-<ol type="1">
-<li>Using AI to write code for financial analysis, visualization, and report generation</li>
-<li>Using AI to create apps to automate the above</li>
-<li>Using AI to create custom chatbots for the above</li>
-</ol>
-<p>The first two topics comprise roughly the first three weeks of the course, and the last half of the course is dedicated to the third topic.</p>
-</section>
-<section id="tools" class="level2">
-<h2 class="anchored" data-anchor-id="tools">Tools</h2>
-<p>Currently, the best tool for my course is Google Colab. It is free Python environment in the cloud and has built-in Gemini assistance. There is no software to install, so there is no set-up required. Students need a little instruction in how to navigate Jupyter notebooks. I’ll say more about that below.</p>
-<p>In previous years, I used <a href="https://julius.ai">Julius.ai</a>. It is a bit simpler to use, because it simple chatbot interface rather than a Jupyter notebook See my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. It also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
-</section>
-<section id="first-topic-writing-code" class="level2">
-<h2 class="anchored" data-anchor-id="first-topic-writing-code">First Topic: Writing Code</h2>
-<p>Two good exercises for the first topic are mean-variance analysis and CAPM cost of capital calculations. We could demo one of them and assign the other. AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis. We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments. See my blog posts about <a href="https://kerryback.substack.com/p/02-online-data">getting data from Yahoo Finance</a>, <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">mean-variance analysis</a>, and <a href="https://kerryback.substack.com/p/04-capm-cost-of-capital">calculating the cost of capital</a>.</p>
-<p>There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line. AI can write python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations. See this post about <a href="https://kerryback.substack.com/p/05-building">generating Word docs and PowerPoint decks</a> and this post about <a href="https://kerryback.substack.com/p/03-visualize">visualizations</a>.</p>
-<p>There is a lot that could be done on option pricing if students have seen options already. As remarked above, I teach a first-year class, and I can’t preempt what will be taught to second-year students. Except for that issue, I would certainly spend some time on options.</p>
-</section>
-<section id="second-topic-building-apps" class="level2">
-<h2 class="anchored" data-anchor-id="second-topic-building-apps">Second Topic: Building Apps</h2>
-<p>Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform. The Python Streamlit library makes app construction easy. The same is true of the Gradio library apparently, but I only have experience with Streamlit. I posted about creating apps <a href="https://substack.com/home/post/p-163644611">here</a>.</p>
-<p>Streamlit apps can be deployed to the cloud from Google Colab using the free ngrok service. Students will need to create free accounts at <a href="https://ngrok.com">ngrok</a> and get an <a href="https://dashboard.ngrok.com/get-started/your-authtoken">authorization token</a>. They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that). Then, they can tell Gemini to deploy apps using ngrok.</p>
-<p>Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment. It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex. The best solution I have found is to install <a href="https://www.anthropic.com/claude-code">Claude Code</a> and ask it to do it. However, students will need assistance even to install and use Claude Code. See my discussion of that <a href="https://substack.com/home/post/p-163644611">here</a>.</p>
-</section>
-<section id="third-topic-building-chatbots" class="level2">
-<h2 class="anchored" data-anchor-id="third-topic-building-chatbots">Third Topic: Building Chatbots</h2>
-<p>Custom chatbots require</p>
-<ul>
-<li>A user interface in which users can enter prompts and see responses, perhaps with the facilities to upload documents and download results</li>
-<li>An API connection to an LLM</li>
-<li>A process to customize user prompts by including additional information and instructions to each prompt</li>
-</ul>
-<p>The user interface can be a Streamlit app deployed by Colab with ngrok, so the lessons learned in the second part of the course carry over here.</p>
-<p>The API connection can be to OpenAI,Gemini, Claude, or any other LLM.</p>
+</header>
 
 
-</section>
+<div id="cell-2" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install streamlit pyngrok</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple Streamlit app</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile app.py</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>st.title(<span class="st">'Streamlit on Google Colab'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>st.write(<span class="st">'This app is running on Colab with pyngrok!'</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Add some interactive elements</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> st.slider(<span class="st">'Select a number'</span>, <span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">50</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>st.write(<span class="ss">f'You selected: </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>chart_data <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    np.random.randn(<span class="dv">20</span>, <span class="dv">3</span>),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>[<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>st.line_chart(chart_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-4" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up ngrok authentication (optional but recommended)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Get your free auth token from: https://dashboard.ngrok.com/get-started/your-authtoken</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyngrok <span class="im">import</span> ngrok</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment and add your token:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ngrok.set_auth_token('YOUR_NGROK_AUTH_TOKEN')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-5" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run Streamlit with pyngrok</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyngrok <span class="im">import</span> ngrok</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> subprocess</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> threading</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run_streamlit():</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    subprocess.run([<span class="st">'streamlit'</span>, <span class="st">'run'</span>, <span class="st">'app.py'</span>, <span class="st">'--server.port'</span>, <span class="st">'8501'</span>])</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Start Streamlit in background thread</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>thread <span class="op">=</span> threading.Thread(target<span class="op">=</span>run_streamlit)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>thread.start()</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create ngrok tunnel</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>public_url <span class="op">=</span> ngrok.<span class="ex">connect</span>(<span class="dv">8501</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="ch">\n</span><span class="ss">✅ Streamlit app is running at: </span><span class="sc">{</span>public_url<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Click the link above to access your app!'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-6" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Alternative: One-liner approach</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>streamlit run app.py <span class="op">&amp;&gt;/</span>dev<span class="op">/</span>null<span class="op">&amp;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyngrok <span class="im">import</span> ngrok</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>public_url <span class="op">=</span> ngrok.<span class="ex">connect</span>(<span class="dv">8501</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Streamlit URL: </span><span class="sc">{</span>public_url<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-7" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To kill the tunnel when done</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>ngrok.kill()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
