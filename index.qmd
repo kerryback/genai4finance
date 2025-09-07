@@ -22,7 +22,10 @@ A good demonstration at the start of a course on Finance with AI is to upload a 
 - a sensitivity analysis focused on the items for which extrapolation might be most unreasonable 
 - a buy/hold/sell recommendation 
 
-This example illustrates the power of AI 'out of the box' for financial analysis.  It also explains why we are seeing so many stories about the demise of junior financial analysts.  Of course, the AI is not perfect.  We can engage our students in a discussion of how the report can be improved.  Collect the responses and use them later in the course to design a custom chatbot that produces better investment reports.  Students who can do that will bring real value to the companies they join.
+This example illustrates the power of AI 'out of the box' for financial analysis.  It also explains why we are seeing so many stories about the potential demise of junior financial analysts.  Of course, the AI is not perfect.  We should engage our students in a discussion of how the report can be improved.  
+
+Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the LLM will have no memory of the original prompt and response^[LLMs do not actually remember past prompts and responses in a session.  Instead the record of past prompts and responses in a session is sent by a chatbot to an LLM along with each new prompt, so that the LLM can use the record of past prompts and responses when generating a new response.]), and submit the new prompt.  Compare the results.  Get students to discuss how they might further improve the new prompt.  Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report.  This is **prompt engineering,** and it leads directly into the topic of creating custom chatbots.
+
 
 ## Main Topics 
 
@@ -42,7 +45,7 @@ In previous years, I used [Julius.ai](https://julius.ai).  It is a bit simpler t
 
 ## First Topic: Writing Code
 
-Two good exercises for the first topic are mean-variance analysis and CAPM cost of capital calculations.  We could demo one of them and assign the other.  AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis.  We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data), [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
+Two good exercises for the first topic are mean-variance analysis and CAPM cost of capital calculations.  I demo the first and assign the second as a group project.  AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis.  We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data), [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
 
 There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualizations](https://kerryback.substack.com/p/03-visualize).    
 
@@ -52,7 +55,7 @@ There is a lot that could be done on option pricing if students have seen option
 
 Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  See my [blog post about creating apps](https://substack.com/home/post/p-163644611).
 
-Streamlit apps can be deployed to the cloud from Google Colab using the free ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
+Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
 and get an [authorization token](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
 
 Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment.  It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex.  The best solution I have found is to install [Claude Code](https://www.anthropic.com/claude-code) and ask it to do it. However, students will need assistance even to install and use Claude Code.  See my discussion of [setting up and installing Claude Code](https://substack.com/home/post/p-163644611).  
@@ -60,13 +63,24 @@ Deployment by ngrok is sufficient to illustrate the concept of building apps, bu
 
 ## Third Topic: Building Chatbots
 
-Custom chatbots require 
+Custom chatbots involve 
 
-- A user interface in which users can enter prompts and see responses, perhaps with the facilities to upload documents and download results 
+- A user interface
 - An API connection to an LLM
-- A process to customize user prompts by including additional information and instructions to each prompt
+- A customization of user prompts
+  - System prompt
+  - Possible retrieval of documents
+- Possible uses of tools
+- Possible fine tuning
 
-The user interface can be a Streamlit app deployed by Colab with ngrok, so the lessons learned in the second part of the course carry over here.  
+Creating a user interface is a variation of building an app and has already been essentially covered.  Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic.  Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt.  So, a simple custom chatbot of user interface + API connection + system prompt uses only techniques that students have already seen at this point.
 
-The API connection can be to OpenAI,Gemini, Claude, or any other LLM.  
+Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  It is also possible to get a free API key from [Open Router](https://openrouter.ai) and to use free open source LLMS from [Hugging Face](https://huggingface.co), so there are no charges at all.
+
+Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response.  Gemini will probably import the openai Python package even for using other LLMs, because the OpenAI API has become the standard.  The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.
+
+As a next step, students can ask Gemini to create a custom chatbot using Streamlit and ngrok.  A good example for a system prompt is to ask the LLM to respond in a foreign language.  Then, students can see that the system prompt actually works.  If the chatbot does not seem to be remembering past prompts during a session, tell Gemini to create a loop that collects all past prompts and responses and to send all past prompts and responses together with the system prompt with each new prompt.  
+
+After successfully building chatbots, students are ready to start building finance chatbots.  For a first finance chatbot, use the investment report example from the course introduction.  But, I would focus on the DCF analysis.  
+
 

@@ -320,7 +320,8 @@ ul.task-list li input[type="checkbox"] {
 <li>a sensitivity analysis focused on the items for which extrapolation might be most unreasonable</li>
 <li>a buy/hold/sell recommendation</li>
 </ul>
-<p>This example illustrates the power of AI ‘out of the box’ for financial analysis. It also explains why we are seeing so many stories about the demise of junior financial analysts. Of course, the AI is not perfect. We can engage our students in a discussion of how the report can be improved. Collect the responses and use them later in the course to design a custom chatbot that produces better investment reports. Students who can do that will bring real value to the companies they join.</p>
+<p>This example illustrates the power of AI ‘out of the box’ for financial analysis. It also explains why we are seeing so many stories about the potential demise of junior financial analysts. Of course, the AI is not perfect. We should engage our students in a discussion of how the report can be improved.</p>
+<p>Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the LLM will have no memory of the original prompt and response<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>), and submit the new prompt. Compare the results. Get students to discuss how they might further improve the new prompt. Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report. This is <strong>prompt engineering,</strong> and it leads directly into the topic of creating custom chatbots.</p>
 </section>
 <section id="main-topics" class="level2">
 <h2 class="anchored" data-anchor-id="main-topics">Main Topics</h2>
@@ -339,32 +340,47 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="first-topic-writing-code" class="level2">
 <h2 class="anchored" data-anchor-id="first-topic-writing-code">First Topic: Writing Code</h2>
-<p>Two good exercises for the first topic are mean-variance analysis and CAPM cost of capital calculations. We could demo one of them and assign the other. AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis. We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments. See my blog posts about <a href="https://kerryback.substack.com/p/02-online-data">getting data from Yahoo Finance</a>, <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">mean-variance analysis</a>, and <a href="https://kerryback.substack.com/p/04-capm-cost-of-capital">calculating the cost of capital</a>.</p>
+<p>Two good exercises for the first topic are mean-variance analysis and CAPM cost of capital calculations. I demo the first and assign the second as a group project. AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis. We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments. See my blog posts about <a href="https://kerryback.substack.com/p/02-online-data">getting data from Yahoo Finance</a>, <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">mean-variance analysis</a>, and <a href="https://kerryback.substack.com/p/04-capm-cost-of-capital">calculating the cost of capital</a>.</p>
 <p>There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line. AI can write python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations. See this post about <a href="https://kerryback.substack.com/p/05-building">generating Word docs and PowerPoint decks</a> and this post about <a href="https://kerryback.substack.com/p/03-visualize">visualizations</a>.</p>
 <p>There is a lot that could be done on option pricing if students have seen options already. As remarked above, I teach a first-year class, and I can’t preempt what will be taught to second-year students. Except for that issue, I would certainly spend some time on options.</p>
 </section>
 <section id="second-topic-building-apps" class="level2">
 <h2 class="anchored" data-anchor-id="second-topic-building-apps">Second Topic: Building Apps</h2>
 <p>Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform. The Python Streamlit library makes app construction easy. The same is true of the Gradio library apparently, but I only have experience with Streamlit. See my <a href="https://substack.com/home/post/p-163644611">blog post about creating apps</a>.</p>
-<p>Streamlit apps can be deployed to the cloud from Google Colab using the free ngrok service. Students will need to create free accounts at <a href="https://ngrok.com">ngrok</a> and get an <a href="https://dashboard.ngrok.com/get-started/your-authtoken">authorization token</a>. They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that). Then, they can tell Gemini to deploy apps using ngrok.</p>
+<p>Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service. Students will need to create free accounts at <a href="https://ngrok.com">ngrok</a> and get an <a href="https://dashboard.ngrok.com/get-started/your-authtoken">authorization token</a>. They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that). Then, they can tell Gemini to deploy apps using ngrok.</p>
 <p>Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment. It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex. The best solution I have found is to install <a href="https://www.anthropic.com/claude-code">Claude Code</a> and ask it to do it. However, students will need assistance even to install and use Claude Code. See my discussion of <a href="https://substack.com/home/post/p-163644611">setting up and installing Claude Code</a>.</p>
 </section>
 <section id="third-topic-building-chatbots" class="level2">
 <h2 class="anchored" data-anchor-id="third-topic-building-chatbots">Third Topic: Building Chatbots</h2>
-<p>Custom chatbots require</p>
+<p>Custom chatbots involve</p>
 <ul>
-<li>A user interface in which users can enter prompts and see responses, perhaps with the facilities to upload documents and download results</li>
+<li>A user interface</li>
 <li>An API connection to an LLM</li>
-<li>A process to customize user prompts by including additional information and instructions to each prompt</li>
+<li>A customization of user prompts
+<ul>
+<li>System prompt</li>
+<li>Possible retrieval of documents</li>
+</ul></li>
+<li>Possible uses of tools</li>
+<li>Possible fine tuning</li>
 </ul>
-<p>The user interface can be a Streamlit app deployed by Colab with ngrok, so the lessons learned in the second part of the course carry over here.</p>
-<p>The API connection can be to OpenAI,Gemini, Claude, or any other LLM.</p>
+<p>Creating a user interface is a variation of building an app and has already been essentially covered. Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic. Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt. So, a simple custom chatbot of user interface + API connection + system prompt uses only techniques that students have already seen at this point.</p>
+<p>Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google. They can ask any chatbot how to do it. They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys. They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course. It is also possible to get a free API key from <a href="https://openrouter.ai">Open Router</a> and to use free open source LLMS from <a href="https://huggingface.co">Hugging Face</a>, so there are no charges at all.</p>
+<p>Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response. Gemini will probably import the openai Python package even for using other LLMs, because the OpenAI API has become the standard. The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.</p>
+<p>As a next step, students can ask Gemini to create a custom chatbot using Streamlit and ngrok. A good example for a system prompt is to ask the LLM to respond in a foreign language. Then, students can see that the system prompt actually works. If the chatbot does not seem to be remembering past prompts during a session, tell Gemini to create a loop that collects all past prompts and responses and to send all past prompts and responses together with the system prompt with each new prompt.</p>
+<p>After successfully building chatbots, students are ready to start building finance chatbots. For a first finance chatbot, use the investment report example from the course introduction. But, I would focus on the DCF analysis.</p>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>LLMs do not actually remember past prompts and responses in a session. Instead the record of past prompts and responses in a session is sent by a chatbot to an LLM along with each new prompt, so that the LLM can use the record of past prompts and responses when generating a new response.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
