@@ -14,6 +14,11 @@ site:
     right:
       - icon: substack
         href: https://kerryback.substack.com
+      - icon: journal-text
+        href: https://blog.kerryback.com
+      - icon: mortarboard
+        href: https://mgmt675-2026.kerryback.com/syllabus.pdf
+        target: _blank
 
 format:
   html:

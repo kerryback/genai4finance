@@ -260,6 +260,16 @@ ul.task-list li input[type="checkbox"] {
 </i> 
 <span class="menu-text"></span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://blog.kerryback.com"> <i class="bi bi-journal-text" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mgmt675-2026.kerryback.com/syllabus.pdf" target="_blank"> <i class="bi bi-mortarboard" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -277,13 +287,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#teaching-ai-assisted-financial-analysis" id="toc-teaching-ai-assisted-financial-analysis" class="nav-link active" data-scroll-target="#teaching-ai-assisted-financial-analysis">Teaching AI-Assisted Financial Analysis</a>
+  <ul class="collapse">
   <li><a href="#course-intro" id="toc-course-intro" class="nav-link" data-scroll-target="#course-intro">Course Intro</a></li>
   <li><a href="#main-topics" id="toc-main-topics" class="nav-link" data-scroll-target="#main-topics">Main Topics</a></li>
   <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
   <li><a href="#first-topic-writing-code" id="toc-first-topic-writing-code" class="nav-link" data-scroll-target="#first-topic-writing-code">First Topic: Writing Code</a></li>
   <li><a href="#second-topic-building-apps" id="toc-second-topic-building-apps" class="nav-link" data-scroll-target="#second-topic-building-apps">Second Topic: Building Apps</a></li>
   <li><a href="#third-topic-building-chatbots" id="toc-third-topic-building-chatbots" class="nav-link" data-scroll-target="#third-topic-building-chatbots">Third Topic: Building Chatbots</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -294,11 +306,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The purpose of this site is to share some experiences and thoughts about teaching MBA students how generative AI can be used in the financial industry and how they can use it to be more efficient in the workplace. We are all learning this on the fly, and of course things are evolving very quickly, so I’m hoping that sharing will be useful. I invite everyone to share in the comment section below.</p>
+<section id="teaching-ai-assisted-financial-analysis" class="level1">
+<h1>Teaching AI-Assisted Financial Analysis</h1>
+<p>The purpose of this site is to share some experiences and thoughts about teaching MBA students how generative AI can and is being used in the financial industry and how they can leverage it to be more efficient in the workplace. We are all learning this on the fly, and of course things are evolving very quickly, so I’m hoping that sharing will be useful. I invite everyone to share in the comment section below.</p>
 <p>I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year. For the most part, I do not teach new financial concepts in the course, because we have other courses for those. However, I try to reinforce students’ understanding of concepts they have already seen by approaching them with a different tool (AI + coding). The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an ‘Applied Finance’ course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets. I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.</p>
-</section>
 <section id="course-intro" class="level2">
 <h2 class="anchored" data-anchor-id="course-intro">Course Intro</h2>
 <p>A good demonstration at the start of a course on Finance with AI is to upload a company’s annual report to ChatGPT (or a different chatbot) and ask it for an investment analysis in the form of a Word document. You can ask the chatbot to include the following:</p>
@@ -324,7 +335,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="tools" class="level2">
 <h2 class="anchored" data-anchor-id="tools">Tools</h2>
 <p>Currently, the best tool for my course is Google Colab. It is free Python environment in the cloud and has built-in Gemini assistance. There is no software to install, so there is no set-up required. Students need a little instruction in how to navigate Jupyter notebooks. I’ll say more about that below.</p>
-<p>In previous years, I used <a href="https://julius.ai">Julius.ai</a>. It is a bit simpler to use, because it simple chatbot interface rather than a Jupyter notebook See my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. It also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
+<p>In previous years, I used <a href="https://julius.ai">Julius.ai</a>. It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook See my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. It also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
 </section>
 <section id="first-topic-writing-code" class="level2">
 <h2 class="anchored" data-anchor-id="first-topic-writing-code">First Topic: Writing Code</h2>
@@ -334,9 +345,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="second-topic-building-apps" class="level2">
 <h2 class="anchored" data-anchor-id="second-topic-building-apps">Second Topic: Building Apps</h2>
-<p>Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform. The Python Streamlit library makes app construction easy. The same is true of the Gradio library apparently, but I only have experience with Streamlit. I posted about creating apps <a href="https://substack.com/home/post/p-163644611">here</a>.</p>
+<p>Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform. The Python Streamlit library makes app construction easy. The same is true of the Gradio library apparently, but I only have experience with Streamlit. See my <a href="https://substack.com/home/post/p-163644611">blog post about creating apps</a>.</p>
 <p>Streamlit apps can be deployed to the cloud from Google Colab using the free ngrok service. Students will need to create free accounts at <a href="https://ngrok.com">ngrok</a> and get an <a href="https://dashboard.ngrok.com/get-started/your-authtoken">authorization token</a>. They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that). Then, they can tell Gemini to deploy apps using ngrok.</p>
-<p>Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment. It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex. The best solution I have found is to install <a href="https://www.anthropic.com/claude-code">Claude Code</a> and ask it to do it. However, students will need assistance even to install and use Claude Code. See my discussion of that <a href="https://substack.com/home/post/p-163644611">here</a>.</p>
+<p>Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment. It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex. The best solution I have found is to install <a href="https://www.anthropic.com/claude-code">Claude Code</a> and ask it to do it. However, students will need assistance even to install and use Claude Code. See my discussion of <a href="https://substack.com/home/post/p-163644611">setting up and installing Claude Code</a>.</p>
 </section>
 <section id="third-topic-building-chatbots" class="level2">
 <h2 class="anchored" data-anchor-id="third-topic-building-chatbots">Third Topic: Building Chatbots</h2>
@@ -350,6 +361,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The API connection can be to OpenAI,Gemini, Claude, or any other LLM.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

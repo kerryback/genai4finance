@@ -5,9 +5,10 @@ page-layout: full
 title-block-banner: false
 ---
 
-## Introduction
 
-The purpose of this site is to share some experiences and thoughts about teaching MBA  students how generative AI can be used in the financial industry and how they can use it to be more efficient in the workplace.  We are all learning this on the fly, and of course things are evolving very quickly, so I'm hoping that sharing will be useful.  I invite everyone to share in the comment section below.  
+# Teaching AI-Assisted Financial Analysis
+
+The purpose of this site is to share some experiences and thoughts about teaching MBA  students how generative AI can and is being used in the financial industry and how they can leverage it to be more efficient in the workplace.  We are all learning this on the fly, and of course things are evolving very quickly, so I'm hoping that sharing will be useful.  I invite everyone to share in the comment section below.  
 
 I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year.  For the most part, I do not teach new financial concepts in the course, because we have other courses for those.  However, I try to reinforce students' understanding of concepts they have already seen by approaching them with a different tool (AI + coding).  The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an 'Applied Finance' course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets.  I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.
 
@@ -37,7 +38,7 @@ The first two topics comprise roughly the first three weeks of the course, and t
 
 Currently, the best tool for my course is Google Colab.  It is free Python environment in the cloud and has built-in Gemini assistance.  There is no software to install, so there is no set-up required.  Students need a little instruction in how to navigate Jupyter notebooks.  I'll say more about that below.
 
-In previous years, I used [Julius.ai](https://julius.ai).  It is a bit simpler to use, because it simple chatbot interface rather than a Jupyter notebook See my [blog post about Julius](https://kerryback.substack.com/p/07-mean-variance-analysis).  It also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini.  However, while Anthropic's Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice.  Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud. 
+In previous years, I used [Julius.ai](https://julius.ai).  It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook See my [blog post about Julius](https://kerryback.substack.com/p/07-mean-variance-analysis).  It also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini.  However, while Anthropic's Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice.  Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud. 
 
 ## First Topic: Writing Code
 
@@ -49,12 +50,13 @@ There is a lot that could be done on option pricing if students have seen option
 
 ## Second Topic: Building Apps
 
-Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  I posted about creating apps [here](https://substack.com/home/post/p-163644611).
+Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  See my [blog post about creating apps](https://substack.com/home/post/p-163644611).
 
 Streamlit apps can be deployed to the cloud from Google Colab using the free ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
 and get an [authorization token](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
 
-Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment.  It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex.  The best solution I have found is to install [Claude Code](https://www.anthropic.com/claude-code) and ask it to do it. However, students will need assistance even to install and use Claude Code.  See my discussion of that [here](https://substack.com/home/post/p-163644611).  
+Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment.  It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex.  The best solution I have found is to install [Claude Code](https://www.anthropic.com/claude-code) and ask it to do it. However, students will need assistance even to install and use Claude Code.  See my discussion of [setting up and installing Claude Code](https://substack.com/home/post/p-163644611).  
+
 
 ## Third Topic: Building Chatbots
 
