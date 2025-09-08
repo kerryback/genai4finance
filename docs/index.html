@@ -249,12 +249,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-intro" id="toc-course-intro" class="nav-link active" data-scroll-target="#course-intro">Course Intro</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link active" data-scroll-target="#tools">Tools</a></li>
   <li><a href="#main-topics" id="toc-main-topics" class="nav-link" data-scroll-target="#main-topics">Main Topics</a></li>
-  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
-  <li><a href="#first-topic-writing-code" id="toc-first-topic-writing-code" class="nav-link" data-scroll-target="#first-topic-writing-code">First Topic: Writing Code</a></li>
-  <li><a href="#second-topic-building-apps" id="toc-second-topic-building-apps" class="nav-link" data-scroll-target="#second-topic-building-apps">Second Topic: Building Apps</a></li>
-  <li><a href="#third-topic-building-chatbots" id="toc-third-topic-building-chatbots" class="nav-link" data-scroll-target="#third-topic-building-chatbots">Third Topic: Building Chatbots</a></li>
+  <li><a href="#prompt-engineering" id="toc-prompt-engineering" class="nav-link" data-scroll-target="#prompt-engineering">1. Prompt Engineering</a></li>
+  <li><a href="#corporate-implementations-of-ai" id="toc-corporate-implementations-of-ai" class="nav-link" data-scroll-target="#corporate-implementations-of-ai">2. Corporate Implementations of AI</a></li>
+  <li><a href="#ai-generated-code" id="toc-ai-generated-code" class="nav-link" data-scroll-target="#ai-generated-code">3. AI-Generated Code</a></li>
+  <li><a href="#building-apps" id="toc-building-apps" class="nav-link" data-scroll-target="#building-apps">4. Building Apps</a></li>
+  <li><a href="#custom-chatbots" id="toc-custom-chatbots" class="nav-link" data-scroll-target="#custom-chatbots">5. Custom Chatbots</a></li>
+  <li><a href="#ai-assisted-dcf-valuation" id="toc-ai-assisted-dcf-valuation" class="nav-link" data-scroll-target="#ai-assisted-dcf-valuation">6. AI-Assisted DCF Valuation</a></li>
   <li><a href="#giscus" id="toc-giscus" class="nav-link" data-scroll-target="#giscus">Discussions</a></li>
   </ul>
 </nav>
@@ -321,8 +323,26 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <p>The purpose of this site is to share some experiences and thoughts about teaching MBA students how generative AI can and is being used in the finance industry and how they can leverage it to be more efficient in the workplace. We are all learning this on the fly, and of course things are evolving very quickly, so I’m hoping that sharing will be useful. I invite everyone to share in the comments section below.</p>
 <p>I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year. For the most part, I do not teach new financial concepts in the course, because we have other courses for those. However, I try to reinforce students’ understanding of concepts they have already seen by approaching them with a different tool (AI + coding). The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an ‘Applied Finance’ course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets. I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.</p>
-<section id="course-intro" class="level2">
-<h2 class="anchored" data-anchor-id="course-intro">Course Intro</h2>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p>Students can use any chatbot for the first part of the course. Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance. There is no software to install, so there is no set-up required. I some self-guided instructions for <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">using Google Colab and Jupyter notebooks</a>.</p>
+<p>For the last part of the course, students need an OpenAI account. They can use the free version. They will need to get an API key, for which charges are on a per-usage basis. The charges are miniscule for the experimentation that is done in the course.</p>
+<p>Previously, I used <a href="https://julius.ai">Julius.ai</a> instead of Google Colab It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook - see my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. Julius also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers several advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
+</section>
+<section id="main-topics" class="level2">
+<h2 class="anchored" data-anchor-id="main-topics">Main Topics</h2>
+<p>The course covers the following topics:</p>
+<ol type="1">
+<li>Prompt engineering</li>
+<li>Corporate implementations of AI</li>
+<li>Using AI to write code for financial analysis, visualization, and report generation</li>
+<li>Using AI to create apps to automate the above</li>
+<li>Using AI to create custom chatbots for the above</li>
+<li>In-depth study of using AI for DCF valuation of companies</li>
+</ol>
+</section>
+<section id="prompt-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-engineering">1. Prompt Engineering</h2>
 <p>A good demonstration at the start of a course on Finance with AI is to upload a company’s annual report to ChatGPT (or a different chatbot) and ask it for an investment analysis in the form of a Word document. You can ask the chatbot to include the following:</p>
 <ul>
 <li>a summary of the annual report</li>
@@ -334,35 +354,34 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>This example illustrates the power of AI ‘out of the box’ for financial analysis. It also explains why we are seeing so many stories about the potential demise of junior financial analysts. Of course, the AI is not perfect. We should engage our students in a discussion of how the report can be improved.</p>
 <p>Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the LLM will have no memory of the original prompt and response<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>), and submit the new prompt. Compare the results. Get students to discuss how they might further improve the new prompt. Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report. This is <strong>prompt engineering.</strong></p>
 </section>
-<section id="main-topics" class="level2">
-<h2 class="anchored" data-anchor-id="main-topics">Main Topics</h2>
-<p>My course is focused on three topics, each of which builds on the previous one and each of which culminates in a group project requirement.</p>
-<ol type="1">
-<li>Using AI to write code for financial analysis, visualization, and report generation</li>
-<li>Using AI to create apps to automate the above</li>
-<li>Using AI to create custom chatbots for the above</li>
-</ol>
-<p>The first two topics comprise roughly the first three weeks of the course, and the last half of the course is dedicated to the third topic.</p>
+<section id="corporate-implementations-of-ai" class="level2">
+<h2 class="anchored" data-anchor-id="corporate-implementations-of-ai">2. Corporate Implementations of AI</h2>
+<p>The HBS case about <a href="https://hbsp.harvard.edu/product/HEC382-PDF-ENG">Implementing AI at Deloitte</a> is a good foundation for a class discussion of AI implementation. It covers the issues of data privacy, compliance, client trust, reliability, biases, and employee buy-in. It also describes how Deloitte set up a custom chatbot.</p>
+<p>This widely cited <a href="https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf">MIT Study</a> is also must reading. It has been described in the media as reporting that 95% of corporate AI implementations fail. What it actually says is that only 5% of corporate AI pilots reach production, which is not quite the same thing. The reasons that most pilots are abandoned and the characteristics of successful pilots are informative. Also key is this passage: “workers from over 90% of the companies we surveyed reported regular use of personal AI tools for work tasks. In fact, almost every single person used an LLM in some form for their work.” So, AI is being widely used, despite the difficulties companies have faced in designing and implementing company-specific AI solutions.</p>
+<p>Another very interesting study is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5188231">this study</a> about the use of AI in corporate teams. The study is described by one of the authors <a href="https://www.oneusefulthing.org/p/the-cybernetic-teammate">here</a>. They conclude that, instead of thinking of AI as a tool, it should be regarded as a teammate. They find that that one person working with AI is at least as efficient as two people working in a team without AI. The most effective combination is naturally a team with AI. Interestingly, they find that AI enables workers and teams to break functional silos, performing like teams composed of individuals with diverse functional knowledge.</p>
 </section>
-<section id="tools" class="level2">
-<h2 class="anchored" data-anchor-id="tools">Tools</h2>
-<p>Currently, the best tool for my course is Google Colab. It is a free Python environment in the cloud and has built-in Gemini assistance. There is no software to install, so there is no set-up required. Students need a little instruction in how to navigate Jupyter notebooks. I’ll say more about that below.</p>
-<p>Previously, I used <a href="https://julius.ai">Julius.ai</a>. It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook - see my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. Julius also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
-</section>
-<section id="first-topic-writing-code" class="level2">
-<h2 class="anchored" data-anchor-id="first-topic-writing-code">First Topic: Writing Code</h2>
-<p>Two good exercises for the first topic are mean-variance analysis and CAPM cost of capital calculations. I demo the first and assign the second as a group project. AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis. We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments. See my blog posts about <a href="https://kerryback.substack.com/p/02-online-data">getting data from Yahoo Finance</a>, <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">mean-variance analysis</a>, and <a href="https://kerryback.substack.com/p/04-capm-cost-of-capital">calculating the cost of capital</a>.</p>
+<section id="ai-generated-code" class="level2">
+<h2 class="anchored" data-anchor-id="ai-generated-code">3. AI-Generated Code</h2>
+<p>Two good exercises for seeing how AI-generated code can be used to perform financial analysis are mean-variance analysis and CAPM cost of capital calculations. I demo the first and assign the second as a group project. AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis. We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments. See my blog posts about <a href="https://kerryback.substack.com/p/02-online-data">getting data from Yahoo Finance</a>, <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">mean-variance analysis</a>, and <a href="https://kerryback.substack.com/p/04-capm-cost-of-capital">calculating the cost of capital</a>.</p>
 <p>There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line. AI can write python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations. See this post about <a href="https://kerryback.substack.com/p/05-building">generating Word docs and PowerPoint decks</a> and this post about <a href="https://kerryback.substack.com/p/03-visualize">visualizations</a>.</p>
 <p>There is a lot that could be done on option pricing if students have seen options already. As remarked above, I teach a first-year class, and I can’t preempt what will be taught to second-year students. Except for that issue, I would certainly spend some time on options.</p>
 </section>
-<section id="second-topic-building-apps" class="level2">
-<h2 class="anchored" data-anchor-id="second-topic-building-apps">Second Topic: Building Apps</h2>
+<section id="building-apps" class="level2">
+<h2 class="anchored" data-anchor-id="building-apps">4. Building Apps</h2>
 <p>Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform. The Python Streamlit library makes app construction easy. The same is true of the Gradio library apparently, but I only have experience with Streamlit. See my <a href="https://substack.com/home/post/p-163644611">blog post about creating apps</a>.</p>
 <p>Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service. Students will need to create free accounts at <a href="https://ngrok.com">ngrok</a> and get an <a href="https://dashboard.ngrok.com/get-started/your-authtoken">authorization token</a>. They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that). Then, they can tell Gemini to deploy apps using ngrok.</p>
 <p>Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment. It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex. The best solution I have found is to install <a href="https://www.anthropic.com/claude-code">Claude Code</a> and ask it to do it. However, students will need assistance even to install and use Claude Code. See my discussion of <a href="https://substack.com/home/post/p-163644611">setting up and installing Claude Code</a>.</p>
+<p>At this point in the course, students have seen enough to compare the following ways to perform a financial analysis:</p>
+<ul>
+<li>Using Excel</li>
+<li>Asking a chatbot</li>
+<li>Using AI + coding via Google Colab’</li>
+<li>Creating and using an app</li>
+</ul>
+<p>This provides the foundation for an informative class discussion about the relative merits of each approach and the circumstances in which one approach is better than another.</p>
 </section>
-<section id="third-topic-building-chatbots" class="level2">
-<h2 class="anchored" data-anchor-id="third-topic-building-chatbots">Third Topic: Building Chatbots</h2>
+<section id="custom-chatbots" class="level2">
+<h2 class="anchored" data-anchor-id="custom-chatbots">5. Custom Chatbots</h2>
 <p>Custom chatbots involve</p>
 <ul>
 <li>A user interface</li>
@@ -375,19 +394,30 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>Possible uses of tools</li>
 <li>Possible fine tuning</li>
 </ul>
-<p>Creating a user interface is a variation of building an app and has already been essentially covered. Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic. Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt. So, a simple custom chatbot of user interface + API connection + system prompt uses only techniques that students have already seen at this point.</p>
+<p>Creating a user interface is a variation of building an app and has already been essentially covered. Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic. Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt. So, a simple custom chatbot of <strong>user interface + API connection + system prompt</strong> requires only techniques that students have already seen at this point.</p>
 <p>Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google. They can ask any chatbot how to do it. They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys. They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course. It is also possible to get a free API key from <a href="https://openrouter.ai">Open Router</a> and to use free open source LLMS from <a href="https://huggingface.co">Hugging Face</a>, so there are no charges at all.</p>
 <p>Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response. Gemini will probably import the openai Python package even for using other LLMs, because the OpenAI API has become the standard. The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.</p>
-<p>As a next step, students can ask Gemini to create a custom chatbot using Streamlit and ngrok. A good example for a system prompt is to ask the LLM to respond in a foreign language, so students can see that the system prompt actually works. It is important that Gemini build a loop in the app that collects all past prompts and responses and sends them together with the system prompt with each new prompt. If the chatbot does not seem to be remembering past prompts during a session, it is because the loop was not constructed. Students should ask Gemini to add the loop if this occurs.</p>
-<p>A good topic for creating custom chatbots is valuing a company through a DCF analysis. The ultimate goal is that a user can simply ask for a valuation of a company, and the chatbot will ask appropriate questions and generate a DCF analysis, spelling out assumptions and the reasons for them and including sensitivity analyses. There are a lot of questions that one must grapple with on the way to creating such a chatbot, and it is a great way to get students to think in more detail about how to generate pro forma statements and what assumptions are reasonable in different contexts. It is worthwhile to discuss multiple Harvard-style cases in the process of refining the chatbot’s system prompt.</p>
-<p>The assumptions that are used must ultimately be supplied by the user, but the chatbot can provide information - for example, trends in historical ratios - and ask the user to what extent the trends should be extrapolated or how they should be adjusted. Students can decide what ratios the chatbot should calculate use to generate the pro forma statements.</p>
-<p>If we use OpenAI’s API, we get access to OpenAI’s Code Interpreter tool, which is a cloud-based Python environment. It has similar functionality to Google Colab but can be run in the background, invisible to the user. The purpose of employing the Code Interpreter is to ensure that mathematical errors are not made. LLMs are still not completely reliable for mathematical calculations.</p>
-<p>An easy option for data is Yahoo Finance. Alternatively, users can be asked to upload data. It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.</p>
-<p>I treat building a valuation API as a class project that extends over multiple class sessions. It is too complex to to be presented to students as as an assignment. However, students should be able to build chatbots for mean-variance analysis or for cost of capital calculations.</p>
+<p>As a next step, students can ask Gemini in Google Colab to create a custom chatbot using Streamlit and ngrok. A good example for a system prompt is to ask the LLM to respond in a foreign language, so students can see that the system prompt actually works. It is important that Gemini build a loop in the app that collects all past prompts and responses and sends them together with the system prompt with each new prompt. If the chatbot does not seem to be remembering past prompts during a session, it is because the loop was not constructed. Students should ask Gemini to add the loop if this occurs.</p>
+<p>For a first financial chatbot, we can return to the mean-variance or cost of capital exercise. The apps created before can be recreated as chatbots, so users can ask for what they want in natural language instead of using input fields on an app. Here, I use OpenAI’s API with the Code Interpreter tool enabled. The code that performed the calculations in the app can be uploaded in the system prompt with instructions to run it with the Code Interpreter to answer the user’s questions.</p>
+<p>The mean-variance analysis and cost of capital calculations are simple examples, but they provide a good foundation to discuss the following questions.</p>
+<ul>
+<li>For what types of analyses would a custom chatbot work better than an app?</li>
+<li>For what types of analyses is it worthwhile to create a custom chatbot rather than using a standard chatbot?</li>
+</ul>
+</section>
+<section id="ai-assisted-dcf-valuation" class="level2">
+<h2 class="anchored" data-anchor-id="ai-assisted-dcf-valuation">6. AI-Assisted DCF Valuation</h2>
+<p>We started the course by asking a chatbot to do a DCF analysis. We return to the same question now with new tools in our belt. A good question to pose is: How can we best build a chatbot to assist us in valuing a company? At least a week and perhaps two weeks should be dedicated to this question.</p>
+<p>I like the HBS case <a href="https://hbsp.harvard.edu/product/W11058-PDF-ENG">Valuing Walmart 2010</a>. The approach that the case guides students to use is too simplistic, so I mostly ignore it. I like the case because everyone has some understanding of where Walmart’s value comes from, and we can have meaningful discussions of possible future growth rates.</p>
+<p>I start this part of the course by sketching a valuation analysis on the board with student input and discussion. We have to decide what ratios and growth rates we will use to generate pro forma statements and what assumptions we will make about them.</p>
+<p>After the in-class discussion, I upload the financial statements in the case to ChatGPT and ask it for a DCF valuation. Then, I read the statements into Google Colab and ask Gemini to assist with a valuation. At this point, students are prepared to discuss whether and how we can create a useful valuationassistant using an app or custom chatbot.</p>
+<p>To use the app or custom chatbot, we will need to have a data source. It is easy to get data from Yahoo Finance. Alternatively, users can be asked to upload data. It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.</p>
+<p>I assign creating a valuation assistant chatbot as the final group project for the course, worth 50% of the total grade. I require the chatbots to include a facility for uploading financial statements. Also, students must use the OpenAI API with the Code Interpreter tool enabled.</p>
+<p>I use the last class day for testing and demonstrations. I give each group the same company and data to evaluate and give them a fixed amount of time to use their assistants to attempt generate a valuation (breaking out into groups). Then, we reconvene, and each group shows the class how their tool performed, by scrolling through their chat history and explaining their process.</p>
 </section>
 <section id="giscus" class="level2">
 <h2 class="anchored" data-anchor-id="giscus">Discussions</h2>
-<p>Feel free to share your thoughts, experiences, or questions about teaching finance with AI in the comments below.</p>
+<p>Please share your thoughts, experiences, or questions about teaching AI-assisted finance in the comments below.</p>
 
 
 </section>
