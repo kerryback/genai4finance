@@ -5,7 +5,7 @@ title-block-banner: false
 ---
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="image2.png" alt="Teaching Finance with AI" style="max-width: 600px; width: 100%; height: auto;">
+  <img src="image3.png" alt="Teaching Finance with AI" style="max-width: 600px; width: 100%; height: auto;">
 </div>
 
 <div style="text-align: center; margin: 2rem 0; font-size: 1.5rem;">
