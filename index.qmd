@@ -96,7 +96,7 @@ The first two topics comprise roughly the first three weeks of the course, and t
 
 ## Tools
 
-Currently, the best tool for my course is Google Colab.  It is free Python environment in the cloud and has built-in Gemini assistance.  There is no software to install, so there is no set-up required.  Students need a little instruction in how to navigate Jupyter notebooks.  I'll say more about that below.
+Currently, the best tool for my course is Google Colab.  It is a free Python environment in the cloud and has built-in Gemini assistance.  There is no software to install, so there is no set-up required.  Students need a little instruction in how to navigate Jupyter notebooks.  I'll say more about that below.
 
 In previous years, I used [Julius.ai](https://julius.ai).  It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook See my [blog post about Julius](https://kerryback.substack.com/p/07-mean-variance-analysis).  It also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini.  However, while Anthropic's Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice.  Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud. 
 
