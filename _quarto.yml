@@ -22,10 +22,10 @@ format:
 
 comments:
   giscus:
-    repo: kerryback/ai-site
-    repo-id: R_kgDOOkPrbQ
-    category: General
-    category-id: DIC_kwDOOkPrbc4Cpylb
+    repo: kerryback/finance-and-ai
+    # repo-id: UPDATE_THIS_FROM_GISCUS_APP
+    # category: General
+    # category-id: UPDATE_THIS_FROM_GISCUS_APP
     mapping: pathname
     reactions-enabled: true
     loading: lazy
