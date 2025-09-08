@@ -15,7 +15,7 @@ title-block-banner: false
    <button id="theme-toggle" title="Toggle Light/Dark Theme" class="nav-icon" style="margin: 0 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;">
     <i class="bi bi-sun" id="theme-icon"></i>
   </button>
-  <a href="https://mgmt675-2026.kerryback.com/syllabus.pdf" target="_blank" title="Syllabus" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
+  <a href="https://mgmt675-2026.kerryback.com/MGMT675.pdf" target="_blank" title="Syllabus" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
     <i class="bi bi-mortarboard"></i>
   </a>
 </div>
