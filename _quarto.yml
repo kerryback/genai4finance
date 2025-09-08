@@ -23,9 +23,9 @@ format:
 comments:
   giscus:
     repo: kerryback/finance-and-ai
-    # repo-id: UPDATE_THIS_FROM_GISCUS_APP
-    # category: General
-    # category-id: UPDATE_THIS_FROM_GISCUS_APP
+    repo-id: R_kgDOPrZjmA
+    category: General
+    category-id: DIC_kwDOPrZjmM4CvItR
     mapping: pathname
     reactions-enabled: true
     loading: lazy
