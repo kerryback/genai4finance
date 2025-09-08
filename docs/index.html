@@ -255,6 +255,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#first-topic-writing-code" id="toc-first-topic-writing-code" class="nav-link" data-scroll-target="#first-topic-writing-code">First Topic: Writing Code</a></li>
   <li><a href="#second-topic-building-apps" id="toc-second-topic-building-apps" class="nav-link" data-scroll-target="#second-topic-building-apps">Second Topic: Building Apps</a></li>
   <li><a href="#third-topic-building-chatbots" id="toc-third-topic-building-chatbots" class="nav-link" data-scroll-target="#third-topic-building-chatbots">Third Topic: Building Chatbots</a></li>
+  <li><a href="#giscus" id="toc-giscus" class="nav-link" data-scroll-target="#giscus">Discussions</a></li>
   </ul>
 </nav>
     </div>
@@ -269,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="image2.png" alt="Teaching Finance with AI" style="max-width: 600px; width: 100%; height: auto;"></p>
 </div>
 <div style="text-align: center; margin: 2rem 0; font-size: 1.5rem;">
-<p><a href="https://blog.kerryback.com" title="Blog" class="nav-icon" style="margin: 0 1rem; text-decoration: none;"> <i class="bi bi-journal-text"></i> </a> <button id="theme-toggle" title="Toggle Light/Dark Theme" class="nav-icon" style="margin: 0 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;"> <i class="bi bi-sun" id="theme-icon"></i> </button> <a href="https://mgmt675-2026.kerryback.com/MGMT675.pdf" target="_blank" title="Syllabus" class="nav-icon" style="margin: 0 1rem; text-decoration: none;"> <i class="bi bi-mortarboard"></i> </a></p>
+<p><a href="https://blog.kerryback.com" title="Blog" class="nav-icon" style="margin: 0 1rem; text-decoration: none;"> <i class="bi bi-journal-text"></i> </a> <button id="theme-toggle" title="Toggle Light/Dark Theme" class="nav-icon" style="margin: 0 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;"> <i class="bi bi-sun" id="theme-icon"></i> </button> <a href="#giscus" title="Discussions" class="nav-icon" style="margin: 0 1rem; text-decoration: none;"> <i class="bi bi-chat-dots"></i> </a> <a href="https://mgmt675-2026.kerryback.com/MGMT675.pdf" target="_blank" title="Syllabus" class="nav-icon" style="margin: 0 1rem; text-decoration: none;"> <i class="bi bi-mortarboard"></i> </a></p>
 </div>
 <style>
 .nav-icon {
@@ -279,6 +280,10 @@ ul.task-list li input[type="checkbox"] {
 
 [data-bs-theme="dark"] .nav-icon {
   color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
 <script>
@@ -379,6 +384,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>If we use OpenAI’s API, we get access to OpenAI’s Code Interpreter tool, which is a cloud-based Python environment. It has similar functionality to Google Colab but can be run in the background, invisible to the user. The purpose of employing the Code Interpreter is to ensure that mathematical errors are not made. LLMs are still not completely reliable for mathematical calculations.</p>
 <p>An easy option for data is Yahoo Finance. Alternatively, users can be asked to upload data. It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.</p>
 <p>I treat building a valuation API as a class project that extends over multiple class sessions. It is too complex to to be presented to students as as an assignment. However, students should be able to build chatbots for mean-variance analysis or for cost of capital calculations.</p>
+</section>
+<section id="giscus" class="level2">
+<h2 class="anchored" data-anchor-id="giscus">Discussions</h2>
+<p>Feel free to share your thoughts, experiences, or questions about teaching finance with AI in the comments below.</p>
 
 
 </section>
@@ -818,10 +827,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
     script.async = true;
-    script.dataset.repo = "kerryback/ai-site";
-    script.dataset.repoId = "R_kgDOOkPrbQ";
+    script.dataset.repo = "kerryback/finance-and-ai";
+    script.dataset.repoId = "R_kgDOPrZjmA";
     script.dataset.category = "General";
-    script.dataset.categoryId = "DIC_kwDOOkPrbc4Cpylb";
+    script.dataset.categoryId = "DIC_kwDOPrZjmM4CvItR";
     script.dataset.mapping = "pathname";
     script.dataset.reactionsEnabled = "1";
     script.dataset.emitMetadata = "0";

@@ -15,6 +15,9 @@ title-block-banner: false
    <button id="theme-toggle" title="Toggle Light/Dark Theme" class="nav-icon" style="margin: 0 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;">
     <i class="bi bi-sun" id="theme-icon"></i>
   </button>
+  <a href="#giscus" title="Discussions" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
+    <i class="bi bi-chat-dots"></i>
+  </a>
   <a href="https://mgmt675-2026.kerryback.com/MGMT675.pdf" target="_blank" title="Syllabus" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
     <i class="bi bi-mortarboard"></i>
   </a>
@@ -28,6 +31,10 @@ title-block-banner: false
 
 [data-bs-theme="dark"] .nav-icon {
   color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
 
@@ -146,4 +153,8 @@ If we use OpenAI's API, we get access to OpenAI's Code Interpreter tool, which i
 
 An easy option for data is Yahoo Finance.  Alternatively, users can be asked to upload data.  It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.
 
-I treat building a valuation API as a class project that extends over multiple class sessions.  It is too complex to to be presented to students as as an assignment.  However, students should be able to build chatbots for mean-variance analysis or for cost of capital calculations.  
+I treat building a valuation API as a class project that extends over multiple class sessions.  It is too complex to to be presented to students as as an assignment.  However, students should be able to build chatbots for mean-variance analysis or for cost of capital calculations.
+
+## Discussions {#giscus}
+
+Feel free to share your thoughts, experiences, or questions about teaching finance with AI in the comments below.  

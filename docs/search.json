@@ -70,80 +70,10 @@
     "text": "I believe that one of the most important things we can teach business students today is how they can use AI to be more efficient in the workplace. I’ve started this blog and created the site finance-with-ai.org to communicate things I’ve learned about teaching MBA students at Rice University how to do financial analyses using “AI + coding” and more broadly how generative AI can and is being used in the finance industry. I will post short notes on what I’ve learned about teaching this topic and on related things I find interesting. The blog is intended to be a resource for finance instructors at the undergraduate, MBA, and MSF levels.\nThe current effectiveness of AI + coding varies somewhat between corporate finance and investments applications. Here, I lump fundamental security analysis with corporate finance. There are many topics in the investments area for which spreadsheets were never well equipped and for which spreadsheets are seldom used in practice. Previously, it was difficult to teach those topics by example, but now students can prompt an LLM to generate code for them.\nEven in capital budgeting, financial statement analysis, and pro forma financial valuation, AI is already very valuable. It is not yet ready to replace spreadsheets, but it can be a useful complement to spreadsheets. AI can be used as a collaborator – “tell me how you would do this” or “you do it your way, and I’ll do it my way, and then we can compare answers.” As the models improve, I expect the world to shift more and more to AI in lieu of spreadsheets even for corporate finance applications. Of course, Hewlett-Packard is still making the 12C financial calculator, and Microsoft will undoubtedly sell Excel for many years to come, but I think AI + coding will eventually dominate. To prepare our students for that world and to give them a leg up, we should teach them what they can do now and what may lie ahead.\nIt is hard to keep up in this rapidly evolving world. Please help by sharing with me and others in the comments.\n\nAlso on substack at kerryback.substack.com"
   },
   {
-    "objectID": "index2.html",
-    "href": "index2.html",
+    "objectID": "index.html#giscus",
+    "href": "index.html#giscus",
     "title": "",
-    "section": "",
-    "text": "The purpose of this site is to share some experiences and thoughts about teaching MBA students how generative AI can and is being used in the finance industry and how they can leverage it to be more efficient in the workplace. We are all learning this on the fly, and of course things are evolving very quickly, so I’m hoping that sharing will be useful. I invite everyone to share in the comments section below.\nI teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year. For the most part, I do not teach new financial concepts in the course, because we have other courses for those. However, I try to reinforce students’ understanding of concepts they have already seen by approaching them with a different tool (AI + coding). The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an ‘Applied Finance’ course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets. I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups."
-  },
-  {
-    "objectID": "index2.html#course-intro",
-    "href": "index2.html#course-intro",
-    "title": "",
-    "section": "Course Intro",
-    "text": "Course Intro\nA good demonstration at the start of a course on Finance with AI is to upload a company’s annual report to ChatGPT (or a different chatbot) and ask it for an investment analysis in the form of a Word document. You can ask the chatbot to include the following:\n\na summary of the annual report\na comparison of the firm to peer firms\na two-stage DCF analysis formed by extrapolating trends\na sensitivity analysis focused on the items for which extrapolation might be most unreasonable\na buy/hold/sell recommendation\n\nThis example illustrates the power of AI ‘out of the box’ for financial analysis. It also explains why we are seeing so many stories about the potential demise of junior financial analysts. Of course, the AI is not perfect. We should engage our students in a discussion of how the report can be improved.\nCompile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the LLM will have no memory of the original prompt and response1), and submit the new prompt. Compare the results. Get students to discuss how they might further improve the new prompt. Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report. This is prompt engineering."
-  },
-  {
-    "objectID": "index2.html#main-topics",
-    "href": "index2.html#main-topics",
-    "title": "",
-    "section": "Main Topics",
-    "text": "Main Topics\nMy course is focused on three topics, each of which builds on the previous one and each of which culminates in a group project requirement.\n\nUsing AI to write code for financial analysis, visualization, and report generation\nUsing AI to create apps to automate the above\nUsing AI to create custom chatbots for the above\n\nThe first two topics comprise roughly the first three weeks of the course, and the last half of the course is dedicated to the third topic."
-  },
-  {
-    "objectID": "index2.html#tools",
-    "href": "index2.html#tools",
-    "title": "",
-    "section": "Tools",
-    "text": "Tools\nCurrently, the best tool for my course is Google Colab. It is free Python environment in the cloud and has built-in Gemini assistance. There is no software to install, so there is no set-up required. Students need a little instruction in how to navigate Jupyter notebooks. I’ll say more about that below.\nIn previous years, I used Julius.ai. It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook See my blog post about Julius. It also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers the following advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud."
-  },
-  {
-    "objectID": "index2.html#first-topic-writing-code",
-    "href": "index2.html#first-topic-writing-code",
-    "title": "",
-    "section": "First Topic: Writing Code",
-    "text": "First Topic: Writing Code\nTwo good exercises for the first topic are mean-variance analysis and CAPM cost of capital calculations. I demo the first and assign the second as a group project. AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis. We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments. See my blog posts about getting data from Yahoo Finance, mean-variance analysis, and calculating the cost of capital.\nThere are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line. AI can write python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations. See this post about generating Word docs and PowerPoint decks and this post about visualizations.\nThere is a lot that could be done on option pricing if students have seen options already. As remarked above, I teach a first-year class, and I can’t preempt what will be taught to second-year students. Except for that issue, I would certainly spend some time on options."
-  },
-  {
-    "objectID": "index2.html#second-topic-building-apps",
-    "href": "index2.html#second-topic-building-apps",
-    "title": "",
-    "section": "Second Topic: Building Apps",
-    "text": "Second Topic: Building Apps\nWhatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform. The Python Streamlit library makes app construction easy. The same is true of the Gradio library apparently, but I only have experience with Streamlit. See my blog post about creating apps.\nStreamlit apps can be deployed to the cloud from Google Colab using the ngrok service. Students will need to create free accounts at ngrok and get an authorization token. They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that). Then, they can tell Gemini to deploy apps using ngrok.\nDeployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment. It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex. The best solution I have found is to install Claude Code and ask it to do it. However, students will need assistance even to install and use Claude Code. See my discussion of setting up and installing Claude Code."
-  },
-  {
-    "objectID": "index2.html#third-topic-building-chatbots",
-    "href": "index2.html#third-topic-building-chatbots",
-    "title": "",
-    "section": "Third Topic: Building Chatbots",
-    "text": "Third Topic: Building Chatbots\nCustom chatbots involve\n\nA user interface\nAn API connection to an LLM\nA customization of user prompts\n\nSystem prompt\nPossible retrieval of documents\n\nPossible uses of tools\nPossible fine tuning\n\nCreating a user interface is a variation of building an app and has already been essentially covered. Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic. Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt. So, a simple custom chatbot of user interface + API connection + system prompt uses only techniques that students have already seen at this point.\nStudents can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google. They can ask any chatbot how to do it. They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys. They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course. It is also possible to get a free API key from Open Router and to use free open source LLMS from Hugging Face, so there are no charges at all.\nOnce an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response. Gemini will probably import the openai Python package even for using other LLMs, because the OpenAI API has become the standard. The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.\nAs a next step, students can ask Gemini to create a custom chatbot using Streamlit and ngrok. A good example for a system prompt is to ask the LLM to respond in a foreign language, so students can see that the system prompt actually works. It is important that Gemini build a loop in the app that collects all past prompts and responses and sends them together with the system prompt with each new prompt. If the chatbot does not seem to be remembering past prompts during a session, it is because the loop was not constructed. Students should ask Gemini to add the loop if this occurs.\nA good topic for creating custom chatbots is valuing a company through a DCF analysis. The ultimate goal is that a user can simply ask for a valuation of a company, and the chatbot will ask appropriate questions and generate a DCF analysis, spelling out assumptions and the reasons for them and including sensitivity analyses. There are a lot of questions that one must grapple with on the way to creating such a chatbot, and it is a great way to get students to think in more detail about how to generate pro forma statements and what assumptions are reasonable in different contexts. It is worthwhile to discuss multiple Harvard-style cases in the process of refining the chatbot’s system prompt.\nThe assumptions that are used must ultimately be supplied by the user, but the chatbot can provide information - for example, trends in historical ratios - and ask the user to what extent the trends should be extrapolated or how they should be adjusted. Students can decide what ratios the chatbot should calculate use to generate the pro forma statements.\nIf we use OpenAI’s API, we get access to OpenAI’s Code Interpreter tool, which is a cloud-based Python environment. It has similar functionality to Google Colab but can be run in the background, invisible to the user. The purpose of employing the Code Interpreter is to ensure that mathematical errors are not made. LLMs are still not completely reliable for mathematical calculations.\nAn easy option for data is Yahoo Finance. Alternatively, users can be asked to upload data. It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.\nI treat building a valuation API as a class project that extends over multiple class sessions. It is too complex to to be presented to students as as an assignment. However, students should be able to build chatbots for mean-variance analysis or for cost of capital calculations."
-  },
-  {
-    "objectID": "index2.html#more-on-building-apps",
-    "href": "index2.html#more-on-building-apps",
-    "title": "",
-    "section": "More on Building Apps",
-    "text": "More on Building Apps"
-  },
-  {
-    "objectID": "index2.html#more-on-deploying-apps",
-    "href": "index2.html#more-on-deploying-apps",
-    "title": "",
-    "section": "More on Deploying Apps",
-    "text": "More on Deploying Apps"
-  },
-  {
-    "objectID": "index2.html#more-on-python",
-    "href": "index2.html#more-on-python",
-    "title": "",
-    "section": "More on Python",
-    "text": "More on Python"
-  },
-  {
-    "objectID": "index2.html#footnotes",
-    "href": "index2.html#footnotes",
-    "title": "",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nLLMs do not actually remember past prompts and responses in a session. Instead the record of past prompts and responses in a session is sent by a chatbot to an LLM along with each new prompt, so that the LLM can use the record of past prompts and responses when generating a new response.↩︎"
+    "section": "Discussions",
+    "text": "Discussions\nFeel free to share your thoughts, experiences, or questions about teaching finance with AI in the comments below."
   }
 ]
