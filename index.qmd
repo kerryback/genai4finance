@@ -1,14 +1,72 @@
 ---
 title: ""
-
 page-layout: full
 title-block-banner: false
 ---
 
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="image2.png" alt="Teaching Finance with AI" style="max-width: 600px; width: 100%; height: auto;">
+</div>
 
-# Teaching AI-Assisted Financial Analysis
+<div style="text-align: center; margin: 2rem 0; font-size: 1.5rem;">
+  <a href="https://blog.kerryback.com" title="Blog" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
+    <i class="bi bi-journal-text"></i>
+  </a>
+   <button id="theme-toggle" title="Toggle Light/Dark Theme" class="nav-icon" style="margin: 0 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;">
+    <i class="bi bi-sun" id="theme-icon"></i>
+  </button>
+  <a href="https://mgmt675-2026.kerryback.com/syllabus.pdf" target="_blank" title="Syllabus" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
+    <i class="bi bi-mortarboard"></i>
+  </a>
+</div>
 
-The purpose of this site is to share some experiences and thoughts about teaching MBA  students how generative AI can and is being used in the financial industry and how they can leverage it to be more efficient in the workplace.  We are all learning this on the fly, and of course things are evolving very quickly, so I'm hoping that sharing will be useful.  I invite everyone to share in the comment section below.  
+<style>
+.nav-icon {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .nav-icon {
+  color: #ffffff;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const htmlElement = document.documentElement;
+  
+  // Check for saved theme preference or default to 'light'
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  htmlElement.setAttribute('data-bs-theme', currentTheme);
+  
+  // Update icon based on current theme
+  function updateIcon() {
+    const theme = htmlElement.getAttribute('data-bs-theme');
+    if (theme === 'dark') {
+      themeIcon.className = 'bi bi-moon';
+    } else {
+      themeIcon.className = 'bi bi-sun';
+    }
+  }
+  
+  updateIcon();
+  
+  // Toggle theme on button click
+  themeToggle.addEventListener('click', function() {
+    const currentTheme = htmlElement.getAttribute('data-bs-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    htmlElement.setAttribute('data-bs-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateIcon();
+  });
+});
+</script>
+
+
+The purpose of this site is to share some experiences and thoughts about teaching MBA  students how generative AI can and is being used in the finance industry and how they can leverage it to be more efficient in the workplace.  We are all learning this on the fly, and of course things are evolving very quickly, so I'm hoping that sharing will be useful.  I invite everyone to share in the comments section below.  
 
 I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year.  For the most part, I do not teach new financial concepts in the course, because we have other courses for those.  However, I try to reinforce students' understanding of concepts they have already seen by approaching them with a different tool (AI + coding).  The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an 'Applied Finance' course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets.  I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.
 
@@ -24,8 +82,7 @@ A good demonstration at the start of a course on Finance with AI is to upload a 
 
 This example illustrates the power of AI 'out of the box' for financial analysis.  It also explains why we are seeing so many stories about the potential demise of junior financial analysts.  Of course, the AI is not perfect.  We should engage our students in a discussion of how the report can be improved.  
 
-Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the LLM will have no memory of the original prompt and response^[LLMs do not actually remember past prompts and responses in a session.  Instead the record of past prompts and responses in a session is sent by a chatbot to an LLM along with each new prompt, so that the LLM can use the record of past prompts and responses when generating a new response.]), and submit the new prompt.  Compare the results.  Get students to discuss how they might further improve the new prompt.  Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report.  This is **prompt engineering,** and it leads directly into the topic of creating custom chatbots.
-
+Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the LLM will have no memory of the original prompt and response^[LLMs do not actually remember past prompts and responses in a session.  Instead the record of past prompts and responses in a session is sent by a chatbot to an LLM along with each new prompt, so that the LLM can use the record of past prompts and responses when generating a new response.]), and submit the new prompt.  Compare the results.  Get students to discuss how they might further improve the new prompt.  Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report.  This is **prompt engineering.** 
 
 ## Main Topics 
 
@@ -79,8 +136,14 @@ Students can get API keys from OpenAI even with free accounts, or they can get A
 
 Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response.  Gemini will probably import the openai Python package even for using other LLMs, because the OpenAI API has become the standard.  The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.
 
-As a next step, students can ask Gemini to create a custom chatbot using Streamlit and ngrok.  A good example for a system prompt is to ask the LLM to respond in a foreign language.  Then, students can see that the system prompt actually works.  If the chatbot does not seem to be remembering past prompts during a session, tell Gemini to create a loop that collects all past prompts and responses and to send all past prompts and responses together with the system prompt with each new prompt.  
+As a next step, students can ask Gemini to create a custom chatbot using Streamlit and ngrok.  A good example for a system prompt is to ask the LLM to respond in a foreign language, so students can see that the system prompt actually works.  It is important that Gemini build a loop in the app that collects all past prompts and responses and sends them together with the system prompt with each new prompt.  If the chatbot does not seem to be remembering past prompts during a session, it is because the loop was not constructed.  Students should ask Gemini to add the loop if this occurs.
 
-After successfully building chatbots, students are ready to start building finance chatbots.  For a first finance chatbot, use the investment report example from the course introduction.  But, I would focus on the DCF analysis.  
+A good topic for creating custom chatbots is valuing a company through a DCF analysis.  The ultimate goal is that a user can simply ask for a valuation of a company, and the chatbot will ask appropriate questions and generate a DCF analysis, spelling out assumptions and the reasons for them and including sensitivity analyses.  There are a lot of questions that one must grapple with on the way to creating such a chatbot, and it is a great way to get students to think in more detail about how to generate pro forma statements and what assumptions are reasonable in different contexts.  It is worthwhile to discuss multiple Harvard-style cases in the process of refining the chatbot's system prompt.  
 
+The assumptions that are used must ultimately be supplied by the user, but the chatbot can provide information - for example, trends in historical ratios - and ask the user to what extent the trends should be extrapolated or how they should be adjusted.  Students can decide what ratios the chatbot should calculate use to generate the pro forma statements.
 
+If we use OpenAI's API, we get access to OpenAI's Code Interpreter tool, which is a cloud-based Python environment.  It has similar functionality to Google Colab but can be run in the background, invisible to the user.  The purpose of employing the Code Interpreter is to ensure that mathematical errors are not made.  LLMs are still not completely reliable for mathematical calculations.
+
+An easy option for data is Yahoo Finance.  Alternatively, users can be asked to upload data.  It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.
+
+I treat building a valuation API as a class project that extends over multiple class sessions.  It is too complex to to be presented to students as as an assignment.  However, students should be able to build chatbots for mean-variance analysis or for cost of capital calculations.  

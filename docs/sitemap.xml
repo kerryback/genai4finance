@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://finance-with-ai.org/index.html</loc>
-    <lastmod>2025-09-07T16:12:51.534Z</lastmod>
+    <lastmod>2025-09-08T03:46:25.195Z</lastmod>
   </url>
   <url>
     <loc>https://finance-with-ai.org/streamlit_colab_example.html</loc>
@@ -11,5 +11,9 @@
   <url>
     <loc>https://finance-with-ai.org/00-welcome/index.html</loc>
     <lastmod>2025-09-07T14:02:12.464Z</lastmod>
+  </url>
+  <url>
+    <loc>https://finance-with-ai.org/index2.html</loc>
+    <lastmod>2025-09-08T03:40:33.138Z</lastmod>
   </url>
 </urlset>

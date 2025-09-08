@@ -4,21 +4,13 @@ project:
   resources:
     - CNAME
     - teaching_finance_with_ai_logo.png
+    - image1.png
+    - image2.png
 
 site:
   title: ""
   site-url: https://finance-with-ai.org
   description: "Teaching the use of generative AI in finance"
-  navbar:
-    logo: "teaching_finance_with_ai_logo.png"
-    right:
-      - icon: substack
-        href: https://kerryback.substack.com
-      - icon: journal-text
-        href: https://blog.kerryback.com
-      - icon: mortarboard
-        href: https://mgmt675-2026.kerryback.com/syllabus.pdf
-        target: _blank
 
 format:
   html:
@@ -27,3 +19,15 @@ format:
       dark: superhero
     css: styles.css
     toc: true
+
+comments:
+  giscus:
+    repo: kerryback/ai-site
+    repo-id: R_kgDOOkPrbQ
+    category: General
+    category-id: DIC_kwDOOkPrbc4Cpylb
+    mapping: pathname
+    reactions-enabled: true
+    loading: lazy
+    input-position: bottom
+    theme: preferred_color_scheme 

@@ -1,15 +1,25 @@
 
 /* Styles for both themes */
 .navbar {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    min-height: 100px !important;
 }
 
-.navbar-brand img {
-    max-height: 75px;  /* Set logo height to 200px */
-    width: auto;
-    /*margin-top: -1rem;  /* Adjust vertical position if needed */
-    /*margin-bottom: -1rem;
+.navbar-brand-container {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    background: #f5f5dc !important;
+    border-radius: 10px !important;
+    padding: 0.75rem 2rem !important;
+    margin: 0 2rem !important;
+}
+
+.navbar-brand img, .navbar-logo {
+    max-height: 75px !important;
+    height: 75px !important;
+    width: auto !important;
 }
 
 /* Light theme specific styles */
