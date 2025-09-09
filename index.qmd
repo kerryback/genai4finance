@@ -79,9 +79,9 @@ I teach a six-week 18-contact-hour course to first year MBAs in the last part of
 
 ## Tools
 
-Students can use any chatbot for the first part of the course.  Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance.  There is no software to install, so there is no set-up required.  I some self-guided instructions for [using Google Colab and Jupyter notebooks](https://kerryback.substack.com/p/07-mean-variance-analysis).
+Students can use any chatbot for the first part of the course.  Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance.  There is no software to install, so there is no set-up required.  I prepared some materials to show students how to [use Google Colab](), which I cover when we get to that point.
 
-For the last part of the course, students need an OpenAI account.  They can use the free version.  They will need to get an API key, for which charges are on a per-usage basis.  The charges are miniscule for the experimentation that is done in the course.  
+For the last part of the course, students need an OpenAI account.  They can use the free version.  They will need to get an API key, for which charges are on a per-usage basis.  The charges are minimal for the experimentation that is done in the course.  
 
 Previously, I used [Julius.ai](https://julius.ai) instead of Google Colab  It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook - see my [blog post about Julius](https://kerryback.substack.com/p/07-mean-variance-analysis).  Julius also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini.  However, while Anthropic's Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice.  Furthermore, Colab offers several advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud. 
 
@@ -94,7 +94,8 @@ The course covers the following topics:
 3. Using AI to write code for financial analysis, visualization, and report generation
 4. Using AI to create apps to automate the above
 5. Using AI to create custom chatbots for the above 
-6. In-depth study of using AI for DCF valuation of companies
+6. Understanding AI agents and their capabilities
+7. In-depth study of using AI for DCF valuation of companies
  
 
 ## 1. Prompt Engineering
@@ -174,7 +175,37 @@ The mean-variance analysis and cost of capital calculations are simple examples,
 -  For what types of analyses would a custom chatbot work better than an app?
 -  For what types of analyses is it worthwhile to create a custom chatbot rather than using a standard chatbot?
 
-## 6. AI-Assisted DCF Valuation
+## 6. AI Agents
+
+An AI agent is a more sophisticated form of AI assistant that can autonomously perform complex, multi-step tasks with minimal human intervention. Unlike traditional chatbots that respond to prompts one at a time, agents can break down complex problems, create plans, execute multiple steps, use various tools, and adapt their approach based on intermediate results.
+
+### Key Characteristics of AI Agents
+
+**Autonomy**: Agents can work independently once given a goal. For example, instead of asking step-by-step how to value a company, you could tell an agent "Perform a DCF valuation of Apple" and it would autonomously gather data, perform calculations, create visualizations, and generate a report.
+
+**Tool Use**: Agents can use multiple tools and APIs. A financial analysis agent might use Yahoo Finance for data, Python for calculations, web search for industry information, and document generation tools for creating reports - all without explicit instructions for each step.
+
+**Planning and Reasoning**: Agents create and execute plans. Given a task like "Compare the financial health of three tech companies," an agent would plan the analysis approach, determine what metrics to calculate, and decide how to present the comparison.
+
+**Memory and Context**: Advanced agents maintain context across sessions and can learn from past interactions, making them more effective over time.
+
+### Examples in Finance
+
+A portfolio management agent could continuously monitor market conditions, rebalance portfolios based on predetermined criteria, generate performance reports, and alert managers to significant events - all autonomously.
+
+An earnings analysis agent could automatically retrieve quarterly reports when released, compare results to analyst expectations, identify key trends and anomalies, and draft an initial analysis report for human review.
+
+### Building Agents
+
+Students can experiment with agent frameworks like LangChain or AutoGPT using the OpenAI API. A simple agent can be created by combining:
+- A planning module that breaks down tasks
+- Tool-calling capabilities for data retrieval and calculations  
+- A execution loop that works through the plan
+- Error handling and adaptation mechanisms
+
+While we don't have time to build sophisticated agents in this course, understanding their potential is crucial as they represent the future of AI-assisted financial analysis.
+
+## 7. AI-Assisted DCF Valuation
 
 We started the course by asking a chatbot to do a DCF analysis.  We return to the same question now with new tools in our belt.  A good question to pose is: How can we best build a chatbot to assist us in valuing a company?  At least a week and perhaps two weeks should be dedicated to this question.
 

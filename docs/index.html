@@ -256,7 +256,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ai-generated-code" id="toc-ai-generated-code" class="nav-link" data-scroll-target="#ai-generated-code">3. AI-Generated Code</a></li>
   <li><a href="#building-apps" id="toc-building-apps" class="nav-link" data-scroll-target="#building-apps">4. Building Apps</a></li>
   <li><a href="#custom-chatbots" id="toc-custom-chatbots" class="nav-link" data-scroll-target="#custom-chatbots">5. Custom Chatbots</a></li>
-  <li><a href="#ai-assisted-dcf-valuation" id="toc-ai-assisted-dcf-valuation" class="nav-link" data-scroll-target="#ai-assisted-dcf-valuation">6. AI-Assisted DCF Valuation</a></li>
+  <li><a href="#ai-agents" id="toc-ai-agents" class="nav-link" data-scroll-target="#ai-agents">6. AI Agents</a>
+  <ul class="collapse">
+  <li><a href="#key-characteristics-of-ai-agents" id="toc-key-characteristics-of-ai-agents" class="nav-link" data-scroll-target="#key-characteristics-of-ai-agents">Key Characteristics of AI Agents</a></li>
+  <li><a href="#examples-in-finance" id="toc-examples-in-finance" class="nav-link" data-scroll-target="#examples-in-finance">Examples in Finance</a></li>
+  <li><a href="#building-agents" id="toc-building-agents" class="nav-link" data-scroll-target="#building-agents">Building Agents</a></li>
+  </ul></li>
+  <li><a href="#ai-assisted-dcf-valuation" id="toc-ai-assisted-dcf-valuation" class="nav-link" data-scroll-target="#ai-assisted-dcf-valuation">7. AI-Assisted DCF Valuation</a></li>
   <li><a href="#giscus" id="toc-giscus" class="nav-link" data-scroll-target="#giscus">Discussions</a></li>
   </ul>
 </nav>
@@ -325,8 +331,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year. For the most part, I do not teach new financial concepts in the course, because we have other courses for those. However, I try to reinforce students’ understanding of concepts they have already seen by approaching them with a different tool (AI + coding). The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an ‘Applied Finance’ course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets. I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.</p>
 <section id="tools" class="level2">
 <h2 class="anchored" data-anchor-id="tools">Tools</h2>
-<p>Students can use any chatbot for the first part of the course. Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance. There is no software to install, so there is no set-up required. I some self-guided instructions for <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">using Google Colab and Jupyter notebooks</a>.</p>
-<p>For the last part of the course, students need an OpenAI account. They can use the free version. They will need to get an API key, for which charges are on a per-usage basis. The charges are miniscule for the experimentation that is done in the course.</p>
+<p>Students can use any chatbot for the first part of the course. Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance. There is no software to install, so there is no set-up required. I prepared some materials to show students how to <a href="">use Google Colab</a>, which I cover when we get to that point.</p>
+<p>For the last part of the course, students need an OpenAI account. They can use the free version. They will need to get an API key, for which charges are on a per-usage basis. The charges are minimal for the experimentation that is done in the course.</p>
 <p>Previously, I used <a href="https://julius.ai">Julius.ai</a> instead of Google Colab It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook - see my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. Julius also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers several advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
 </section>
 <section id="main-topics" class="level2">
@@ -338,6 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>Using AI to write code for financial analysis, visualization, and report generation</li>
 <li>Using AI to create apps to automate the above</li>
 <li>Using AI to create custom chatbots for the above</li>
+<li>Understanding AI agents and their capabilities</li>
 <li>In-depth study of using AI for DCF valuation of companies</li>
 </ol>
 </section>
@@ -405,8 +412,30 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>For what types of analyses is it worthwhile to create a custom chatbot rather than using a standard chatbot?</li>
 </ul>
 </section>
+<section id="ai-agents" class="level2">
+<h2 class="anchored" data-anchor-id="ai-agents">6. AI Agents</h2>
+<p>An AI agent is a more sophisticated form of AI assistant that can autonomously perform complex, multi-step tasks with minimal human intervention. Unlike traditional chatbots that respond to prompts one at a time, agents can break down complex problems, create plans, execute multiple steps, use various tools, and adapt their approach based on intermediate results.</p>
+<section id="key-characteristics-of-ai-agents" class="level3">
+<h3 class="anchored" data-anchor-id="key-characteristics-of-ai-agents">Key Characteristics of AI Agents</h3>
+<p><strong>Autonomy</strong>: Agents can work independently once given a goal. For example, instead of asking step-by-step how to value a company, you could tell an agent “Perform a DCF valuation of Apple” and it would autonomously gather data, perform calculations, create visualizations, and generate a report.</p>
+<p><strong>Tool Use</strong>: Agents can use multiple tools and APIs. A financial analysis agent might use Yahoo Finance for data, Python for calculations, web search for industry information, and document generation tools for creating reports - all without explicit instructions for each step.</p>
+<p><strong>Planning and Reasoning</strong>: Agents create and execute plans. Given a task like “Compare the financial health of three tech companies,” an agent would plan the analysis approach, determine what metrics to calculate, and decide how to present the comparison.</p>
+<p><strong>Memory and Context</strong>: Advanced agents maintain context across sessions and can learn from past interactions, making them more effective over time.</p>
+</section>
+<section id="examples-in-finance" class="level3">
+<h3 class="anchored" data-anchor-id="examples-in-finance">Examples in Finance</h3>
+<p>A portfolio management agent could continuously monitor market conditions, rebalance portfolios based on predetermined criteria, generate performance reports, and alert managers to significant events - all autonomously.</p>
+<p>An earnings analysis agent could automatically retrieve quarterly reports when released, compare results to analyst expectations, identify key trends and anomalies, and draft an initial analysis report for human review.</p>
+</section>
+<section id="building-agents" class="level3">
+<h3 class="anchored" data-anchor-id="building-agents">Building Agents</h3>
+<p>Students can experiment with agent frameworks like LangChain or AutoGPT using the OpenAI API. A simple agent can be created by combining: - A planning module that breaks down tasks - Tool-calling capabilities for data retrieval and calculations<br>
+- A execution loop that works through the plan - Error handling and adaptation mechanisms</p>
+<p>While we don’t have time to build sophisticated agents in this course, understanding their potential is crucial as they represent the future of AI-assisted financial analysis.</p>
+</section>
+</section>
 <section id="ai-assisted-dcf-valuation" class="level2">
-<h2 class="anchored" data-anchor-id="ai-assisted-dcf-valuation">6. AI-Assisted DCF Valuation</h2>
+<h2 class="anchored" data-anchor-id="ai-assisted-dcf-valuation">7. AI-Assisted DCF Valuation</h2>
 <p>We started the course by asking a chatbot to do a DCF analysis. We return to the same question now with new tools in our belt. A good question to pose is: How can we best build a chatbot to assist us in valuing a company? At least a week and perhaps two weeks should be dedicated to this question.</p>
 <p>I like the HBS case <a href="https://hbsp.harvard.edu/product/W11058-PDF-ENG">Valuing Walmart 2010</a>. The approach that the case guides students to use is too simplistic, so I mostly ignore it. I like the case because everyone has some understanding of where Walmart’s value comes from, and we can have meaningful discussions of possible future growth rates.</p>
 <p>I start this part of the course by sketching a valuation analysis on the board with student input and discussion. We have to decide what ratios and growth rates we will use to generate pro forma statements and what assumptions we will make about them.</p>
