@@ -179,9 +179,9 @@ If we connect multiple tools to a chatbot, then a user can, within a single chat
 
 ## 7. AI-Assisted DCF Valuation
 
-We start the course by asking a chatbot to do a DCF analysis.  We can return to the same question now with new tools in our belt.  A good question to pose is: How can we best build a chatbot to assist us in valuing a company?  At least a week and perhaps two weeks should be dedicated to this question.
+We start the course by asking a chatbot to do a DCF analysis.  We can return to the same question now with new tools in our toolbox.  A good question to pose is: How can we best build a chatbot to assist us in valuing a company?  At least a week and perhaps two weeks should be dedicated to this question.
 
-I like the HBS case [Valuing Walmart 2010](https://hbsp.harvard.edu/product/W11058-PDF-ENG).  The approach that the case guides students to use is too simplistic, so I mostly ignore it.  I like the case because all students will have some understanding of where Walmart's value comes from, and we can have meaningful discussions of possible future growth rates.
+I like the HBS case [Valuing Walmart 2010](https://hbsp.harvard.edu/product/W11058-PDF-ENG).  The approach that the case guides students to use is too simplistic, so I mostly ignore it.  I like the case because all students will have some understanding of where Walmart's value comes from, and we can have meaningful discussions about possible future growth rates.
 
 I start this part of the course by sketching a valuation analysis on the board with student input and discussion.  We have to decide what ratios and growth rates we will use to generate pro forma statements and what assumptions we will make about them.  This provides a leveling-up experience for students and provides focus to the ensuing discussions.
 
@@ -191,21 +191,21 @@ To use the app or custom chatbot, we will need to have a data source.  It is eas
 
 I assign the creation of a valuation assistant chatbot as the final group project for the course, worth 50% of the total grade.  I require the chatbots to include a facility for uploading financial statements.   
 
-I use the last class day for testing and demonstrations.  I give each group the same company and data to evaluate and give them a fixed amount of time to use their assistants to attempt generate a valuation (breaking out into groups).  Then, we reconvene, and each group shows the class how their tool performed, by scrolling through their chat history and explaining their process. 
+I use the last class day for testing and demonstrations.  I give each group the same company and data to evaluate and give them a fixed amount of time to use their assistants to attempt to generate a valuation, breaking out into groups.  Then, we reconvene, and each group shows the class how their tool performed, by scrolling through their chat history and explaining their process. 
 
 ## Extras
 
 #### Introduction to Python
 
-Students need to have some understanding of what they are seeing when an LLM generates code.  I provide a [pre-course workshop](https://workshop.kerryback.com) on using Jupyter notebooks in Google Colab, basic elements of Python, and pandas, numpy, and visualization libraries
+Students need to have some understanding of what they are seeing when an LLM generates code.  I provide an optional [pre-course workshop](https://workshop.kerryback.com) on using Jupyter notebooks in Google Colab, basic elements of Python, and pandas, numpy, and visualization libraries.
 
 #### Beyond Streamlit
 
-Streamlit is a convenient way to build apps, but it provides limited flexibility in the design of the user interface.  LLMs can write code in many languages other than Python.  [Replit] is an easy-to-use platform for creating apps that codes in Python, JavaScript, HTML, CSS, and other languages to create professional user interfaces.  I don't ask students to subscribe, but I do provide a demonstration. 
+Streamlit is a convenient way to build apps, but it provides limited flexibility in the design of the user interface.  LLMs can write code in many languages other than Python.  [Replit](https://replit.com) is an easy-to-use platform for creating apps that codes in Python, JavaScript, HTML, CSS, and other languages to create professional user interfaces.  I don't ask students to subscribe to Replit, but I do provide an in-class demonstration. 
 
 #### Database Chatbots
 
-Another example of a useful custom chatbot is one that converts natural language prompts into database queries and returns data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the [MotherDuck CLI](https://motherduck.com/cli) to upload csv files.  ChatGPT or Gemini can tell you how to do this, or, there are agentic chatbots like Claude Code that can do it for you. Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, that can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv file to the LLM.  This will probably require testing and iteration.
+An example of a useful custom chatbot is one that converts natural language prompts into database queries and returns data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the [MotherDuck CLI](https://motherduck.com/cli) to upload csv files.  ChatGPT or Gemini can tell you how to do this, or, there are agentic chatbots like Claude Code that can do it for you. Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, that can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv file to the LLM.  This will probably require testing and iteration.
 
 #### App Deployment 
 
