@@ -83,7 +83,7 @@ In each step, we use examples from finance, but this same structure would apply 
 
 ## Tools for the Course
 
-Students can use any chatbot for the first part of the course.  Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance.  There is no software to install, so there is no set-up required.  I prepared some materials to show students how to [use Google Colab](), which I cover when we get to that point.
+Students can use any chatbot for the first part of the course.  Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance.  There is no software to install, so there is no set-up required.  I prepared some materials to show students how to [use Google Colab](https://workshop.kerryback.com), which I cover when we get to that point.
 
 For the last part of the course, students need an OpenAI account.  They can use the free version.  They will need to get an API key, for which charges are on a per-usage basis.  The charges are minimal for the experimentation that is done in the course.  
 
@@ -136,7 +136,7 @@ There is a lot that could be done on option pricing if students have seen option
 
 ## 4. Building Apps
 
-Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  See my [blog post about creating apps](https://substack.com/home/post/p-163644611).
+Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  See my [blog post about creating apps](https://substack.com/home/post/p-163644611).  Again, I demo mean-variance analysis and assign cost of capital calculations as a group project.
 
 Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
 and get an [authorization token](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
@@ -155,20 +155,20 @@ This provides the foundation for an informative class discussion about the relat
 Custom chatbots involve 
 
 - A user interface
-- An API connection to an LLM
+- An API connection to an LLM, which has possibly been fine-tuned
 - A customization of user prompts
   - System prompt
   - Possible retrieval of documents
 - Possible uses of tools
-- Possible fine tuning
+
 
 Creating a user interface is a variation of building an app and has already been essentially covered.  Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic.  Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt.  So, a simple custom chatbot of **user interface + API connection + system prompt** requires only techniques that students have already seen at this point.
 
-Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get a free API key from [Open Router](https://openrouter.ai) and to use free open source LLMS from [Hugging Face](https://huggingface.co), so there are no charges at all.  
+Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get free API keys from [Open Router](https://openrouter.ai) and use free open source LLMS from [Hugging Face](https://huggingface.co).  
 
-Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response.  Gemini will probably import the openai Python package even for using other LLMs, because the OpenAI API has become the standard.  The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.
+Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response.  Gemini will import the openai Python package even for using other LLMs, because the OpenAI API has become the standard.  The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.
 
-As a next step, students can ask Gemini in Google Colab to create a custom chatbot using Streamlit and ngrok.  A good example for a system prompt is to ask the LLM to respond in a foreign language, so students can see that the system prompt actually works.  It is important that Gemini build a loop in the app that collects all past prompts and responses and sends them together with the system prompt with each new prompt.  If the chatbot does not seem to be remembering past prompts during a session, it is because the loop was not constructed.  Students should ask Gemini to add the loop if this occurs.
+As a next step, students can ask Gemini to create a custom chatbot using Streamlit and ngrok.  A good example for a system prompt is to ask the LLM to respond in a foreign language, so we can see that the system prompt actually works.  It is important that Gemini build a loop in the app that collects all past prompts and responses and sends them together with the system prompt with each new prompt.  If the chatbot does not seem to be remembering past prompts during a session, it is because the loop was not constructed.  Students should ask Gemini to add the loop if this occurs.
 
 ## 6. AI Agents
 
@@ -182,15 +182,15 @@ If we connect multiple tools to a chatbot, then a user can, within a single chat
 
 We start the course by asking a chatbot to do a DCF analysis.  We can return to the same question now with new tools in our belt.  A good question to pose is: How can we best build a chatbot to assist us in valuing a company?  At least a week and perhaps two weeks should be dedicated to this question.
 
-I like the HBS case [Valuing Walmart 2010](https://hbsp.harvard.edu/product/W11058-PDF-ENG).  The approach that the case guides students to use is too simplistic, so I mostly ignore it.  I like the case because everyone has some understanding of where Walmart's value comes from, and we can have meaningful discussions of possible future growth rates.
+I like the HBS case [Valuing Walmart 2010](https://hbsp.harvard.edu/product/W11058-PDF-ENG).  The approach that the case guides students to use is too simplistic, so I mostly ignore it.  I like the case because all students will have some understanding of where Walmart's value comes from, and we can have meaningful discussions of possible future growth rates.
 
-I start this part of the course by sketching a valuation analysis on the board with student input and discussion.  We have to decide what ratios and growth rates we will use to generate pro forma statements and what assumptions we will make about them.
+I start this part of the course by sketching a valuation analysis on the board with student input and discussion.  We have to decide what ratios and growth rates we will use to generate pro forma statements and what assumptions we will make about them.  This provides a leveling-up experience for students and provides focus to the ensuing discussions.
 
-After the in-class discussion, I upload the financial statements in the case to ChatGPT and ask it for a DCF valuation.  Then, I read the statements into Google Colab and ask Gemini to assist with a valuation.  At this point, students are prepared to discuss whether and how we can create a useful valuationassistant using an app or custom chatbot.  
+After working through the issues by hand, I upload the financial statements in the case to ChatGPT and ask it for a DCF valuation.  Then, I read the statements into Google Colab and ask Gemini to assist with a valuation in Python. At this point, students are prepared to discuss whether and how we can create a useful valuation assistant using an app or custom chatbot.  
 
 To use the app or custom chatbot, we will need to have a data source.  It is easy to get data from Yahoo Finance.  Alternatively, users can be asked to upload data.  It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.
 
-I assign the creation of a valuation assistant chatbot as the final group project for the course, worth 50% of the total grade.  I require the chatbots to include a facility for uploading financial statements.  Also, students must use the OpenAI API with the Code Interpreter tool enabled.  
+I assign the creation of a valuation assistant chatbot as the final group project for the course, worth 50% of the total grade.  I require the chatbots to include a facility for uploading financial statements.   
 
 I use the last class day for testing and demonstrations.  I give each group the same company and data to evaluate and give them a fixed amount of time to use their assistants to attempt generate a valuation (breaking out into groups).  Then, we reconvene, and each group shows the class how their tool performed, by scrolling through their chat history and explaining their process. 
 
