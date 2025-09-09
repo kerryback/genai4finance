@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -325,6 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <p>The purpose of this site is to share some experiences and thoughts about teaching MBA students how generative AI can and is being used in the finance industry and how they can leverage it to be more efficient in the workplace. We are all learning this on the fly, and of course things are evolving very quickly, so I’m hoping that sharing will be useful. I invite everyone to share in the comments section below.</p>
 <p>I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year. For the most part, I do not teach new financial concepts in the course, because we have other courses for those. However, I try to reinforce students’ understanding of concepts they have already seen by approaching them with a different tool (AI + coding). The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an ‘Applied Finance’ course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets. I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.</p>
+<p>In addition to conducting financial analysis directly with AI + coding, the course uses AI + coding to develop tools for financial analysis. The basic structure, as is described in more detail below, is <span class="math display">\[\text{Chatbots} \; \rightarrow \; \text{Coding} \; \rightarrow \; \text{Apps} \; \rightarrow \; \text{Custom Chatbots} \; \rightarrow \; \text{AI Agents}\]</span> In each step, we use examples from finance, but this same structure would apply to any domain.</p>
 <section id="tools-for-the-course" class="level2">
 <h2 class="anchored" data-anchor-id="tools-for-the-course">Tools for the Course</h2>
 <p>Students can use any chatbot for the first part of the course. Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance. There is no software to install, so there is no set-up required. I prepared some materials to show students how to <a href="">use Google Colab</a>, which I cover when we get to that point.</p>
