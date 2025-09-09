@@ -138,13 +138,13 @@ There is a lot that could be done on option pricing if students have seen option
 Whatever code an LLM (large language model) writes for financial analysis can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  See my [blog post about creating apps](https://substack.com/home/post/p-163644611).  Again, I demo mean-variance analysis and assign cost of capital calculations as a group project.
 
 Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
-and get an [authorization token](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
+and get [authorization tokens](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
 
 At this point in the course, students have seen enough to compare the following ways to perform a financial analysis:
 
 - Using Excel
 - Asking a chatbot
-- Using AI + coding via Google Colab'
+- Using AI + coding via Google Colab
 - Creating and using an app
 
 This provides the foundation for an informative class discussion about the relative merits of each approach and the circumstances in which one approach is better than another.
@@ -173,7 +173,7 @@ As a next step, students can ask Gemini to create a custom chatbot using Streaml
 
 An AI agent is a chatbot that can use tools to complete tasks. Unlike regular chatbots that only generate text, agents can call functions, access APIs, and run applications to get things done.
 
-Students are prepared to learn about AI agents after having seen app development and custom chatbot development.  We can configure the mean-variance and cost-of-capital apps as tools that can be called and create a custom chatbot that can call them.  All of this can be done by Gemini in Google Colab.
+Students are prepared to learn about AI agents after having seen app development and custom chatbot development.  We can configure the mean-variance and cost-of-capital apps as tools that can be called, and we can create a custom chatbot that can call them.  All of this can be done by Gemini in Google Colab.
 
 If we connect multiple tools to a chatbot, then a user can, within a single chatbot session, perform a variety of specialized tasks.  For example, a user can retrieve data, possibly from multiple sources, and perform multiple types of analyses, all while interacting with the same chatbot using natural language prompts.  This really unleashes the power of AI.
 
