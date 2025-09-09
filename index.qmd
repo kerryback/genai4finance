@@ -77,7 +77,7 @@ The purpose of this site is to share some experiences and thoughts about teachin
 
 I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year.  For the most part, I do not teach new financial concepts in the course, because we have other courses for those.  However, I try to reinforce students' understanding of concepts they have already seen by approaching them with a different tool (AI + coding).  The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an 'Applied Finance' course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets.  I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.
 
-## Tools
+## Tools for the Course
 
 Students can use any chatbot for the first part of the course.  Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance.  There is no software to install, so there is no set-up required.  I prepared some materials to show students how to [use Google Colab](), which I cover when we get to that point.
 
@@ -93,8 +93,9 @@ The course covers the following topics:
 2. Corporate implementations of AI
 3. Using AI to write code for financial analysis, visualization, and report generation
 4. Using AI to create apps to automate the above
-5. Using AI to create custom chatbots for the above 
-6. In-depth study of using AI for DCF valuation of companies
+5. Creating custom chatbots for the above 
+6. Creating AI agents for the above
+7. In-depth study of using AI for DCF valuation of companies
  
 
 ## 1. Prompt Engineering
@@ -161,22 +162,23 @@ Custom chatbots involve
 
 Creating a user interface is a variation of building an app and has already been essentially covered.  Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic.  Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt.  So, a simple custom chatbot of **user interface + API connection + system prompt** requires only techniques that students have already seen at this point.
 
-Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get a free API key from [Open Router](https://openrouter.ai) and to use free open source LLMS from [Hugging Face](https://huggingface.co), so there are no charges at all.  However, we will eventually want to use OpenAI's Code Interpreter tool, which requires us to use OpenAI's API.
+Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get a free API key from [Open Router](https://openrouter.ai) and to use free open source LLMS from [Hugging Face](https://huggingface.co), so there are no charges at all.  
 
 Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response.  Gemini will probably import the openai Python package even for using other LLMs, because the OpenAI API has become the standard.  The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.
 
 As a next step, students can ask Gemini in Google Colab to create a custom chatbot using Streamlit and ngrok.  A good example for a system prompt is to ask the LLM to respond in a foreign language, so students can see that the system prompt actually works.  It is important that Gemini build a loop in the app that collects all past prompts and responses and sends them together with the system prompt with each new prompt.  If the chatbot does not seem to be remembering past prompts during a session, it is because the loop was not constructed.  Students should ask Gemini to add the loop if this occurs.
 
-For a first financial chatbot, we can return to the mean-variance or cost of capital exercise.  The apps created before can be recreated as chatbots, so users can ask for what they want in natural language instead of using input fields on an app.  Here, I use OpenAI's API with the Code Interpreter tool enabled.  The code that performed the calculations in the app can be uploaded in the system prompt with instructions to run it with the Code Interpreter to answer the user's questions.  
+## 6. AI Agents
 
-The mean-variance analysis and cost of capital calculations are simple examples, but they provide a good foundation to discuss the following questions.
+An AI agent is a chatbot that can use tools to complete tasks. Unlike regular chatbots that only generate text, agents can call functions, access APIs, and run applications to get things done.
 
--  For what types of analyses would a custom chatbot work better than an app?
--  For what types of analyses is it worthwhile to create a custom chatbot rather than using a standard chatbot?
+Students are prepared to learn about AI agents after having seen app development and custom chatbot development.  We can configure the mean-variance and cost-of-capital apps as tools that can be called and create a custom chatbot that can call them.  All of this can be done by Gemini in Google Colab.
 
-## 6. AI-Assisted DCF Valuation
+If we connect multiple tools to a chatbot, then a user can, within a single chatbot session, perform a variety of specialized tasks.  For example, a user can retrieve data, possibly from multiple sources, and perform multiple types of analyses, all while interacting with the same chatbot using natural language prompts.  This really unleashes the power of AI.
 
-We started the course by asking a chatbot to do a DCF analysis.  We return to the same question now with new tools in our belt.  A good question to pose is: How can we best build a chatbot to assist us in valuing a company?  At least a week and perhaps two weeks should be dedicated to this question.
+## 7. AI-Assisted DCF Valuation
+
+We start the course by asking a chatbot to do a DCF analysis.  We can return to the same question now with new tools in our belt.  A good question to pose is: How can we best build a chatbot to assist us in valuing a company?  At least a week and perhaps two weeks should be dedicated to this question.
 
 I like the HBS case [Valuing Walmart 2010](https://hbsp.harvard.edu/product/W11058-PDF-ENG).  The approach that the case guides students to use is too simplistic, so I mostly ignore it.  I like the case because everyone has some understanding of where Walmart's value comes from, and we can have meaningful discussions of possible future growth rates.
 
@@ -186,47 +188,45 @@ After the in-class discussion, I upload the financial statements in the case to 
 
 To use the app or custom chatbot, we will need to have a data source.  It is easy to get data from Yahoo Finance.  Alternatively, users can be asked to upload data.  It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.
 
-I assign creating a valuation assistant chatbot as the final group project for the course, worth 50% of the total grade.  I require the chatbots to include a facility for uploading financial statements.  Also, students must use the OpenAI API with the Code Interpreter tool enabled.  
+I assign the creation of a valuation assistant chatbot as the final group project for the course, worth 50% of the total grade.  I require the chatbots to include a facility for uploading financial statements.  Also, students must use the OpenAI API with the Code Interpreter tool enabled.  
 
 I use the last class day for testing and demonstrations.  I give each group the same company and data to evaluate and give them a fixed amount of time to use their assistants to attempt generate a valuation (breaking out into groups).  Then, we reconvene, and each group shows the class how their tool performed, by scrolling through their chat history and explaining their process. 
 
 ## Extras
 
-### Introduction to Python
+#### Introduction to Python
 
-Students need to have some understanding of what they are seeing when an LLM generates code.  I provide a [pre-course workshop]() on using Jupyter notebooks in Google Colab, basic elements of Python, and pandas, numpy, and visualization libraries
+Students need to have some understanding of what they are seeing when an LLM generates code.  I provide a [pre-course workshop](https://workshop.kerryback.com) on using Jupyter notebooks in Google Colab, basic elements of Python, and pandas, numpy, and visualization libraries
 
-### Beyond Streamlit
+#### Beyond Streamlit
 
 Streamlit is a convenient way to build apps, but it provides limited flexibility in the design of the user interface.  LLMs can write code in many languages other than Python.  [Replit] is an easy-to-use platform for creating apps that codes in Python, JavaScript, HTML, CSS, and other languages to create professional user interfaces.  I don't ask students to subscribe, but I do provide a demonstration. 
 
-### Data Pipelines
+#### Database Chatbots
 
-Another example of a useful custom chatbot is one that that convert natural language prompts into database queries and return data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the [MotherDuck CLI](https://motherduck.com/cli) to upload csv files.  Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, that can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv file to the LLM.  
+Another example of a useful custom chatbot is one that converts natural language prompts into database queries and returns data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the [MotherDuck CLI](https://motherduck.com/cli) to upload csv files.  ChatGPT or Gemini can tell you how to do this, or, there are agentic chatbots like Claude Code that can do it for you. Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, that can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv file to the LLM.  This will probably require testing and iteration.
 
-### AI Agents 
+#### App Deployment 
 
-An AI agent is a more sophisticated form of AI assistant that can autonomously perform complex, multi-step tasks with minimal human intervention. Unlike traditional chatbots that respond to prompts one at a time, agents can break down complex problems, create plans, execute multiple steps, use various tools, and adapt their approach based on intermediate results.
+To permanently deploy an app, we need an account at a host.  [Koyeb](https://koyeb.com) is a good choice.  [Render](https://render.com) is similar.  A relatively simple way to deploy is to also create a [GitHub](https://github.com) account.  Then, you can 
 
-**Key Characteristics:**
-- **Autonomy**: Agents work independently once given a goal. For example, instead of asking step-by-step how to value a company, you could tell an agent "Perform a DCF valuation of Apple" and it would autonomously gather data, perform calculations, create visualizations, and generate a report.
-- **Tool Use**: Agents can use multiple tools and APIs. A financial analysis agent might use Yahoo Finance for data, Python for calculations, web search for industry information, and document generation tools for creating reports - all without explicit instructions for each step.
-- **Planning and Reasoning**: Agents create and execute plans. Given a task like "Compare the financial health of three tech companies," an agent would plan the analysis approach, determine what metrics to calculate, and decide how to present the comparison.
-- **Memory and Context**: Advanced agents maintain context across sessions and can learn from past interactions, making them more effective over time.
+- Initialize a GitHub repository 
+- Push your code to GitHub 
+- Add a new Koyeb or Render service
+- Connect the service to the GitHub repository 
+- Click 'Deploy' on Koyeb or Render
 
-**Examples in Finance:**
-- A portfolio management agent could continuously monitor market conditions, rebalance portfolios based on predetermined criteria, generate performance reports, and alert managers to significant events - all autonomously.
-- An earnings analysis agent could automatically retrieve quarterly reports when released, compare results to analyst expectations, identify key trends and anomalies, and draft an initial analysis report for human review.
-- A risk management agent could monitor trading positions in real-time, calculate VaR and other risk metrics, flag potential breaches of risk limits, and suggest hedging strategies.
+Gemini or another chatbot can walk you through each step.  
 
-**Building Simple Agents:**
-Students can experiment with agent frameworks like LangChain, AutoGen, or CrewAI using the OpenAI API. A simple agent can be created by combining:
-- A planning module that breaks down tasks into steps
-- Tool-calling capabilities for data retrieval and calculations  
-- An execution loop that works through the plan
-- Error handling and adaptation mechanisms
+#### Local Installation of AI + Coding 
 
-While we don't have time to build sophisticated agents in this course, understanding their potential is crucial as they represent the future of AI-assisted financial analysis. The evolution from chatbots to agents parallels the evolution from reactive to proactive AI assistance.
+The simplest way for students to install Python plus some of the packages they need is to use the [Anaconda](https://www.anaconda.com/products/distribution) distribution.  It is free and easy to use.  
+
+To create a local version of Google Colab with Gemini, it is hard to beat [Cursor](https://cursor.com).  Cursor is offering students a [free year](https://cursor.com/en/students) of its Cursor Pro account.  Students can use their OpenAI API keys - or  API keys from Anthropic or Google, etc. - to configure the AI.  There will be charges based on usage.
+
+Cursor has auto-complete and chat just like Google Colab.  It can also execute terminal commands.  Using the terminal, it can implement the steps described above for permanent deployment of apps - creating a Github repo, pushing to Github, integrating with Koyeb or Render, and deploying.  This is even easier than asking a chatbot what to do and doing it yourself.
+
+Cursor can also code in other languages than Python.  So, it can use JavaScript, etc. to create professional user interfaces, as discussed above for Replit.
 
 ## Discussions {#giscus}
 
