@@ -129,7 +129,7 @@ Another very interesting item is [this study](https://papers.ssrn.com/sol3/paper
 
 Two good exercises for seeing how AI-generated code can be used to perform financial analysis are mean-variance analysis and CAPM cost of capital calculations.  I demo the first and assign the second as a group project.  AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis.  We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data), [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
 
-There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualizations](https://kerryback.substack.com/p/03-visualize).    
+There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write Python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualizations](https://kerryback.substack.com/p/03-visualize).    
 
 There is a lot that could be done on option pricing if students have seen options already.  As remarked above, I teach a first-year class, and I can't preempt what will be taught to second-year students.  Except for that issue, I would certainly spend some time on options.
 
@@ -191,8 +191,6 @@ To use the app or custom chatbot, we will need to have a data source.  It is eas
 
 I assign the creation of a valuation assistant chatbot as the final group project for the course, worth 50% of the total grade.  I require the chatbots to include a facility for uploading financial statements.   
 
-I use the last class day for testing and demonstrations.  I give each group the same company and data to evaluate and give them a fixed amount of time to use their assistants to attempt to generate a valuation, breaking out into groups.  Then, we reconvene, and each group shows the class how their tool performed, by scrolling through their chat history and explaining their process. 
-
 ## Extras
 
 #### Introduction to Python
@@ -205,7 +203,7 @@ Streamlit is a convenient way to build apps, but it provides limited flexibility
 
 #### Database Chatbots
 
-An example of a useful custom chatbot is one that converts natural language prompts into database queries and returns data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the [MotherDuck CLI](https://motherduck.com/cli) to upload csv files.  ChatGPT or Gemini can tell you how to do this, or, there are agentic chatbots that can do it for you (see below). Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, that can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv file to the LLM.  This requires testing and iteration, like creating the system prompt for the forecasting and valuation chatbot.
+An example of a useful custom chatbot is one that converts natural language prompts into database queries and returns data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the MotherDuck CLI (command line interface) to upload csv files.  ChatGPT or Gemini can tell you how to do this, or, there are agentic chatbots that can do it for you (see below). Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, which can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv files to the LLM.  This requires testing and iteration, like creating the system prompt for the forecasting and valuation chatbot.
 
 #### App Deployment 
 
@@ -221,11 +219,11 @@ Gemini or another chatbot can walk students through each step.
 
 #### Local Installation of AI + Coding 
 
-The simplest way for students to install Python plus some of the packages they need is to use the [Anaconda](https://www.anaconda.com/products/distribution) distribution.  It is free and easy to use.  
+The simplest way for students to install Python plus some of the packages they need is to use the [Anaconda](https://www.anaconda.com/products/distribution) distribution.  It is free and easy to install.  
 
-To create a local version of Google Colab with Gemini, it is hard to beat [Cursor](https://cursor.com).  Cursor is offering students a [free year](https://cursor.com/en/students) of its Cursor Pro account.  Students can use their OpenAI API keys - or  API keys from Anthropic or Google, etc. - to configure the AI.  There will be charges based on usage.
+To create a local version of Google Colab with Gemini, it is hard to beat [Cursor](https://cursor.com).  Cursor is offering students a [free year](https://cursor.com/en/students) of its Cursor Pro account.  Students can use their OpenAI API keys - or  API keys from Anthropic or Google, etc. - to configure the AI.  There will be charges based on usage, which again will be small for the amount of usage done in the course.
 
-Cursor has auto-complete and chat just like Google Colab.  It can also execute terminal commands.  Using the terminal, it can implement the steps described above for permanent deployment of apps - creating a Github repo, pushing to Github, integrating with Koyeb or Render, and deploying.  This is even easier than asking a chatbot what to do and doing it yourself.
+Cursor has auto-complete and chat just like Google Colab.  It can also execute terminal commands.  Using the terminal, it can implement the steps described above for permanent deployment of apps - creating a Github repo, pushing to Github, integrating with Koyeb or Render, and deploying.  It can also the the MotherDuck CLI to create the online database described above.
 
 Cursor can also code in languages other than Python.  In particular, it can use JavaScript, etc. to create professional user interfaces, as discussed above for Replit.
 
