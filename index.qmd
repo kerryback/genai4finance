@@ -135,7 +135,7 @@ There is a lot that could be done on option pricing if students have seen option
 
 ## 4. Building Apps
 
-Whatever code an LLM (large language model) writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  See my [blog post about creating apps](https://substack.com/home/post/p-163644611).  Again, I demo mean-variance analysis and assign cost of capital calculations as a group project.
+Whatever code an LLM (large language model) writes for financial analysis can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  See my [blog post about creating apps](https://substack.com/home/post/p-163644611).  Again, I demo mean-variance analysis and assign cost of capital calculations as a group project.
 
 Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
 and get an [authorization token](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
