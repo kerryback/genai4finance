@@ -129,7 +129,7 @@ Another very interesting item is [this study](https://papers.ssrn.com/sol3/paper
 
 Two good exercises for seeing how AI-generated code can be used to perform financial analysis are mean-variance analysis and CAPM cost of capital calculations.  I demo the first and assign the second as a group project.  AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis.  We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data), [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
 
-There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write Python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualizations](https://kerryback.substack.com/p/03-visualize).    
+There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write Python code to create the visualizations and to produce Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualization](https://kerryback.substack.com/p/03-visualize).    
 
 There is a lot that could be done on option pricing if students have seen options already.  As remarked above, I teach a first-year class, and I can't preempt what will be taught to second-year students.  Except for that issue, I would certainly spend some time on options.
 
@@ -155,10 +155,9 @@ Custom chatbots involve
 
 - A user interface
 - An API connection to an LLM, which has possibly been fine-tuned
-- A customization of user prompts
-  - System prompt
-  - Possible retrieval of documents
-- Possible uses of tools
+- A system prompt
+- Possible retrieval of documents
+- Possible use of tools
 
 
 Creating a user interface is a variation of building an app and has already been covered essentially.  Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic.  Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt.  So, a simple custom chatbot of **user interface + API connection + system prompt** requires only techniques that students have already seen at this point.

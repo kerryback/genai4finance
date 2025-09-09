@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="ai-generated-code" class="level2">
 <h2 class="anchored" data-anchor-id="ai-generated-code">3. AI-Generated Code</h2>
 <p>Two good exercises for seeing how AI-generated code can be used to perform financial analysis are mean-variance analysis and CAPM cost of capital calculations. I demo the first and assign the second as a group project. AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis. We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments. See my blog posts about <a href="https://kerryback.substack.com/p/02-online-data">getting data from Yahoo Finance</a>, <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">mean-variance analysis</a>, and <a href="https://kerryback.substack.com/p/04-capm-cost-of-capital">calculating the cost of capital</a>.</p>
-<p>There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line. AI can write Python code to generate Word docs and/or PowerPoint decks containing the analyses and visualizations. See this post about <a href="https://kerryback.substack.com/p/05-building">generating Word docs and PowerPoint decks</a> and this post about <a href="https://kerryback.substack.com/p/03-visualize">visualizations</a>.</p>
+<p>There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line. AI can write Python code to create the visualizations and to produce Word docs and/or PowerPoint decks containing the analyses and visualizations. See this post about <a href="https://kerryback.substack.com/p/05-building">generating Word docs and PowerPoint decks</a> and this post about <a href="https://kerryback.substack.com/p/03-visualize">visualization</a>.</p>
 <p>There is a lot that could be done on option pricing if students have seen options already. As remarked above, I teach a first-year class, and I can’t preempt what will be taught to second-year students. Except for that issue, I would certainly spend some time on options.</p>
 </section>
 <section id="building-apps" class="level2">
@@ -417,12 +417,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li>A user interface</li>
 <li>An API connection to an LLM, which has possibly been fine-tuned</li>
-<li>A customization of user prompts
-<ul>
-<li>System prompt</li>
+<li>A system prompt</li>
 <li>Possible retrieval of documents</li>
-</ul></li>
-<li>Possible uses of tools</li>
+<li>Possible use of tools</li>
 </ul>
 <p>Creating a user interface is a variation of building an app and has already been covered essentially. Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic. Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt. So, a simple custom chatbot of <strong>user interface + API connection + system prompt</strong> requires only techniques that students have already seen at this point.</p>
 <p>Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google. They can ask any chatbot how to do it. They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys. They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course. They could also get free API keys from <a href="https://openrouter.ai">Open Router</a> and use free open source LLMS from <a href="https://huggingface.co">Hugging Face</a>.</p>
