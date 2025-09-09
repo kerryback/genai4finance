@@ -209,15 +209,15 @@ An example of a useful custom chatbot is one that converts natural language prom
 
 #### App Deployment 
 
-To permanently deploy an app, we need an account at a host.  [Koyeb](https://koyeb.com) is a good choice.  [Render](https://render.com) is similar.  A relatively simple way to deploy is to also create a [GitHub](https://github.com) account.  Then, you can 
+To permanently deploy an app, we need an account at a host.  [Koyeb](https://koyeb.com) is a good choice.  [Render](https://render.com) is similar.  A relatively simple way to deploy is to create a [GitHub](https://github.com) account.  Then, we can 
 
 - Initialize a GitHub repository 
-- Push your code to GitHub 
+- Push our code to GitHub 
 - Add a new Koyeb or Render service
 - Connect the service to the GitHub repository 
 - Click 'Deploy' on Koyeb or Render
 
-Gemini or another chatbot can walk you through each step.  
+Gemini or another chatbot can walk students through each step.  
 
 #### Local Installation of AI + Coding 
 
