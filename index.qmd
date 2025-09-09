@@ -123,7 +123,7 @@ This widely cited [MIT Study](https://mlq.ai/media/quarterly_decks/v0.1_State_of
 personal AI tools for work tasks. In fact, almost every single person used an LLM in some 
 form for their work."  So, AI is being widely used, despite the difficulties companies have faced in designing and implementing company-specific AI solutions.  
 
-Another very interesting study is [this study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5188231) about the use of AI in corporate teams.  The study is described by one of the authors [here](https://www.oneusefulthing.org/p/the-cybernetic-teammate).  They conclude that, instead of thinking of AI as a tool, it should be regarded as a teammate.  They find that that one person working with AI is at least as efficient as two people working in a team without AI.  The most effective combination is naturally a team with AI.  Interestingly, they find that AI enables workers and teams to break functional silos, performing like teams composed of individuals with diverse functional knowledge.
+Another very interesting item is [this study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5188231) about the use of AI in corporate teams.  The study is described by one of the authors [here](https://www.oneusefulthing.org/p/the-cybernetic-teammate).  They conclude that, instead of thinking of AI as a tool, it should be regarded as a teammate.  They find that one person working with AI is at least as efficient as two people working in a team without AI.  The most effective combination is naturally a team with AI.  Interestingly, they find that AI enables workers and teams to break functional silos, performing like teams composed of individuals with diverse functional knowledge.
 
 ## 3. AI-Generated Code
 
