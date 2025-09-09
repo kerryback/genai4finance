@@ -227,7 +227,7 @@ To create a local version of Google Colab with Gemini, it is hard to beat [Curso
 
 Cursor has auto-complete and chat just like Google Colab.  It can also execute terminal commands.  Using the terminal, it can implement the steps described above for permanent deployment of apps - creating a Github repo, pushing to Github, integrating with Koyeb or Render, and deploying.  This is even easier than asking a chatbot what to do and doing it yourself.
 
-Cursor can also code in other languages than Python.  So, it can use JavaScript, etc. to create professional user interfaces, as discussed above for Replit.
+Cursor can also code in languages other than Python.  In particular, it can use JavaScript, etc. to create professional user interfaces, as discussed above for Replit.
 
 ## Discussions {#giscus}
 
