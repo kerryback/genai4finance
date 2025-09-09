@@ -120,7 +120,7 @@ Compile the responses to build a more detailed prompt than the original prompt, 
 
 The HBS case about [Implementing AI at Deloitte](https://hbsp.harvard.edu/product/HEC382-PDF-ENG) is a good foundation for a class discussion of AI implementation.  It covers the issues of data privacy, compliance, client trust, reliability, biases, and employee buy-in.  It also describes how Deloitte set up a custom chatbot.  
 
-This widely cited [MIT Study](https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf) is also must reading.  It has been described in the media as reporting that 95% of corporate AI implementations fail.  What it actually says is that only 5% of corporate AI pilots reach production, which is not quite the same thing.  The reasons that most pilots are abandoned and the characteristics of successful pilots are informative.  Also key is this passage: "workers from over 90% of the companies we surveyed reported regular use of 
+This widely cited [MIT Study](https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf) is also must-reading.  It has been described in the media as reporting that 95% of corporate AI implementations fail.  What it actually says is that only 5% of corporate AI pilots reach production, which is not quite the same thing.  The reasons that most pilots are abandoned and the characteristics of successful pilots are informative.  Also key is this passage: "workers from over 90% of the companies we surveyed reported regular use of 
 personal AI tools for work tasks. In fact, almost every single person used an LLM in some 
 form for their work."  So, AI is being widely used, despite the difficulties companies have faced in designing and implementing company-specific AI solutions.  
 
@@ -140,8 +140,6 @@ Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an 
 
 Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
 and get an [authorization token](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
-
-Deployment by ngrok is sufficient to illustrate the concept of building apps, but it is not a permanent deployment.  It is probably best to leave permanent deployment as something for students to explore on their own or perhaps to cover in a special session, because it can be a bit complex.  The best solution I have found is to install [Claude Code](https://www.anthropic.com/claude-code) and ask it to do it. However, students will need assistance even to install and use Claude Code.  See my discussion of [setting up and installing Claude Code](https://substack.com/home/post/p-163644611).  
 
 At this point in the course, students have seen enough to compare the following ways to perform a financial analysis:
 
