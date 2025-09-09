@@ -161,7 +161,7 @@ Custom chatbots involve
 - Possible uses of tools
 
 
-Creating a user interface is a variation of building an app and has already been essentially covered.  Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic.  Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt.  So, a simple custom chatbot of **user interface + API connection + system prompt** requires only techniques that students have already seen at this point.
+Creating a user interface is a variation of building an app and has already been covered essentially.  Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic.  Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt.  So, a simple custom chatbot of **user interface + API connection + system prompt** requires only techniques that students have already seen at this point.
 
 Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get free API keys from [Open Router](https://openrouter.ai) and use free open source LLMS from [Hugging Face](https://huggingface.co).  
 
