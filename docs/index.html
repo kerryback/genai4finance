@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="tools-for-the-course" class="level2">
 <h2 class="anchored" data-anchor-id="tools-for-the-course">Tools for the Course</h2>
 <p>Students can use any chatbot for the first part of the course. Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance. There is no software to install, so there is no set-up required. I prepared some materials to show students how to <a href="https://workshop.kerryback.com">use Google Colab</a>, which I cover when we get to that point.</p>
-<p>Previously, I used <a href="https://julius.ai">Julius.ai</a> instead of Google Colab It is a bit simpler to use, because it is a simple chatbot interface rather than a Jupyter notebook - see my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. Julius also provides access to LLMs from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding LLM, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers several advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
+<p>Previously, I used <a href="https://julius.ai">Julius.ai</a> instead of Google Colab. Julius is a bit more straightforward to use, because it is a simple chatbot interface rather than a Jupyter notebook - see my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. Julius also provides access to models from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding model, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers several advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
 </section>
 <section id="main-topics" class="level2">
 <h2 class="anchored" data-anchor-id="main-topics">Main Topics</h2>
@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>a buy/hold/sell recommendation</li>
 </ul>
 <p>This example illustrates the power of AI ‘out of the box’ for financial analysis. It also explains why we are seeing so many stories about the potential demise of junior financial analysts. Of course, the AI is not perfect. We should engage our students in a discussion of how the report can be improved.</p>
-<p>Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the LLM will have no memory of the original prompt and response<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>), and submit the new prompt. Compare the results. Get students to discuss how they might further improve the new prompt. Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report. This is <strong>prompt engineering.</strong></p>
+<p>Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the model will have no memory of the original prompt and response<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>), and submit the new prompt. Compare the results. Get students to discuss how they might further improve the new prompt. Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report. This is <strong>prompt engineering.</strong></p>
 </section>
 <section id="corporate-implementations-of-ai" class="level2">
 <h2 class="anchored" data-anchor-id="corporate-implementations-of-ai">2. Corporate Implementations of AI</h2>
@@ -400,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 <section id="building-apps" class="level2">
 <h2 class="anchored" data-anchor-id="building-apps">4. Building Apps</h2>
-<p>Whatever code an LLM writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform. The Python Streamlit library makes app construction easy. The same is true of the Gradio library apparently, but I only have experience with Streamlit. See my <a href="https://substack.com/home/post/p-163644611">blog post about creating apps</a>. Again, I demo mean-variance analysis and assign cost of capital calculations as a group project.</p>
+<p>Whatever code an LLM (large language model) writes for an exercise in Part 1 can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform. The Python Streamlit library makes app construction easy. The same is true of the Gradio library apparently, but I only have experience with Streamlit. See my <a href="https://substack.com/home/post/p-163644611">blog post about creating apps</a>. Again, I demo mean-variance analysis and assign cost of capital calculations as a group project.</p>
 <p>Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service. Students will need to create free accounts at <a href="https://ngrok.com">ngrok</a> and get an <a href="https://dashboard.ngrok.com/get-started/your-authtoken">authorization token</a>. They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that). Then, they can tell Gemini to deploy apps using ngrok.</p>
 <p>At this point in the course, students have seen enough to compare the following ways to perform a financial analysis:</p>
 <ul>
@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>LLMs do not actually remember past prompts and responses in a session. Instead the record of past prompts and responses in a session is sent by a chatbot to an LLM along with each new prompt, so that the LLM can use the record of past prompts and responses when generating a new response.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Large language models do not actually remember past prompts and responses in a session. Instead the record of past prompts and responses in a session is sent by a chatbot to the model along with each new prompt, so that the model can use the record of past prompts and responses when generating a new response.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
