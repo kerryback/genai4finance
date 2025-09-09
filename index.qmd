@@ -197,7 +197,7 @@ I assign the creation of a valuation assistant chatbot as the final group projec
 
 Students need to have some understanding of what they are seeing when an LLM generates code.  I provide an optional [pre-course workshop](https://workshop.kerryback.com) on using Jupyter notebooks in Google Colab, basic elements of Python, and pandas, numpy, and visualization libraries.
 
-#### Beyond Streamlit
+#### User Interfaces of Apps
 
 Streamlit is a convenient way to build apps, but it provides limited flexibility in the design of the user interface.  LLMs can write code in many languages other than Python.  [Replit](https://replit.com) is an easy-to-use platform for creating apps that codes in Python, JavaScript, HTML, CSS, and other languages to create professional user interfaces.  I don't ask students to subscribe to Replit, but I do provide an in-class demonstration. 
 
