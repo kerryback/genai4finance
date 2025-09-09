@@ -94,7 +94,8 @@ The course covers the following topics:
 3. Using AI to write code for financial analysis, visualization, and report generation
 4. Using AI to create apps to automate the above
 5. Using AI to create custom chatbots for the above 
-6. In-depth study of using AI for DCF valuation of companies
+6. Understanding AI agents and their capabilities
+7. In-depth study of using AI for DCF valuation of companies
  
 
 ## 1. Prompt Engineering
@@ -161,7 +162,7 @@ Custom chatbots involve
 
 Creating a user interface is a variation of building an app and has already been essentially covered.  Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic.  Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt.  So, a simple custom chatbot of **user interface + API connection + system prompt** requires only techniques that students have already seen at this point.
 
-Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get a free API key from [Open Router](https://openrouter.ai) and to use free open source LLMS from [Hugging Face](https://huggingface.co), so there are no charges at all.  However, we will eventually want to use OpenAI's Code Interpreter tool, which requires us to use OpenAI's API.
+Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  It is also possible to get a free API key from [Open Router](https://openrouter.ai) and to use free open source LLMS from [Hugging Face](https://huggingface.co), so there are no charges at all.
 
 Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response.  Gemini will probably import the openai Python package even for using other LLMs, because the OpenAI API has become the standard.  The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.
 
@@ -174,7 +175,37 @@ The mean-variance analysis and cost of capital calculations are simple examples,
 -  For what types of analyses would a custom chatbot work better than an app?
 -  For what types of analyses is it worthwhile to create a custom chatbot rather than using a standard chatbot?
 
-## 6. AI-Assisted DCF Valuation
+## 6. AI Agents
+
+An AI agent is a more sophisticated form of AI assistant that can autonomously perform complex, multi-step tasks with minimal human intervention. Unlike traditional chatbots that respond to prompts one at a time, agents can break down complex problems, create plans, execute multiple steps, use various tools, and adapt their approach based on intermediate results.
+
+### Key Characteristics of AI Agents
+
+**Autonomy**: Agents can work independently once given a goal. For example, instead of asking step-by-step how to value a company, you could tell an agent "Perform a DCF valuation of Apple" and it would autonomously gather data, perform calculations, create visualizations, and generate a report.
+
+**Tool Use**: Agents can use multiple tools and APIs. A financial analysis agent might use Yahoo Finance for data, Python for calculations, web search for industry information, and document generation tools for creating reports - all without explicit instructions for each step.
+
+**Planning and Reasoning**: Agents create and execute plans. Given a task like "Compare the financial health of three tech companies," an agent would plan the analysis approach, determine what metrics to calculate, and decide how to present the comparison.
+
+**Memory and Context**: Advanced agents maintain context across sessions and can learn from past interactions, making them more effective over time.
+
+### Examples in Finance
+
+A portfolio management agent could continuously monitor market conditions, rebalance portfolios based on predetermined criteria, generate performance reports, and alert managers to significant events - all autonomously.
+
+An earnings analysis agent could automatically retrieve quarterly reports when released, compare results to analyst expectations, identify key trends and anomalies, and draft an initial analysis report for human review.
+
+### Building Agents
+
+Students can experiment with agent frameworks like LangChain or AutoGPT using the OpenAI API. A simple agent can be created by combining:
+- A planning module that breaks down tasks
+- Tool-calling capabilities for data retrieval and calculations  
+- A execution loop that works through the plan
+- Error handling and adaptation mechanisms
+
+While we don't have time to build sophisticated agents in this course, understanding their potential is crucial as they represent the future of AI-assisted financial analysis.
+
+## 7. AI-Assisted DCF Valuation
 
 We started the course by asking a chatbot to do a DCF analysis.  We return to the same question now with new tools in our belt.  A good question to pose is: How can we best build a chatbot to assist us in valuing a company?  At least a week and perhaps two weeks should be dedicated to this question.
 
@@ -190,43 +221,6 @@ I assign creating a valuation assistant chatbot as the final group project for t
 
 I use the last class day for testing and demonstrations.  I give each group the same company and data to evaluate and give them a fixed amount of time to use their assistants to attempt generate a valuation (breaking out into groups).  Then, we reconvene, and each group shows the class how their tool performed, by scrolling through their chat history and explaining their process. 
 
-## Extras
-
-### Introduction to Python
-
-Students need to have some understanding of what they are seeing when an LLM generates code.  I provide a [pre-course workshop]() on using Jupyter notebooks in Google Colab, basic elements of Python, and pandas, numpy, and visualization libraries
-
-### Beyond Streamlit
-
-Streamlit is a convenient way to build apps, but it provides limited flexibility in the design of the user interface.  LLMs can write code in many languages other than Python.  [Replit] is an easy-to-use platform for creating apps that codes in Python, JavaScript, HTML, CSS, and other languages to create professional user interfaces.  I don't ask students to subscribe, but I do provide a demonstration. 
-
-### Data Pipelines
-
-Another example of a useful custom chatbot is one that that convert natural language prompts into database queries and return data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the [MotherDuck CLI](https://motherduck.com/cli) to upload csv files.  Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, that can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv file to the LLM.  
-
-### AI Agents 
-
-An AI agent is a more sophisticated form of AI assistant that can autonomously perform complex, multi-step tasks with minimal human intervention. Unlike traditional chatbots that respond to prompts one at a time, agents can break down complex problems, create plans, execute multiple steps, use various tools, and adapt their approach based on intermediate results.
-
-**Key Characteristics:**
-- **Autonomy**: Agents work independently once given a goal. For example, instead of asking step-by-step how to value a company, you could tell an agent "Perform a DCF valuation of Apple" and it would autonomously gather data, perform calculations, create visualizations, and generate a report.
-- **Tool Use**: Agents can use multiple tools and APIs. A financial analysis agent might use Yahoo Finance for data, Python for calculations, web search for industry information, and document generation tools for creating reports - all without explicit instructions for each step.
-- **Planning and Reasoning**: Agents create and execute plans. Given a task like "Compare the financial health of three tech companies," an agent would plan the analysis approach, determine what metrics to calculate, and decide how to present the comparison.
-- **Memory and Context**: Advanced agents maintain context across sessions and can learn from past interactions, making them more effective over time.
-
-**Examples in Finance:**
-- A portfolio management agent could continuously monitor market conditions, rebalance portfolios based on predetermined criteria, generate performance reports, and alert managers to significant events - all autonomously.
-- An earnings analysis agent could automatically retrieve quarterly reports when released, compare results to analyst expectations, identify key trends and anomalies, and draft an initial analysis report for human review.
-- A risk management agent could monitor trading positions in real-time, calculate VaR and other risk metrics, flag potential breaches of risk limits, and suggest hedging strategies.
-
-**Building Simple Agents:**
-Students can experiment with agent frameworks like LangChain, AutoGen, or CrewAI using the OpenAI API. A simple agent can be created by combining:
-- A planning module that breaks down tasks into steps
-- Tool-calling capabilities for data retrieval and calculations  
-- An execution loop that works through the plan
-- Error handling and adaptation mechanisms
-
-While we don't have time to build sophisticated agents in this course, understanding their potential is crucial as they represent the future of AI-assisted financial analysis. The evolution from chatbots to agents parallels the evolution from reactive to proactive AI assistance.
 
 ## Discussions {#giscus}
 
