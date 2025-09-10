@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://finance-and-ai.kerryback.com/index.html</loc>
-    <lastmod>2025-09-09T02:26:27.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://finance-and-ai.kerryback.com/streamlit_colab_example.html</loc>
-    <lastmod>2025-09-07T14:02:12.468Z</lastmod>
-  </url>
-  <url>
-    <loc>https://finance-and-ai.kerryback.com/00-welcome/index.html</loc>
-    <lastmod>2025-09-07T14:02:12.464Z</lastmod>
-  </url>
-  <url>
     <loc>https://finance-with-ai.org/index.html</loc>
-    <lastmod>2025-09-09T23:38:37.420Z</lastmod>
+    <lastmod>2025-09-10T15:11:21.369Z</lastmod>
   </url>
   <url>
     <loc>https://finance-with-ai.org/index-old.html</loc>
     <lastmod>2025-09-09T02:22:34.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://finance-with-ai.org/streamlit_colab_example.html</loc>
+    <lastmod>2025-09-07T14:02:12.468Z</lastmod>
+  </url>
+  <url>
+    <loc>https://finance-with-ai.org/00-welcome/index.html</loc>
+    <lastmod>2025-09-07T14:02:12.464Z</lastmod>
   </url>
 </urlset>
