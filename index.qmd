@@ -2,6 +2,8 @@
 title: ""
 page-layout: full
 title-block-banner: false
+reference-location: margin
+citation-location: margin
 ---
 
 <div style="text-align: center; margin: 2rem 0;">
@@ -113,7 +115,7 @@ A good demonstration at the start of a course on Finance with AI is to upload a 
 
 This example illustrates the power of AI 'out of the box' for financial analysis.  It also explains why we are seeing so many stories about the potential demise of junior financial analysts.  Of course, the AI is not perfect.  We should engage our students in a discussion of how the report can be improved.  
 
-Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the model will have no memory of the original prompt and response[Large language models do not actually remember past prompts and responses in a session.  Instead the record of past prompts and responses in a session is sent by a chatbot to the model along with each new prompt, so that the model can use the record of past prompts and responses when generating a new response.]{.aside}), and submit the new prompt.  Compare the results.  Get students to discuss how they might further improve the new prompt.  Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report.  This is **prompt engineering.** 
+Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the model will have no memory of the original prompt and response^[Large language models do not actually remember past prompts and responses in a session.  Instead the record of past prompts and responses in a session is sent by a chatbot to the model along with each new prompt, so that the model can use the record of past prompts and responses when generating a new response.]), and submit the new prompt.  Compare the results.  Get students to discuss how they might further improve the new prompt.  Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report.  This is **prompt engineering.** 
 
 ## 2. Corporate Implementations of AI
 
@@ -220,7 +222,7 @@ Gemini or another chatbot can walk students through each step.
 
 The simplest way for students to install Python plus some of the packages they need is to use the [Anaconda](https://www.anaconda.com/products/distribution) distribution.  It is free and easy to install.  
 
-To create a local version of Google Colab with Gemini, it is hard to beat [Cursor](https://cursor.com). [Actually, my favorite setup at the moment is to use Claude Code with Cursor's Claude Code Extension.  This setup adds extra cost, but it enables replacement of Cursor's chat feature with Claude Code, which seems to have a better system prompt.]{.aside} Cursor is offering students a [free year](https://cursor.com/en/students) of its Cursor Pro account.  Students can use their OpenAI API keys - or  API keys from Anthropic or Google, etc. - to configure the AI.  There will be charges based on usage, which again will be small for the amount of usage done in the course.
+To create a local version of Google Colab with Gemini, it is hard to beat [Cursor](https://cursor.com).^[Actually, my favorite setup at the moment is to use Claude Code with Cursor's Claude Code Extension.  This setup adds extra cost, but it enables replacement of Cursor's chat feature with Claude Code, which seems to have a better system prompt.] Cursor is offering students a [free year](https://cursor.com/en/students) of its Cursor Pro account.  Students can use their OpenAI API keys - or  API keys from Anthropic or Google, etc. - to configure the AI.  There will be charges based on usage, which again will be small for the amount of usage done in the course.
 
 Cursor has auto-complete and chat just like Google Colab.  It can also execute terminal commands.  Using the terminal, it can implement the steps described above for permanent deployment of apps - creating a Github repo, pushing to Github, integrating with Koyeb or Render, and deploying.  It can also the the MotherDuck CLI to create the online database described above.
 
