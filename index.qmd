@@ -228,6 +228,17 @@ Cursor has auto-complete and chat just like Google Colab.  It can also execute t
 
 Cursor can also code in languages other than Python.  In particular, it can use JavaScript, etc. to create professional user interfaces, as discussed above for Replit.
 
+<div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
+<p style="margin: 0;">
+<strong>&copy; Kerry Back</strong><br>
+J. Howard Creekmore Professor of Finance and Professor of Economics<br>
+Rice University<br>
+<a href="https://kerryback.com">kerryback.com</a>
+</p>
+</div>  
+
 ## Discussions {#giscus}
 
-Please share your thoughts, experiences, or questions about teaching AI-assisted finance in the comments below.  
+Please share your thoughts, experiences, or questions about teaching AI-assisted finance in the comments below.
+
+
