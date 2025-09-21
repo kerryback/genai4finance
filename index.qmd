@@ -7,7 +7,7 @@ citation-location: margin
 ---
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="image3.png" alt="Teaching Finance with AI" style="max-width: 400px; width: 100%; height: auto;">
+  <img src="genai4finance.png" alt="Teaching Finance with AI" style="max-width: 400px; width: 100%; height: auto;">
 </div>
 
 <div style="text-align: center; margin: 2rem 0; font-size: 1.5rem;">

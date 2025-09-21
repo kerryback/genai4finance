@@ -13,7 +13,7 @@ website:
   description: "Teaching the use of generative AI in finance"
   navbar:
     title: false
-    search: false
+    search: true
     left:
       - icon: house-door-fill
         href: https://finance-with-ai.org

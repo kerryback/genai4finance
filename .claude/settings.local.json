@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm:*)",
+      "Bash(quarto render:*)",
+      "Bash(cp:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git remote remove:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(gh api:*)",
+      "Bash(git rm:*)",
+      "Bash(git rebase:*)",
+      "Bash(mv:*)",
+      "Bash(grep:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(gh repo rename:*)",
+      "Bash(gh repo view:*)",
+      "Bash(findstr:*)",
+      "Bash(dir:*)",
+      "Read(//c/Users/kerry/repos/blog/**)",
+      "Bash(git stash:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
