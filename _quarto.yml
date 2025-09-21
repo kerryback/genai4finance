@@ -7,10 +7,30 @@ project:
     - image1.png
     - image2.png
 
-site:
-  title: ""
+website:
+  title: "Teaching Finance with AI"
   site-url: https://finance-with-ai.org
   description: "Teaching the use of generative AI in finance"
+  navbar:
+    title: false
+    search: false
+    left:
+      - icon: house-door-fill
+        href: https://finance-with-ai.org
+    right:
+      - text: Blog
+        href: https://blog.kerryback.com
+        target: _blank
+      - text: Syllabus
+        href: https://mgmt675-2026.kerryback.com
+        target: _blank
+      - text: Discussions
+        href: "#giscus"
+      - text: FMA Tutorial
+        href: https://fma2025.kerryback.com
+        target: _blank
+      - text: FMA Award
+        href: "#"
 
 format:
   html:
