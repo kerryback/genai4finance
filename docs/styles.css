@@ -1,9 +1,8 @@
 
 /* Styles for both themes */
 .navbar {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-    min-height: 100px !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
 }
 
 .navbar-brand-container {
