@@ -180,12 +180,5 @@
     "title": "Teaching Finance with AI",
     "section": "Discussions",
     "text": "Discussions\nPlease share your thoughts, experiences, or questions about teaching AI-assisted finance in the comments below."
-  },
-  {
-    "objectID": "index.html#main-topics",
-    "href": "index.html#main-topics",
-    "title": "Teaching Finance with AI",
-    "section": "Main Topics",
-    "text": "Main Topics\nThe course covers the following topics:\n\nPrompt engineering\nCorporate implementations of AI\nUsing AI to write code for financial analysis, visualization, and report generation\nUsing AI to create apps to automate the above\nCreating custom chatbots for the above\nCreating AI agents for the above\nIn-depth study of using AI for DCF valuation of companies"
   }
 ]
