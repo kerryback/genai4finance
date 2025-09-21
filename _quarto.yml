@@ -6,7 +6,7 @@ project:
     - .nojekyll
 
 website:
-  title: "Teaching Finance with AI"
+  title: "Gen AI for Finance"
   site-url: https://finance-with-ai.org
   description: "Teaching the use of generative AI in finance"
   navbar:
