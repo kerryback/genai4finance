@@ -22,8 +22,6 @@ website:
       - text: Syllabus
         href: https://mgmt675-2026.kerryback.com/MGMT675.pdf
         target: _blank
-      - text: Discussions
-        href: "#giscus"
       - text: FMA Tutorial
         href: https://fma2025.kerryback.com
         target: _blank
