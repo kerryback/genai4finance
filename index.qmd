@@ -6,6 +6,10 @@ reference-location: margin
 citation-location: margin
 ---
 
+<div style="text-align: left; margin: 1rem 0; color: #666; font-size: 0.9rem;">
+  Last Updated: September 21, 2025
+</div>
+
 <div style="text-align: center; margin: 2rem 0;">
   <img src="genai4finance.png" alt="Teaching Finance with AI" style="max-width: 400px; width: 100%; height: auto;">
 </div>
@@ -79,18 +83,20 @@ The purpose of this site is to share some experiences and thoughts about teachin
 
 I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year.  For the most part, I do not teach new financial concepts in the course, because we have other courses for those.  However, I try to reinforce students' understanding of concepts they have already seen by approaching them with a different tool (AI + coding).  The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an 'Applied Finance' course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets.  I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.
 
-In addition to conducting financial analysis directly with AI + coding, the course uses AI + coding to develop tools for financial analysis.  The basic structure, as is described in more detail below, is
-$$\text{Chatbots} \; \rightarrow \; \text{Coding} \; \rightarrow \; \text{Apps} \; \rightarrow \; \text{Custom Chatbots} \; \rightarrow \; \text{AI Agents}$$
-In each step, we use examples from finance, but this same structure would apply to any domain.  
+In addition to conducting financial analysis directly with AI + coding, the course uses AI + coding to develop tools for financial analysis.  The basic structure, as is described in more detail below, is illustrated in the following diagram.  We can do financial analysis directly with AI + coding.  We can also use AI + coding to build apps to automate analysis.  A chatbot is a particular type of app, and we can create a custom chatbot that does financial analysis.  Finally, an AI agent is a chatbot with tools, which can also do financial analysis.
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="ai_learning_progression.png" alt="AI Learning Progression" style="max-width: 600px; width: 60%; height: auto;">
+</div>
 
 ## Tools for the Course
 
-Students can use any chatbot for the first part of the course.  Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance.  There is no software to install, so there is no set-up required.  I prepared some materials to show students how to [use Google Colab](https://workshop.kerryback.com), which I cover when we get to that point.
+At this time, the best tool is Claude Pro ($20/month) with Claude Desktop.  
+Claude is the best coding LLM.  Also, Anthropic recently released Excel integration, so Claude can generate fully functioning, nicely formatted Excel workbooks.^[As of September, 2025, Excel generation is only available with the Claude Max ($100/month) account, but it is expected to be available with the Pro account by the end of the year.]  In addition, Anthropic pioneered the Model Context Protocol (MCP) and have recently made it simpler for users to configure MCP connections in Claude Desktop.  Finally, the Pro subscription allows use of Claude Code, which is a very powerful coding agent.
 
+Previously, I used [Julius.ai](https://julius.ai) instead of Claude. Julius provides access to Claude models, in addition to OpenAI models.  It provides a 50% academic discount, which is an advantage, but it does not provide Excel generation or MCP connections.  ChatGPT is another possibility. It does not use MCP connections, though it has its own Assistants API and Custom GPTs.  However, it does not, at this time, provide Excel generation.  Furthermore, it provides only a limited (though standard) set of Python libraries, unlike Claude, which allows users to add whatever Python libraries they need to the environment that Claude provides in the cloud. 
 
-Previously, I used [Julius.ai](https://julius.ai) instead of Google Colab. Julius is a bit more straightforward to use, because it is a simple chatbot interface rather than a Jupyter notebook - see my [blog post about Julius](https://kerryback.substack.com/p/07-mean-variance-analysis).  Julius also provides access to models from OpenAI and Anthropic, whereas Colab only offers Google Gemini.  However, while Anthropic's Claude is still the best coding model, Gemini has caught up considerably and is now a solid choice.  Furthermore, Colab offers several advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud. 
-
-## Main Topics 
+## Topics
 
 The course covers the following topics:
 
@@ -105,11 +111,11 @@ The course covers the following topics:
 
 ## 1. Prompt Engineering
 
-A good demonstration at the start of a course on Finance with AI is to upload a company's annual report to ChatGPT (or a different chatbot) and ask it for an investment analysis in the form of a Word document.  You can ask the chatbot to include the following:
+A good demonstration at the start of a course on Finance with AI is to upload a company's annual report to a chatbot and ask it for an investment analysis.  Anthropic recently added Excel integration to Claude, and Claude is currently the best chatbot for this exercise.  It can produce a fully functioning Excel workbook and a Word document containing the analysis.  You can ask the chatbot to include the following:
 
 - a summary of the annual report 
 - a comparison of the firm to peer firms
-- a two-stage DCF analysis formed by extrapolating trends 
+- a two-stage DCF analysis
 - a sensitivity analysis focused on the items for which extrapolation might be most unreasonable 
 - a buy/hold/sell recommendation 
 

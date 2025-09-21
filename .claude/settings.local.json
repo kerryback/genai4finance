@@ -25,7 +25,8 @@
       "Read(//c/Users/kerry/repos/blog/**)",
       "Bash(git stash:*)",
       "Bash(git fetch:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []

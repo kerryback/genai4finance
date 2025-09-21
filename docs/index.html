@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -159,7 +130,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#tools-for-the-course" id="toc-tools-for-the-course" class="nav-link active" data-scroll-target="#tools-for-the-course">Tools for the Course</a></li>
-  <li><a href="#main-topics" id="toc-main-topics" class="nav-link" data-scroll-target="#main-topics">Main Topics</a></li>
+  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a></li>
   <li><a href="#prompt-engineering" id="toc-prompt-engineering" class="nav-link" data-scroll-target="#prompt-engineering">1. Prompt Engineering</a></li>
   <li><a href="#corporate-implementations-of-ai" id="toc-corporate-implementations-of-ai" class="nav-link" data-scroll-target="#corporate-implementations-of-ai">2. Corporate Implementations of AI</a></li>
   <li><a href="#ai-generated-code" id="toc-ai-generated-code" class="nav-link" data-scroll-target="#ai-generated-code">3. AI-Generated Code</a></li>
@@ -178,6 +149,9 @@ window.Quarto = {
 
 
 
+<div style="text-align: left; margin: 1rem 0; color: #666; font-size: 0.9rem;">
+<p>Last Updated: September 21, 2025</p>
+</div>
 <div style="text-align: center; margin: 2rem 0;">
 <p><img src="genai4finance.png" alt="Teaching Finance with AI" style="max-width: 400px; width: 100%; height: auto;"></p>
 </div>
@@ -233,14 +207,18 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <p>The purpose of this site is to share some experiences and thoughts about teaching MBA students how generative AI can and is being used in the finance industry and how they can leverage it to be more efficient in the workplace. We are all learning this on the fly, and of course things are evolving very quickly, so I’m hoping that sharing will be useful. I invite everyone to share in the comments section below.</p>
 <p>I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year. For the most part, I do not teach new financial concepts in the course, because we have other courses for those. However, I try to reinforce students’ understanding of concepts they have already seen by approaching them with a different tool (AI + coding). The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an ‘Applied Finance’ course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets. I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.</p>
-<p>In addition to conducting financial analysis directly with AI + coding, the course uses AI + coding to develop tools for financial analysis. The basic structure, as is described in more detail below, is <span class="math display">\[\text{Chatbots} \; \rightarrow \; \text{Coding} \; \rightarrow \; \text{Apps} \; \rightarrow \; \text{Custom Chatbots} \; \rightarrow \; \text{AI Agents}\]</span> In each step, we use examples from finance, but this same structure would apply to any domain.</p>
-<section id="tools-for-the-course" class="level2">
+<p>In addition to conducting financial analysis directly with AI + coding, the course uses AI + coding to develop tools for financial analysis. The basic structure, as is described in more detail below, is illustrated in the following diagram. We can do financial analysis directly with AI + coding. We can also use AI + coding to build apps to automate analysis. A chatbot is a particular type of app, and we can create a custom chatbot that does financial analysis. Finally, an AI agent is a chatbot with tools, which can also do financial analysis.</p>
+<div style="text-align: center; margin: 2rem 0;">
+<p><img src="ai_learning_progression.png" alt="AI Learning Progression" style="max-width: 600px; width: 60%; height: auto;"></p>
+</div>
+<section id="tools-for-the-course" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="tools-for-the-course">Tools for the Course</h2>
-<p>Students can use any chatbot for the first part of the course. Then, the course switches to using Google Colab, which is a free Python environment in the cloud that has built-in Google Gemini assistance. There is no software to install, so there is no set-up required. I prepared some materials to show students how to <a href="https://workshop.kerryback.com">use Google Colab</a>, which I cover when we get to that point.</p>
-<p>Previously, I used <a href="https://julius.ai">Julius.ai</a> instead of Google Colab. Julius is a bit more straightforward to use, because it is a simple chatbot interface rather than a Jupyter notebook - see my <a href="https://kerryback.substack.com/p/07-mean-variance-analysis">blog post about Julius</a>. Julius also provides access to models from OpenAI and Anthropic, whereas Colab only offers Google Gemini. However, while Anthropic’s Claude is still the best coding model, Gemini has caught up considerably and is now a solid choice. Furthermore, Colab offers several advantages: it is free, it produces Jupyter notebooks that are portable, and it can deploy apps to the cloud.</p>
+<p>At this time, the best tool is Claude Pro ($20/month) with Claude Desktop.<br>
+Claude is the best coding LLM. Also, Anthropic recently released Excel integration, so Claude can generate fully functioning, nicely formatted Excel workbooks.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In addition, Anthropic pioneered the Model Context Protocol (MCP) and have recently made it simpler for users to configure MCP connections in Claude Desktop. Finally, the Pro subscription allows use of Claude Code, which is a very powerful coding agent.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;As of September, 2025, Excel generation is only available with the Claude Max ($100/month) account, but it is expected to be available with the Pro account by the end of the year.</p></div></div><p>Previously, I used <a href="https://julius.ai">Julius.ai</a> instead of Claude. Julius provides access to Claude models, in addition to OpenAI models. It provides a 50% academic discount, which is an advantage, but it does not provide Excel generation or MCP connections. ChatGPT is another possibility. It does not use MCP connections, though it has its own Assistants API and Custom GPTs. However, it does not, at this time, provide Excel generation. Furthermore, it provides only a limited (though standard) set of Python libraries, unlike Claude, which allows users to add whatever Python libraries they need to the environment that Claude provides in the cloud.</p>
 </section>
-<section id="main-topics" class="level2">
-<h2 class="anchored" data-anchor-id="main-topics">Main Topics</h2>
+<section id="topics" class="level2">
+<h2 class="anchored" data-anchor-id="topics">Topics</h2>
 <p>The course covers the following topics:</p>
 <ol type="1">
 <li>Prompt engineering</li>
@@ -254,17 +232,17 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 <section id="prompt-engineering" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="prompt-engineering">1. Prompt Engineering</h2>
-<p>A good demonstration at the start of a course on Finance with AI is to upload a company’s annual report to ChatGPT (or a different chatbot) and ask it for an investment analysis in the form of a Word document. You can ask the chatbot to include the following:</p>
+<p>A good demonstration at the start of a course on Finance with AI is to upload a company’s annual report to a chatbot and ask it for an investment analysis. Anthropic recently added Excel integration to Claude, and Claude is currently the best chatbot for this exercise. It can produce a fully functioning Excel workbook and a Word document containing the analysis. You can ask the chatbot to include the following:</p>
 <ul>
 <li>a summary of the annual report</li>
 <li>a comparison of the firm to peer firms</li>
-<li>a two-stage DCF analysis formed by extrapolating trends</li>
+<li>a two-stage DCF analysis</li>
 <li>a sensitivity analysis focused on the items for which extrapolation might be most unreasonable</li>
 <li>a buy/hold/sell recommendation</li>
 </ul>
 <p>This example illustrates the power of AI ‘out of the box’ for financial analysis. It also explains why we are seeing so many stories about the potential demise of junior financial analysts. Of course, the AI is not perfect. We should engage our students in a discussion of how the report can be improved.</p>
-<p>Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the model will have no memory of the original prompt and response<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>), and submit the new prompt. Compare the results. Get students to discuss how they might further improve the new prompt. Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report. This is <strong>prompt engineering.</strong></p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Large language models do not actually remember past prompts and responses in a session. Instead the record of past prompts and responses in a session is sent by a chatbot to the model along with each new prompt, so that the model can use the record of past prompts and responses when generating a new response.</p></div></div></section>
+<p>Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the model will have no memory of the original prompt and response<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>), and submit the new prompt. Compare the results. Get students to discuss how they might further improve the new prompt. Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report. This is <strong>prompt engineering.</strong></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Large language models do not actually remember past prompts and responses in a session. Instead the record of past prompts and responses in a session is sent by a chatbot to the model along with each new prompt, so that the model can use the record of past prompts and responses when generating a new response.</p></div></div></section>
 <section id="corporate-implementations-of-ai" class="level2">
 <h2 class="anchored" data-anchor-id="corporate-implementations-of-ai">2. Corporate Implementations of AI</h2>
 <p>The HBS case about <a href="https://hbsp.harvard.edu/product/HEC382-PDF-ENG">Implementing AI at Deloitte</a> is a good foundation for a class discussion of AI implementation. It covers the issues of data privacy, compliance, client trust, reliability, biases, and employee buy-in. It also describes how Deloitte set up a custom chatbot.</p>
@@ -349,8 +327,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="local-installation-of-ai-coding" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="local-installation-of-ai-coding">Local Installation of AI + Coding</h4>
 <p>The simplest way for students to install Python plus some of the packages they need is to use the <a href="https://www.anaconda.com/products/distribution">Anaconda</a> distribution. It is free and easy to install.</p>
-<p>To create a local version of Google Colab with Gemini, it is hard to beat <a href="https://cursor.com">Cursor</a>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Cursor is offering students a <a href="https://cursor.com/en/students">free year</a> of its Cursor Pro account. Students can use their OpenAI API keys - or API keys from Anthropic or Google, etc. - to configure the AI. There will be charges based on usage, which again will be small for the amount of usage done in the course.</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Actually, my favorite setup at the moment is to use Claude Code with Cursor’s Claude Code Extension. This setup adds extra cost, but it enables replacement of Cursor’s chat feature with Claude Code, which seems to have a better system prompt.</p></div></div><p>Cursor has auto-complete and chat just like Google Colab. It can also execute terminal commands. Using the terminal, it can implement the steps described above for permanent deployment of apps - creating a Github repo, pushing to Github, integrating with Koyeb or Render, and deploying. It can also the the MotherDuck CLI to create the online database described above.</p>
+<p>To create a local version of Google Colab with Gemini, it is hard to beat <a href="https://cursor.com">Cursor</a>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Cursor is offering students a <a href="https://cursor.com/en/students">free year</a> of its Cursor Pro account. Students can use their OpenAI API keys - or API keys from Anthropic or Google, etc. - to configure the AI. There will be charges based on usage, which again will be small for the amount of usage done in the course.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Actually, my favorite setup at the moment is to use Claude Code with Cursor’s Claude Code Extension. This setup adds extra cost, but it enables replacement of Cursor’s chat feature with Claude Code, which seems to have a better system prompt.</p></div></div><p>Cursor has auto-complete and chat just like Google Colab. It can also execute terminal commands. Using the terminal, it can implement the steps described above for permanent deployment of apps - creating a Github repo, pushing to Github, integrating with Koyeb or Render, and deploying. It can also the the MotherDuck CLI to create the online database described above.</p>
 <p>Cursor can also code in languages other than Python. In particular, it can use JavaScript, etc. to create professional user interfaces, as discussed above for Replit.</p>
 <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
 <p style="margin: 0;">
