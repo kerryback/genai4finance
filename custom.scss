@@ -4,6 +4,19 @@
 /*-- scss:rules --*/
 .navbar {
   background-color: #4a4a4a !important;  // Gray banner color
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  min-height: 2.5rem !important;
+}
+
+.navbar-brand {
+  padding-top: 0.125rem !important;
+  padding-bottom: 0.125rem !important;
+}
+
+.navbar-nav .nav-link {
+  padding-top: 0.125rem !important;
+  padding-bottom: 0.125rem !important;
 }
 
 // Remove or modify these rules as they might be interfering
