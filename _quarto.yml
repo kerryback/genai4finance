@@ -3,9 +3,7 @@ project:
   output-dir: docs
   resources:
     - CNAME
-    - teaching_finance_with_ai_logo.png
-    - image1.png
-    - image2.png
+    - .nojekyll
 
 website:
   title: "Teaching Finance with AI"
