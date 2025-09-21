@@ -14,20 +14,6 @@ citation-location: margin
   <img src="genai4finance.png" alt="Teaching Finance with AI" style="max-width: 400px; width: 100%; height: auto;">
 </div>
 
-<div style="text-align: center; margin: 2rem 0; font-size: 1.5rem;">
-  <a href="https://blog.kerryback.com" title="Blog" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
-    <i class="bi bi-journal-text"></i>
-  </a>
-   <button id="theme-toggle" title="Toggle Light/Dark Theme" class="nav-icon" style="margin: 0 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;">
-    <i class="bi bi-sun" id="theme-icon"></i>
-  </button>
-  <a href="#giscus" title="Discussions" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
-    <i class="bi bi-chat-dots"></i>
-  </a>
-  <a href="https://mgmt675-2026.kerryback.com/MGMT675.pdf" target="_blank" title="Syllabus" class="nav-icon" style="margin: 0 1rem; text-decoration: none;">
-    <i class="bi bi-mortarboard"></i>
-  </a>
-</div>
 
 <style>
 .nav-icon {
