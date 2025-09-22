@@ -121,7 +121,7 @@ The analysis and docs Claude creates are impressive, but of course there will be
 
 Before getting to financial analysis, students should see the power of vibe coding for data handling, visualization, and statistics.  That's probably a week of class time.  Then, some good financial applications of vibe coding are mean-variance analysis and CAPM cost of capital calculations.  We can demo one and assign the second as a group project.  Yahoo Finance is a good source of free data, but at this time it seems difficult to get that data with Claude; in particular, in my experience, Claude is unable to use the Python yfinance library.  Hence, we should provide data.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data) using Julius.ai, [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
 
-There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write Python code to create the visualizations and to produce Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualization](https://kerryback.substack.com/p/03-visualize).    
+There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatterplot with regression line.  AI can write Python code to create the visualizations and to produce Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualization](https://kerryback.substack.com/p/03-visualize).    
 
 There is a lot that could be done on option pricing if students have seen options already.  As remarked above, I teach a first-year class, and I can't preempt what will be taught to second-year students.  Except for that issue, I would certainly spend some time on options.
 
@@ -135,9 +135,8 @@ Custom chatbots involve
 - Possible retrieval of documents
 - Possible use of tools
 
-It is useful to show OpenAI Custom GPTs to students and then to show API connections using Claude.  Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Claude Desktop.  They will be charged for using the API keys on a per-token basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get free API keys from [Open Router](https://openrouter.ai) and use free open source LLMS from [Hugging Face](https://huggingface.co).  
+It is useful to show Custom GPTs from OpenAI to students and then to show API connections using Claude.  Students can get API keys even with free accounts.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Claude Desktop.  They will be charged for using the API keys on a per-token basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get free API keys from [Open Router](https://openrouter.ai) and use free open source LLMS from [Hugging Face](https://huggingface.co).  
 
-Outside of Custom GPTs, deploying a custom chatbot is the same as deploying an app.  This leads naturally to creating apps and agents. But, first, it is worthwhile to look at the creation of custom chatbots for companies.
 
 ## Corporate Implementations
 
