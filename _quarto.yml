@@ -4,6 +4,8 @@ project:
   resources:
     - CNAME
     - .nojekyll
+  render:
+    - index.qmd
 
 website:
   title: "Gen AI for Finance"
