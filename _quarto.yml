@@ -29,6 +29,9 @@ website:
         target: _blank
       - text: FMA Award
         href: "#"
+      - text: Python
+        href: https://workshop.kerryback.com
+        target: _blank
 
 format:
   html:
