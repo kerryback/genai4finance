@@ -67,51 +67,81 @@ document.addEventListener('DOMContentLoaded', function() {
 
 The purpose of this site is to share some experiences and thoughts about teaching MBA students how generative AI can and is being used in the finance industry and how they can leverage it to be more efficient in the workplace.  We are all learning this on the fly, and of course things are evolving very quickly, so I'm hoping that sharing will be useful.  I invite everyone to share in the comments section below.  
 
-I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year.  For the most part, I do not teach new financial concepts in the course, because we have other courses for those.  However, I try to reinforce students' understanding of concepts they have already seen by approaching them with a different tool (AI + coding).  The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an 'Applied Finance' course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills, and then my course in the last part of the spring that covers the same topics again, but using AI + coding instead of spreadsheets.  I will describe that course in particular, but many of the observations below should apply to courses in other formats and to courses for different student groups.
+I teach a six-week 18-contact-hour course to first year MBAs in the last part of their first year.  For the most part, I do not teach new financial concepts in the course, because we have other courses for those.  However, I try to reinforce students' understanding of concepts they have already seen by approaching them with a different tool (AI + coding).  The course caps a first-year sequence consisting of a one-semester core course in the fall followed by an 'Applied Finance' course in the first part of the spring that goes deeper into some of the topcs covered in the core course and develops spreadsheet modeling skills.  The observations below should also apply to courses in other parts of the curriculum and to courses for different student groups.
 
-In addition to conducting financial analysis directly with AI + coding, the course uses AI + coding to develop tools for financial analysis.  The basic structure, as is described in more detail below, is illustrated in the following diagram.  We can do financial analysis directly with AI + coding.  We can also use AI + coding to build apps to automate analysis.  A chatbot is a particular type of app, and we can create a custom chatbot that does financial analysis.  Finally, an AI agent is a chatbot with tools, which can also do financial analysis.
+## Themes
+
+There a few basic themes that I think should permeate a course on generative AI for finance.
+
+1. We should treat AI as a colleague, collaborator, and advisor - see Ethan Mollick, [Good Enough Prompting](https://www.oneusefulthing.org/p/getting-started-with-ai-good-enough). 
+2. Large language models (LLMs) cannot be relied upon to do arithmetic, so coding (Python) is essential. 
+3. For critical operations, we should save tested code as an app.
+4. To use a chatbot for critical operations, we should configure the app as a chatbot tool, creating an AI agent.
+
+The learning/building progression is captured in the following diagram. Chatbots are a special type of app, and agents are chatbots with tools.  AI can write the code to create these things, and there are also "no code" options available (Custom GPTs at OpenAI).
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="ai_learning_progression.png" alt="AI Learning Progression" style="max-width: 600px; width: 60%; height: auto;">
+  <img src="ai_progression2.png" alt="AI Learning Progression" style="max-width: 600px; width: 60%; height: auto;">
 </div>
 
-## Tools for the Course
+## Tools 
 
-At this time, the best tool is Claude Pro ($20/month) with Claude Desktop.  
-Claude is the best coding LLM.  Also, Anthropic recently released Excel integration, so Claude can generate fully functioning, nicely formatted Excel workbooks.^[As of September, 2025, Excel generation is only available with the Claude Max ($100/month) account, but it is expected to be available with the Pro account by the end of the year.]  In addition, Anthropic pioneered the Model Context Protocol (MCP) and have recently made it simpler for users to configure MCP connections in Claude Desktop.  Finally, the Pro subscription allows use of Claude Code, which is a very powerful coding agent.
+At this time, the best tool is Claude Pro ($20/month) with Claude Desktop.  Claude Opus and Sonnet are the best coding LLMs.  Also, Anthropic recently released Excel integration, so Claude can generate fully functioning, nicely formatted Excel workbooks.^[As of September, 2025, Excel generation is only available with the Claude Max ($100/month) account, but it is expected to be available with the Pro account by the end of the year.]  In addition, Anthropic created the Model Context Protocol (MCP) and have recently made it simpler for users to configure MCP connections in Claude Desktop.  Finally, the Pro subscription allows use of Claude Code, which is a very powerful coding agent.
 
-Previously, I used [Julius.ai](https://julius.ai) instead of Claude. Julius provides access to Claude models, in addition to OpenAI models.  It provides a 50% academic discount, which is an advantage, but it does not provide Excel generation or MCP connections.  ChatGPT is another possibility. It does not use MCP connections, though it has its own Assistants API and Custom GPTs.  However, it does not, at this time, provide Excel generation.  Furthermore, it provides only a limited (though standard) set of Python libraries, unlike Claude, which allows users to add whatever Python libraries they need to the environment that Claude provides in the cloud. 
+Previously, I used [Julius.ai](https://julius.ai) instead of Claude. Julius provides access to Claude models, in addition to OpenAI models.  It provides a 50% academic discount, which is an advantage, but it does not provide Excel generation or MCP connections.  ChatGPT is another possibility. It has its Assistants API and Custom GPTs as an alternative to MCP connections.  However, it does not, at this time, provide Excel generation.  Furthermore, it provides only a limited (though standard) set of Python libraries, unlike Claude, which allows users to add whatever Python libraries they need to the environment that Claude provides in the cloud. 
 
-## Topics
+## Outline
 
-The course covers the following topics:
+- Collaborating with Claude for valuation (Walmart case study)
+- Vibe coding for finance 
+  - Analysis
+  - Visualization
+  - Report generation 
+- Custom chatbots
+  - System prompt
+  - Retrieval augmented generation (Notebook LM)
+  - Corporate implementation (Deloitte case study)
+  - Custom GPTs and vibe coded chatbots 
+- Apps and agents
+  - App layout (back-end, front-end, user interface)
+  - Creating and deploying (Replit, Streamlit)
+  - Connecting to chatbots (Custom GPTs and MCP)
 
-1. Prompt engineering
-2. Corporate implementations of AI
-3. Using AI to write code for financial analysis, visualization, and report generation
-4. Using AI to create apps to automate the above
-5. Creating custom chatbots for the above 
-6. Creating AI agents for the above
-7. In-depth study of using AI for DCF valuation of companies
- 
+## Introductory Example
 
-## 1. Prompt Engineering
+I like the HBS case [Valuing Walmart 2010](https://hbsp.harvard.edu/product/W11058-PDF-ENG).  The approach that the case guides students to use is too simplistic, so I mostly ignore it.  I like the case because all students will have some understanding of where Walmart's value comes from, and we can have meaningful discussions about possible future growth rates.
 
-A good demonstration at the start of a course on Finance with AI is to upload a company's annual report to a chatbot and ask it for an investment analysis.  Anthropic recently added Excel integration to Claude, and Claude is currently the best chatbot for this exercise.  It can produce a fully functioning Excel workbook and a Word document containing the analysis.  You can ask the chatbot to include the following:
+We can start this part of the course by sketching a valuation analysis on the board with student input and discussion.  We have to decide what ratios and growth rates we will use to generate pro forma statements and what assumptions we will make about them.  This provides a leveling-up experience for students and provides focus to the ensuing discussions.
 
-- a summary of the annual report 
-- a comparison of the firm to peer firms
-- a two-stage DCF analysis
-- a sensitivity analysis focused on the items for which extrapolation might be most unreasonable 
-- a buy/hold/sell recommendation 
+After working through the issues by hand, we can upload the financial statements in the case to Claude and ask it to generate a two-stage DCF analysis, to document and explain its assumptions, and to produce nicely formatted Excel workbooks and Word docs.  
 
-This example illustrates the power of AI 'out of the box' for financial analysis.  It also explains why we are seeing so many stories about the potential demise of junior financial analysts.  Of course, the AI is not perfect.  We should engage our students in a discussion of how the report can be improved.  
+The analysis and docs Claude creates are impressive, but of course there will be room to improve the assumptions and perhaps the analysis.  Doing this live in class gives students a feel for how to collaborate with AI.
 
-Compile the responses to build a more detailed prompt than the original prompt, start a new chatbot session (so the model will have no memory of the original prompt and response^[Large language models do not actually remember past prompts and responses in a session.  Instead the record of past prompts and responses in a session is sent by a chatbot to the model along with each new prompt, so that the model can use the record of past prompts and responses when generating a new response.]), and submit the new prompt.  Compare the results.  Get students to discuss how they might further improve the new prompt.  Then, point out that the eventual prompt that they form through this iterative process can be saved as a text file and uploaded each time they want to generate this type of report.  This is **prompt engineering.** 
+## Vibe Coding for Finance
 
-## 2. Corporate Implementations of AI
+Before getting to financial analysis, students should see the power of vibe coding for data handling, visualization, and statistics.  That's probably a week of class time.  Then, some good financial applications of vibe coding are mean-variance analysis and CAPM cost of capital calculations.  We can demo one and assign the second as a group project.  Yahoo Finance is a good source of free data, but at this time it seems difficult to get that data with Claude; in particular, in my experience, Claude is unable to use the Python yfinance library.  Hence, we should provide data.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data) using Julius.ai, [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
 
-The HBS case about [Implementing AI at Deloitte](https://hbsp.harvard.edu/product/HEC382-PDF-ENG) is a good foundation for a class discussion of AI implementation.  It covers the issues of data privacy, compliance, client trust, reliability, biases, and employee buy-in.  It also describes how Deloitte set up a custom chatbot.  
+There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write Python code to create the visualizations and to produce Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualization](https://kerryback.substack.com/p/03-visualize).    
+
+There is a lot that could be done on option pricing if students have seen options already.  As remarked above, I teach a first-year class, and I can't preempt what will be taught to second-year students.  Except for that issue, I would certainly spend some time on options.
+
+## Custom Chatbots
+
+Custom chatbots involve 
+
+- A user interface
+- An API connection to an LLM
+- A system prompt
+- Possible retrieval of documents
+- Possible use of tools
+
+It is useful to show OpenAI Custom GPTs to students and then to show API connections using Claude.  Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Claude Desktop.  They will be charged for using the API keys on a per-token basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get free API keys from [Open Router](https://openrouter.ai) and use free open source LLMS from [Hugging Face](https://huggingface.co).  
+
+Outside of Custom GPTs, deploying a custom chatbot is the same as deploying an app.  This leads naturally to creating apps and agents. But, first, it is worthwhile to look at the creation of 
+
+## Corporate Implementations
+
+This [case about Implementing AI at Deloitte](https://hbsp.harvard.edu/product/HEC382-PDF-ENG) is a good foundation for a class discussion of AI implementation.  It covers the issues of data privacy, compliance, client trust, reliability, biases, and employee buy-in.  It also describes how Deloitte set up a custom chatbot.  
 
 This widely cited [MIT Study](https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf) is also must-reading.  It has been described in the media as reporting that 95% of corporate AI implementations fail.  What it actually says is that only 5% of corporate AI pilots reach production, which is not quite the same thing.  The reasons that most pilots are abandoned and the characteristics of successful pilots are informative.  Also key is this passage: "workers from over 90% of the companies we surveyed reported regular use of 
 personal AI tools for work tasks. In fact, almost every single person used an LLM in some 
@@ -119,22 +149,19 @@ form for their work."  So, AI is being widely used, despite the difficulties com
 
 Another very interesting item is [this study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5188231) about the use of AI in corporate teams.  The study is described by one of the authors [here](https://www.oneusefulthing.org/p/the-cybernetic-teammate).  They conclude that, instead of thinking of AI as a tool, it should be regarded as a teammate.  They find that one person working with AI is at least as efficient as two people working in a team without AI.  The most effective combination is naturally a team with AI.  Interestingly, they find that AI enables workers and teams to break functional silos, performing like teams composed of individuals with diverse functional knowledge.
 
-## 3. AI-Generated Code
 
-Two good exercises for seeing how AI-generated code can be used to perform financial analysis are mean-variance analysis and CAPM cost of capital calculations.  I demo the first and assign the second as a group project.  AI can write code to get data from Yahoo Finance, calculate returns, and perform the analyses, assuming we are willing to trust sample moments in mean-variance analysis.  We could also input risk and risk premia assumptions directly for mean-variance analysis rather than calculating sample moments.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data), [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
 
-There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatter plot and regression line.  AI can write Python code to create the visualizations and to produce Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualization](https://kerryback.substack.com/p/03-visualize).    
 
-There is a lot that could be done on option pricing if students have seen options already.  As remarked above, I teach a first-year class, and I can't preempt what will be taught to second-year students.  Except for that issue, I would certainly spend some time on options.
+## Apps and Agents
 
-## 4. Building Apps
+Whatever code an LLM (large language model) writes for financial analysis can be encapsulated in an app.  This has two important advantages.  First, the app can be made broadly available, so people bet the benefit of the code without needing to go to a chatbot to write it.  Second, the code can be tested, confirmed, and frozen.  This ensures that mistakes will not be introduced by rewriting the code each time it is needed.  
 
-Whatever code an LLM (large language model) writes for financial analysis can be encapsulated in an app and made broadly available, so people can use the code without needing to go to Julius or Colab or any other Python platform.  The Python Streamlit library makes app construction easy.  The same is true of the Gradio library apparently, but I only have experience with Streamlit.  See my [blog post about creating apps](https://substack.com/home/post/p-163644611).  Again, I demo mean-variance analysis and assign cost of capital calculations as a group project.
+MBA students need to understand that apps can be created to automate activities, and they need to understand about custom chatbots and AI agents.  But, of course, they are not studying to become software engineers, so creating apps is a bit of a digression.  Nevertheless, I think it is worth doing.  Being able to automate routine tasks is a useful skill to have, and vibe coding makes it surprisingly easy.  It also enables us to create concrete examples of custom chatbots and AI agents. 
 
-Streamlit apps can be deployed to the cloud from Google Colab using the ngrok service.  Students will need to create free accounts at [ngrok](https://ngrok.com)
-and get [authorization tokens](https://dashboard.ngrok.com/get-started/your-authtoken).  They should save their authorization tokens as secret keys in Google Colab (they can ask Gemini how to do that).  Then, they can tell Gemini to deploy apps using ngrok.
+We can run Python apps locally if Python is installed.  The next simplest thing is to deploy them in the cloud temporarily on Streamlit Community Cloud or Hugging Face Spaces.^[By 'temporary,' I mean that the app must be restarted whenever it is unused for a day or so.]  Permanent deployment (on Koyeb or Render, for example) is also straightforward, but it does require a few steps, for which students may not have the patience. 
+See my [blog post about apps](https://substack.com/home/post/p-163644611) or the discussion below.  .
 
-At this point in the course, students have seen enough to compare the following ways to perform a financial analysis:
+At this point, students will have seen financial analysis via:
 
 - Using Excel
 - Asking a chatbot
@@ -143,46 +170,9 @@ At this point in the course, students have seen enough to compare the following 
 
 This provides the foundation for an informative class discussion about the relative merits of each approach and the circumstances in which one approach is better than another.
 
-## 5. Custom Chatbots
-
-Custom chatbots involve 
-
-- A user interface
-- An API connection to an LLM, which has possibly been fine-tuned
-- A system prompt
-- Possible retrieval of documents
-- Possible use of tools
-
-
-Creating a user interface is a variation of building an app and has already been covered essentially.  Creating an API connection to an LLM is similar to setting up ngrok as covered in the second topic.  Finally, the prompt that was saved as a text file in the course introduction can easily be used to create an example of a system prompt.  So, a simple custom chatbot of **user interface + API connection + system prompt** requires only techniques that students have already seen at this point.
-
-Students can get API keys from OpenAI even with free accounts, or they can get API keys from Anthropic or Google.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Google Colab in the same way they saved their ngrok keys.  They will be charged on a per-usage basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get free API keys from [Open Router](https://openrouter.ai) and use free open source LLMS from [Hugging Face](https://huggingface.co).  
-
-Once an API key is installed on Colab, students can ask Gemini to connect to the LLM and send a prompt and get a response.  Gemini will import the openai Python package even for using other LLMs, because the OpenAI API has become the standard.  The code that Gemini has to write to use the openai package is extremely simple and transparent, and it is useful for students to see it.
-
-As a next step, students can ask Gemini to create a custom chatbot using Streamlit and ngrok.  A good example for a system prompt is to ask the LLM to respond in a foreign language, so we can see that the system prompt actually works.  It is important that Gemini build a loop in the app that collects all past prompts and responses and sends them together with the system prompt with each new prompt.  If the chatbot does not seem to be remembering past prompts during a session, it is because the loop was not constructed.  Students should ask Gemini to add the loop if this occurs.
-
-## 6. AI Agents
-
 An AI agent is a chatbot that can use tools to complete tasks. Unlike regular chatbots that only generate text, agents can call functions, access APIs, and run applications to get things done.
 
-Students are prepared to learn about AI agents after having seen app development and custom chatbot development.  We can configure the mean-variance and cost-of-capital apps as tools that can be called, and we can create a custom chatbot that can call them.  All of this can be done by Gemini in Google Colab.
-
-If we connect multiple tools to a chatbot, then a user can, within a single chatbot session, perform a variety of specialized tasks.  For example, a user can retrieve data, possibly from multiple sources, and perform multiple types of analyses, all while interacting with the same chatbot using natural language prompts.  This really unleashes the power of AI.
-
-## 7. AI-Assisted DCF Valuation
-
-We start the course by asking a chatbot to do a DCF analysis.  We can return to the same question now with new tools in our toolbox.  A good question to pose is: How can we best build a chatbot to assist us in valuing a company?  At least a week and perhaps two weeks should be dedicated to this question.
-
-I like the HBS case [Valuing Walmart 2010](https://hbsp.harvard.edu/product/W11058-PDF-ENG).  The approach that the case guides students to use is too simplistic, so I mostly ignore it.  I like the case because all students will have some understanding of where Walmart's value comes from, and we can have meaningful discussions about possible future growth rates.
-
-I start this part of the course by sketching a valuation analysis on the board with student input and discussion.  We have to decide what ratios and growth rates we will use to generate pro forma statements and what assumptions we will make about them.  This provides a leveling-up experience for students and provides focus to the ensuing discussions.
-
-After working through the issues by hand, I upload the financial statements in the case to ChatGPT and ask it for a DCF valuation.  Then, I read the statements into Google Colab and ask Gemini to assist with a valuation in Python. At this point, students are prepared to discuss whether and how we can create a useful valuation assistant using an app or custom chatbot.  
-
-To use the app or custom chatbot, we will need to have a data source.  It is easy to get data from Yahoo Finance.  Alternatively, users can be asked to upload data.  It may also be possible to use other data sources, if there are available sources with APIs that can be used by the chatbot.
-
-I assign the creation of a valuation assistant chatbot as the final group project for the course, worth 50% of the total grade.  I require the chatbots to include a facility for uploading financial statements.   
+Students are prepared to learn about AI agents after having seen app development and custom chatbot development.  As examples, we can create apps from the vibe-coded mean-variance and cost-of-capital analysis, deploy them, and create MCP servers to connect them to Claude desktop.  This is ambitious, and it is possible we will only want to demo it rather than require students to learn it.  
 
 ## Extras
 
@@ -190,13 +180,9 @@ I assign the creation of a valuation assistant chatbot as the final group projec
 
 Students need to have some understanding of what they are seeing when an LLM generates code.  I provide an optional [pre-course workshop](https://workshop.kerryback.com) on using Jupyter notebooks in Google Colab, basic elements of Python, and pandas, numpy, and visualization libraries.
 
-#### User Interfaces of Apps
-
-Streamlit is a convenient way to build apps, but it provides limited flexibility in the design of the user interface.  LLMs can write code in many languages other than Python.  [Replit](https://replit.com) is an easy-to-use platform for creating apps.  It codes in Python, JavaScript, HTML, and CSS to create professional user interfaces.  I don't ask students to subscribe to Replit, but I do provide an in-class demonstration. 
-
 #### Database Chatbots
 
-An example of a useful custom chatbot is one that converts natural language prompts into database queries and returns data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the MotherDuck CLI (command line interface) to upload csv files.  ChatGPT or Gemini can tell you how to do this, or, there are agentic chatbots that can do it for you (see below). Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, which can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv files to the LLM.  This requires testing and iteration, like creating the system prompt for the forecasting and valuation chatbot.
+An example of a useful custom chatbot is one that converts natural language prompts into database queries and returns data.  To demonstrate this, we first need to store a database online.  We can use CRSP and/or Compustat data or other data for this example.  An easy way to create an online database is to create an account at [MotherDuck](https://motherduck.com) and use the MotherDuck CLI (command line interface) to upload csv files.  ChatGPT or Gemini can tell you how to do this, or, there are agentic chatbots that can do it for you (see below). Then, we can ask Gemini (or Replit) to create a chatbot that (i) sends a user prompt to an LLM, (ii) receives a response in the form of SQL code, (iii) sends the SQL code to MotherDuck to retrieve data, and (iv) returns the data to the user.  The key to this is the duckdb Python library, which can execute SQL queries against csv files just as if a SQL database had been set up.  To create the chatbot, a system prompt must be created that adequately describes the csv files to the LLM.  This requires testing and iteration.
 
 #### App Deployment 
 
@@ -208,17 +194,11 @@ To permanently deploy an app, we need an account at a host.  [Koyeb](https://koy
 - Connect the service to the GitHub repository 
 - Click 'Deploy' on Koyeb or Render
 
-Gemini or another chatbot can walk students through each step.  
+A chatbot can walk students through each step.  
 
-#### Local Installation of AI + Coding 
+#### Claude Code 
 
-The simplest way for students to install Python plus some of the packages they need is to use the [Anaconda](https://www.anaconda.com/products/distribution) distribution.  It is free and easy to install.  
-
-To create a local version of Google Colab with Gemini, it is hard to beat [Cursor](https://cursor.com).^[Actually, my favorite setup at the moment is to use Claude Code with Cursor's Claude Code Extension.  This setup adds extra cost, but it enables replacement of Cursor's chat feature with Claude Code, which seems to have a better system prompt.] Cursor is offering students a [free year](https://cursor.com/en/students) of its Cursor Pro account.  Students can use their OpenAI API keys - or  API keys from Anthropic or Google, etc. - to configure the AI.  There will be charges based on usage, which again will be small for the amount of usage done in the course.
-
-Cursor has auto-complete and chat just like Google Colab.  It can also execute terminal commands.  Using the terminal, it can implement the steps described above for permanent deployment of apps - creating a Github repo, pushing to Github, integrating with Koyeb or Render, and deploying.  It can also the the MotherDuck CLI to create the online database described above.
-
-Cursor can also code in languages other than Python.  In particular, it can use JavaScript, etc. to create professional user interfaces, as discussed above for Replit.
+Currently, Claude Code is the most powerful publicly available system for applying generative AI to finance.  It is a terminal-based AI agent.  Students should see it.  Also, if we are going to ask students to vibe code apps, chatbots, or agents, then we should make it feasible for them to use it.  Most students will be inexperienced in working in a terminal - we have to explain how to use the arrow keys, Backspace, and Delete to edit, the cd command for changing directories, etc.  Once they've seen that and installed Claude Code, they can open it (type `claude` in the terminal) and ask it to install Python and put it on the path.  Then, it can create, edit, and run Python scripts.  It can run Streamlit apps, manage connections to GitHub, Koyeb, etc.
 
 <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
 <p style="margin: 0;">
@@ -229,7 +209,7 @@ Rice University<br>
 </p>
 </div>  
 
-## Discussions {#giscus}
+## Discussion {#giscus}
 
 Please share your thoughts, experiences, or questions about teaching AI-assisted finance in the comments below.
 
