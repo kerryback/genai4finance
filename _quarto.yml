@@ -17,6 +17,7 @@ website:
     left:
       - icon: house-door-fill
         href: https://finance-with-ai.org
+        target: _blank
     right:
       - text: Blog
         href: https://blog.kerryback.com
@@ -28,7 +29,8 @@ website:
         href: https://fma2025.kerryback.com
         target: _blank
       - text: FMA Award
-        href: "#"
+        href: https://fma2025.kerryback.com/award.html
+        target: _blank
       - text: Python
         href: https://workshop.kerryback.com
         target: _blank
