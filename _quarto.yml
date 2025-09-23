@@ -16,7 +16,7 @@ website:
     search: true
     left:
       - icon: house-door-fill
-        href: https://finance-with-ai.org
+        href: https://genai4finance.kerryback.com
         target: _blank
     right:
       - text: Blog
