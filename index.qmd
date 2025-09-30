@@ -73,10 +73,18 @@ I teach a six-week 18-contact-hour course to first year MBAs in the last part of
 
 There a few basic themes that I think should permeate a course on generative AI for finance.
 
-1. We should treat AI as a colleague, collaborator, and advisor - see Ethan Mollick, [Good Enough Prompting](https://www.oneusefulthing.org/p/getting-started-with-ai-good-enough). 
-2. Large language models (LLMs) cannot be relied upon to do arithmetic, so coding (Python) is essential. 
-3. For critical operations, we should save tested code as an app.
-4. To use a chatbot for critical operations, we should configure the app as a chatbot tool, creating an AI agent.
+1. We should treat AI as a colleague, collaborator, and advisor, as well
+as an assistant - - see Ethan Mollick, [Good Enough Prompting](https://www.oneusefulthing.org/p/getting-started-with-ai-good-enough). 
+2. Large language models (LLMs) cannot be relied upon to do
+arithmetic, so coding (Python) is essential.
+3. AI + coding (vibe coding) can perform many financial analyses as
+well as or better than Excel.
+4. For critical operations, we should save tested code as an app.
+5. Chatbots can be customized through the system prompt, retrieval
+augmented generation (RAG) or fine tuning.
+6. To use a chatbot for critical operations, we should create an app and
+configure it as a chatbot tool, creating an AI agent.
+
 
 The learning/building progression is captured in the following diagram. Chatbots are a special type of app, and agents are chatbots with tools.  AI can write the code to create these things, and there are also "no code" options available (Custom GPTs at OpenAI).
 
