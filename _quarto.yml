@@ -4,6 +4,10 @@ project:
   resources:
     - CNAME
     - .nojekyll
+    - fma2025.pdf 
+    - iita2025.pdf 
+    - claude-dcf-example.xlsx
+
   render:
     - index.qmd
 
@@ -29,10 +33,10 @@ website:
         href: https://mgmt675-2026.kerryback.com
         target: _blank
       - text: FMA Tutorial
-        href: https://fma2025.kerryback.com
+        href: fma2025.pdf
         target: _blank
       - text: FMA IITA
-        href: https://iita2025.kerryback.com/slides.pdf
+        href: iita2025.pdf
         target: _blank
       - text: Python Workshop
         href: https://workshop.kerryback.com
