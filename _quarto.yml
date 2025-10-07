@@ -4,7 +4,7 @@ project:
   resources:
     - CNAME
     - .nojekyll
-    - fma2025.pdf 
+    - "Incorporating AI into Teaching.pdf" 
     - iita2025.pdf 
     - claude-dcf-example.xlsx
 
