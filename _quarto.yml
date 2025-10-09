@@ -7,6 +7,7 @@ project:
     - fma2025_4x3.pdf 
     - iita2025.pdf 
     - claude-dcf-example.xlsx
+    - Binomial_Option_Model.mp4
 
   render:
     - index.qmd
