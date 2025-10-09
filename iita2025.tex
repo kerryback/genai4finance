@@ -1,0 +1,186 @@
+\documentclass{beamer}
+
+\usetheme[progressbar=foot]{metropolis}
+%\usepackage{appendixnumberbeamer}
+
+%\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\pgfplotsset{compat=1.17}
+\usepackage[timeinterval=60]{tdclock} 
+
+\usepackage{xspace}
+\usepackage{xcolor}
+\definecolor{tomato}{RGB}{255,99,71}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=cyan,
+    citecolor=green
+}
+
+\setbeamercolor{alerted text}{fg=tomato}
+
+\setbeamertemplate{frame footer}{MGMT 675: Generative AI for Finance \hfill \tdhours:\tdminutes}
+
+\title{MGMT 675: Generative AI for Finance}
+\subtitle{FMA 2025}
+
+\date{FMA IITA Session: October 24, 2025}
+\author{Kerry Back\\ 
+Jones Graduate School of Business\\
+Rice University}
+
+
+\begin{document}
+
+\initclock
+
+\maketitle
+
+
+\begin{frame}{Overview}
+    \begin{itemize}
+    \item Half-semester MBA course at end of 1st year
+    \item Course comes after: 
+    \begin{itemize}
+    \item Core finance (semester) 
+    \item Excel-based Applied Finance (half-semester)
+    \end{itemize}
+    \item Finance topics mostly repeated from prior courses
+    \item Ideas apply to courses of different lengths, at different points in the curriculum, and for different student groups
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{CNBC on JPMorgan, 9/30/2025}
+
+Derek Waldron, JP Morgan Chief Analytics Officer:
+\begin{itemize}
+\item (What we're working towards is that) every employee will have their own personalized AI assistant; every process is powered by AI agents, and every client experience has an AI concierge.
+\item You'll still have people at the top who are managing and have relationships with clients, but many, many of the processes underneath are now being done by AI systems.
+\end{itemize}
+
+
+Workers would shift from being creators of reports ... or "makers" ... to "checkers" or managers of AI agents doing that work.
+
+\end{frame}
+
+\begin{frame}{Brookings Institute, 2025}
+
+\begin{itemize}
+\item As AI models begin to handle underwriting, compliance, and asset allocation, the traditional architecture of financial work is undergoing a fundamental shift.
+\item As job descriptions evolve, so does the definition of financial talent. Excel is no longer a differentiator. Python is fast becoming the new Excel. 
+\item But technical skills alone will not cut it. The \alert{most in demand profiles today are those that speak both AI and finance}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Course Learning Objectives}
+\begin{enumerate}
+\item How to collaborate with AI to do financial analysis: prompt, evaluate, iterate
+\item How chatbots and AI agents work (chatbot is an app between user and AI, agent is a chatbot with tools)
+\item How to collaborate with AI to build apps, custom chatbots, and AI agents for financial analysis
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Why Teach Students to Build Things?}
+\begin{itemize}
+\item Hands-on learning of how things fit together in AI may provide useful perspective
+\item Deepen understanding of financial analysis by building things to do it
+\item May end up at small to mid size firms and be builders
+\item May check a box for recruiters
+\item It's fun
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Course Tools}
+    \begin{itemize}
+    \item 2024 case on AI implementation at Deloitte (available at HBS)
+    \pause
+    \item Chatbot + Python (I currently prefer Claude) for 
+    \begin{itemize}
+    \item Cost of capital calculation
+    \item Mean-variance optimization
+    \item DCF analysis
+    \item Performance evaluation
+    \end{itemize}
+    \pause
+    \item Choice of finance topics is dictated by position in curriculum
+    \pause
+    \item Build Streamlit apps for finance topics
+    \item Build AI agents (chatbots + tools) for finance topics using Streamlit and Model Context Protocol (MCP)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Assessment}
+    Group projects:
+    \begin{itemize}
+        \item Financial analysis (submit chat, product, and written assessment)
+        \item Building apps (submit app and written description and evaluation)
+        \item Building chatbot (submit chatbot and written description and evaluation)
+    \end{itemize}
+    \pause
+    \vskip\baselineskip
+    In-class seated exam: Analyze case (which they haven't seen before) and prepare Excel/Word/\ldots reports \alert{using AI all you want}.
+\end{frame}
+
+\begin{frame}{Plan for Remainder of Talk}
+    \begin{itemize}
+     \item Example of in-class exercise (mean-variance optimization on Julius.ai)
+     \item Example of new Claude skill (Claude for Excel)
+     \item Website with materials for instructors: genai4finance.kerryback.com
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{In-Class Exercises}
+    \begin{itemize}
+    \item Ask class to propose a prompt to solve a problem 
+    \pause
+    \item Evaluate result $\rightarrow$ another prompt
+    \item Rinse and repeat \ldots
+    \pause
+    \item At end, ask: \alert{How could we have formulated our initial prompt to make this faster?}  Save that prompt as a text file.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Example of End Result (Demo on Julius.ai)}
+   \begin{quote}
+Use the latest version of yfinance to get closing prices at a monthly frequency from Yahoo Finance for SPY, LQD, and IEF since 1970. Compute returns as percent changes and filter to the longest history for which returns for all three ETFs are available. Compute the historical mean and covariance matrix. Compute the tangency portfolio assuming the monthly risk-free rate is 0.04/12.  Allow short sales.  Create a Word doc containing the historical means, standard deviations, and correlations of the monthly SPY, LQD, and IEF returns, an explanation of the method used to compute the tangency portfolio, and your interpretation of why the tangency portfolio is what it is.  Format the Word doc professionally.
+  \end{quote}
+\end{frame}
+
+\begin{frame}{New Excel Skill for Claude}
+\begin{itemize}
+\item 
+In September, Anthropic upgraded Claude so it can generate fully functioning, nicely formatted Excel workbooks.
+\item Microsoft announced the same capability built into Excel (powered by Claude).
+\item Claude Prompt: Create an Excel file to illustrate two-stage DCF valuation of a company.
+\item \href{https://genai4finance.kerryback.com/claude-dcf-example.xlsx}{Claude Excel File}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Website: genai4finance.kerryback.com}
+
+Content:
+\begin{itemize}
+\item Course description aimed at teachers
+\item Blog: short posts about teaching various topics on AI and finance 
+\item Course materials: 2025 and 2026 (partial)
+\item Slides (these and upcoming talk)
+\item Python materials (for pre-course workshop or individual study)
+\end{itemize}
+\end{frame} 
+
+\begin{frame}{\href{https://genai4finance.kerryback.com}{genai4finance.kerryback.com}}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{genai4finance_qr.png}
+\end{center}
+\end{frame}
+\end{document}
+
+
