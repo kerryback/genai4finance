@@ -181,3 +181,4 @@ cython_debug/
 
 # CNAME file (different for each remote)
 docs/CNAME
+~.pptx
