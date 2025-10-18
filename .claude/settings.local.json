@@ -28,7 +28,12 @@
       "Bash(git merge:*)",
       "Bash(git checkout:*)",
       "Bash(python:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Read(//c/Users/kerry/.claude/**)",
+      "Bash(git clone:*)",
+      "Bash(git sparse-checkout:*)",
+      "Bash(cat:*)",
+      "Skill(skill-creator)"
     ],
     "deny": [],
     "ask": []
