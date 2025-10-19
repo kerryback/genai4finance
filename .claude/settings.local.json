@@ -33,7 +33,11 @@
       "Bash(git clone:*)",
       "Bash(git sparse-checkout:*)",
       "Bash(cat:*)",
-      "Skill(skill-creator)"
+      "Skill(skill-creator)",
+      "Read(//c/Users/kerry/**)",
+      "Bash(curl:*)",
+      "Bash(streamlit run:*)",
+      "Bash(ngrok http:*)"
     ],
     "deny": [],
     "ask": []

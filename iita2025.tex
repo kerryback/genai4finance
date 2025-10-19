@@ -5,6 +5,7 @@
 
 %\usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
+\usepackage{soul}
 
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
@@ -16,6 +17,8 @@
 \definecolor{tomato}{RGB}{255,99,71}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{fancybox}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -31,7 +34,7 @@
 \subtitle{FMA 2025}
 
 \date{FMA IITA Session: October 24, 2025}
-\author{Kerry Back\\ 
+\author{Kerry Back\\
 Jones Graduate School of Business\\
 Rice University}
 
@@ -100,7 +103,8 @@ What to do in a course specifically on AI?
 \item Working with AI is a dialogue: prompt, evaluate, iterate
 \item AI doesn't do numbers, so it needs to generate code
 \item AI is just a tool, and domain knowledge remains important 
-\item Domain knowledge + AI + code $\Rightarrow$ superstar
+\pause
+\item Domain knowledge + AI + code $\Rightarrow$ \textcolor{orange}{$\star$\textbf{\textsc{Superstar}}$\star$}
 \end{enumerate}
 \end{frame}
 
@@ -115,36 +119,46 @@ What to do in a course specifically on AI?
 \begin{frame}{Claude Code or Claude Desktop?}
 \begin{itemize}
 \item As AI has improved in general, the advantage of a chatbot that can execute terminal commands over one that cannot has grown.
-\item So, I think it is time to have students install a professional setup: Python, Claude Code, and VS Code. 
+\item With Claude skills, Claude Code is a general agent.
+\item So, I think it is time to use a professional setup: Python, Claude Code, and VS Code.  Install Claude Code.  Let Claude Code install everything else.
 \item If not that, then Claude Desktop.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Claude Example}
 First, install Excel and Word skills (\url{https://github.com/anthropics/skills}).  
-\vspace{1em}
-
-Ask Claude how to do it (just copy text files to the right folders).  Only has to be done once.
+Ask Claude to do it after researching how (just downloads text files to the right folders).  Only has to be done once.
 
 
 \vspace{1em}
 Claude prompt (after uploading \textit{Valuing Wal-Mart 2010}):
+
+\vspace{1em}
 \begin{quote}
 Read the case but ignore the valuation method described in it.  Do a 2-stage DCF analysis.  Document your assumptions and explain your reasons for them.  Create professionally formatted Excel and Word docs.
 \end{quote}
 \end{frame}
 
+\begin{frame}{Creating Apps: Basic Example}
+    Claude prompt:
+
+    \vspace{1em}
+    \begin{quote}
+    Create a streamlit app that prompts a user to input their name and then displays a window with Hello $<$name$>$! centered in a large font accompanied by a display of balloons. Run the app and tunnel it using my ngrok key stored at C:\textbackslash users\textbackslash kerry\textbackslash .env.
+        \end{quote}
+    \end{frame}
+
 \begin{frame}{An Idea for How to Assess}
     Group projects:
     \begin{itemize}
         \item Financial analysis (submit chat, product, and written assessment)
-        \item Building apps (submit app and written description and evaluation)
-        \item Building chatbot (submit chatbot and written description and evaluation)
+        \item Build app (submit app and written description and evaluation) -- could be Claude skill instead
+        \item Build chatbot (submit chatbot and written description and evaluation) -- could be Claude skill instead
     \end{itemize}
 
 \vspace{1em}
 
-    In-class seated exam: Analyze case (which they haven't seen before) and prepare Excel/Word/\ldots reports \alert{using AI all you want}.
+    In-class seated exam: Analyze a case and prepare Excel/Word/\ldots reports \alert{using AI}.
 \end{frame}
 
 
