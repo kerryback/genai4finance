@@ -37,7 +37,9 @@
       "Read(//c/Users/kerry/**)",
       "Bash(curl:*)",
       "Bash(streamlit run:*)",
-      "Bash(ngrok http:*)"
+      "Bash(ngrok http:*)",
+      "Bash(git log -5 --pretty=format:\"%s\")",
+      "Bash(git count-objects -vH)"
     ],
     "deny": [],
     "ask": []
