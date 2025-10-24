@@ -63,7 +63,9 @@
       "Bash(ngrok version:*)",
       "Bash(/d/Apps/Python/python.exe:*)",
       "Bash(./bin/code:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(npx @kerryback/rice-stock-data@1.0.10:*)",
+      "Bash(npm view:*)"
     ],
     "deny": [],
     "ask": []
