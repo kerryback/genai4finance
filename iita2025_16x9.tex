@@ -27,6 +27,7 @@
 }
 
 \setbeamercolor{alerted text}{fg=tomato}
+\setbeamercovered{transparent}
 
 \setbeamertemplate{frame footer}{MGMT 675: Generative AI for Finance \hfill \tdhours:\tdminutes}
 
@@ -86,27 +87,30 @@ Workers would shift from being creators of reports ... or "makers" ... to "check
 \begin{frame}{What Should We Teach about AI?}
 
 \begin{itemize}
-\item Where is it going?
+\item Where is the world going?
 \begin{itemize}
 \item Point-and-click GUIs will be replaced by agentic chatbots.
-\item OpenAI this month introduced OpenAI apps.  Launched with 
-\end{itemize}
-\end{itemize}
-
-\end{frame}
-\begin{frame}{What to do about AI?}
-
-It should be used in every class, and it will be, but it's not yet.  So, a course specifically on AI has a role to play.
-
-
-\vspace{1em}
-
-What to do in a course specifically on AI for finance?
+\item OpenAI this month introduced OpenAI apps.  
 \begin{itemize}
-\item Teach students about AI tools and how they are used in industry (custom chatbots, agents, RAG, \ldots)
-\item Give students experience in collaborating with AI: financial analysis and building things useful for financial analysis
-\end{itemize}  
+\item Launched with apps from Coursera, Expedia, Spotify,
+Zillow, \ldots 
+\item Provided tools for developers to create other apps
+\item Clearly want to be the new Apple APP Store, with everything running inside ChatGPT
+\end{itemize}
+\item Anthropic last week introduced Claude Skills, which can make Claude an agent for everything 
+\end{itemize}
+\pause
+\item We can help students get to the future today
+\begin{itemize}
+\item For example, explain workflows to Claude and ask Claude to create skills
+\item Subsequently, get all their work done by asking Claude to do it
+\end{itemize}
+\pause
+\item These skills will be valuable to students and to employers
+\end{itemize}
+
 \end{frame}
+
 
 
 \begin{frame}{Principles (Should Remain Constant)}
@@ -126,6 +130,8 @@ What to do in a course specifically on AI for finance?
 \item Skills are customized prompts.  Claude only reads them when needed, so you can have many without overloading the context window. 
 \end{itemize}
 \end{frame}
+
+
 
 \begin{frame}{Claude Code or Claude Desktop?}
 \begin{itemize}
@@ -159,12 +165,21 @@ Read the case but ignore the valuation method described in it.  Do a 2-stage DCF
         \end{quote}
     \end{frame}
 
-\begin{frame}{An Idea for How to Assess}
+\begin{frame}{Teaching Process}
+\begin{itemize}
+\item Discuss financial analysis issue 
+\item Ask AI to solve 
+\item Discuss how to verify solutions
+\item Discuss how to improve prompts to get better and faster output 
+\item Codify prompts and code produced by AI as Claude skill
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Assessment}
     Group projects:
     \begin{itemize}
         \item Financial analysis (submit chat, product, and written assessment).  Defend assignments orally.
-        \item Build app (submit app and written description and evaluation) -- could be Claude skill instead
-        \item Build chatbot (submit chatbot and written description and evaluation) -- could be Claude skill instead
+        \item Build Claude skills for financial analysis (submit skill and description of how they verified it). 
     \end{itemize}
 
 \vspace{1em}
