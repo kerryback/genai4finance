@@ -5,7 +5,9 @@ project:
     - CNAME
     - .nojekyll
     - fma2025_4x3.pdf 
-    - iita2025.pdf 
+    - fma2025_16x9.pdf
+    - iita2025.pdf
+    - iita2025_16x9.pdf 
     - claude-dcf-example.xlsx
     - Binomial_Option_Model.mp4
 
