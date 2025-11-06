@@ -180,5 +180,5 @@ cython_debug/
 .pypirc
 
 # CNAME file (different for each remote)
-docs/CNAME
+CNAME
 ~.pptx

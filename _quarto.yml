@@ -5,7 +5,7 @@ project:
     - CNAME
     - .nojekyll
     - fma2025_4x3.pdf 
-    - fma2025_16x9.pdf
+    - fma2025.pdf
     - iita2025.pdf
     - iita2025_16x9.pdf 
     - claude-dcf-example.xlsx
@@ -36,7 +36,7 @@ website:
         href: https://mgmt675-2026.kerryback.com
         target: _blank
       - text: FMA Tutorial
-        href: fma2025_16x9.pdf
+        href: fma2025.pdf
         target: _blank
       - text: FMA IITA
         href: iita2025_16x9.pdf
