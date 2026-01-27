@@ -82,7 +82,7 @@ well as or better than Excel.
 4. For critical operations, we should save tested code as an app.
 5. Chatbots can be customized through the system prompt, retrieval
 augmented generation (RAG) or fine tuning.
-6. To use a chatbot for critical operations, we should create an app (or Claude Skill - see below) and
+6. To use a chatbot for critical operations, we should create an app (or Claude skill - see below) and
 configure it as a chatbot tool, creating an AI agent.
 
 
@@ -94,7 +94,7 @@ The learning/building progression is captured in the following diagram. Chatbots
 
 ## Tools 
 
-At this time, the best tool is Claude Desktop with a Claude Pro account ($20/month).  Claude Opus and Sonnet are the best coding LLMs.  Also, Anthropic recently released Claude Skills, which are the simplest way to add tools to a chatbot.  Via and Excel Skill that Anthropic published, Claude can generate fully functioning, nicely formatted Excel workbooks.  In addition, Anthropic created the Model Context Protocol (MCP) last year, which is a way to create apps as tools, and has recently made it simpler for users to configure MCP connections.  Finally, the Pro subscription allows use of Claude Code, which is a very powerful coding agent.
+At this time, the best tool is Claude Desktop with a Claude Pro account ($20/month).  Claude Opus and Sonnet are the best coding LLMs.  Also, Anthropic recently released Claude skills, which are the simplest way to add tools to a chatbot.  Using a Claude for Excel skill that Anthropic published, Claude can generate fully functioning, nicely formatted Excel workbooks.  In addition, Anthropic created the Model Context Protocol (MCP) last year, which is a way to create apps as tools, and has recently made it simpler for users to configure MCP connections.  Finally, the Pro subscription allows use of Claude Code, which is a very powerful coding agent.
 
 Previously, I used [Julius.ai](https://julius.ai) instead of Claude. Julius provides access to Claude models, in addition to OpenAI models.  It provides a 50% academic discount, which is an advantage, but it does not provide Excel generation or MCP connections.  ChatGPT is another possibility. It has its Assistants API and Custom GPTs as an alternative to MCP connections. It can also generate Excel files, but in my experience Claude is currently doing a better job.  Furthermore, ChatGPT provides only a limited (though standard) set of Python libraries, unlike Claude, which allows users to add whatever Python libraries (in the cloud for Claude Desktop or locally for Claude Code).  
 
@@ -117,50 +117,6 @@ My view is that Claude Desktop is currently the best tool for finance courses th
   - Creating and deploying (Replit, Streamlit)
   - Connecting to chatbots (Custom GPTs and MCP)
 
-## Introductory Example
-
-I like the HBS case [Valuing Walmart 2010](https://hbsp.harvard.edu/product/W11058-PDF-ENG).  The approach that the case guides students to use is too simplistic, so I mostly ignore it.  I like the case because all students will have some understanding of where Walmart's value comes from, and we can have meaningful discussions about possible future growth rates.
-
-We can start this part of the course by sketching a valuation analysis on the board with student input and discussion.  We have to decide what ratios and growth rates we will use to generate pro forma statements and what assumptions we will make about them.  This provides a leveling-up experience for students and provides focus to the ensuing discussions.
-
-After working through the issues by hand, we can upload the financial statements in the case to Claude and ask it to generate a two-stage DCF analysis, to document and explain its assumptions, and to produce nicely formatted Excel workbooks and Word docs.  
-
-The analysis and docs Claude creates are impressive, but of course there will be room to improve the assumptions and perhaps the analysis.  Doing this live in class gives students a feel for how to collaborate with AI.  
-
-## Vibe Coding for Finance
-
-Before getting to financial analysis, students should see the power of vibe coding for data handling, visualization, and statistics.  That's probably a week of class time.  Then, some good financial applications of vibe coding are mean-variance analysis and CAPM cost of capital calculations.  We can demo one and assign the second as a group project.  At this point, the Claude Desktop Python environment is apparently unable to reach the web to get online data.  Hence, we should provide data.  See my blog posts about [getting data from Yahoo Finance](https://kerryback.substack.com/p/02-online-data) using Julius.ai, [mean-variance analysis](https://kerryback.substack.com/p/07-mean-variance-analysis), and [calculating the cost of capital](https://kerryback.substack.com/p/04-capm-cost-of-capital). 
-
-There are natural visualization components to both exercises, namely the plot of the mean-variance frontier and the CAPM scatterplot with regression line.  AI can write Python code to create the visualizations and to produce Word docs and/or PowerPoint decks containing the analyses and visualizations.  See this post about [generating Word docs and PowerPoint decks](https://kerryback.substack.com/p/05-building) and this post about [visualization](https://kerryback.substack.com/p/03-visualize).    
-
-There is a lot that could be done on option pricing if students have seen options already.  As remarked above, I teach a first-year class, and I can't preempt what will be taught to second-year students.  Except for that issue, I would certainly spend some time on options.
-
-## Custom Chatbots
-
-Custom chatbots involve 
-
-- A user interface
-- An API connection to an LLM
-- A system prompt
-- Possible retrieval of documents
-- Possible use of tools
-
-It is useful to show Custom GPTs from OpenAI to students and then to show API connections using Claude.  Students can get API keys even with free accounts.  They can ask any chatbot how to do it.  They should save their API keys as secret keys in Claude Desktop.  They will be charged for using the API keys on a per-token basis, but the charges will be trivial for the experimentation that is done in the course.  They could also get free API keys from [Open Router](https://openrouter.ai) and use free open source LLMS from [Hugging Face](https://huggingface.co).  
-
-
-## Corporate Implementations
-
-This [case about Implementing AI at Deloitte](https://hbsp.harvard.edu/product/HEC382-PDF-ENG) is a good foundation for a class discussion of AI implementation.  It covers the issues of data privacy, compliance, client trust, reliability, biases, and employee buy-in.  It also describes how Deloitte set up a custom chatbot.  
-
-This widely cited [MIT Study](https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf) is also must-reading.  It has been described in the media as reporting that 95% of corporate AI implementations fail.  What it actually says is that only 5% of corporate AI pilots reach production, which is not quite the same thing.  The reasons that most pilots are abandoned and the characteristics of successful pilots are informative.  Also key is this passage: "workers from over 90% of the companies we surveyed reported regular use of 
-personal AI tools for work tasks. In fact, almost every single person used an LLM in some 
-form for their work."  So, AI is being widely used, despite the difficulties companies have faced in designing and implementing company-specific AI solutions.  
-
-Another very interesting item is [this study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5188231) about the use of AI in corporate teams.  The study is described by one of the authors [here](https://www.oneusefulthing.org/p/the-cybernetic-teammate).  They conclude that, instead of thinking of AI as a tool, it should be regarded as a teammate.  They find that one person working with AI is at least as efficient as two people working in a team without AI.  The most effective combination is naturally a team with AI.  Interestingly, they find that AI enables workers and teams to break functional silos, performing like teams composed of individuals with diverse functional knowledge.
-
-
-
-
 ## Apps and Agents
 
 Whatever code an LLM (large language model) writes for financial analysis can be encapsulated in an app.  This has two important advantages.  First, the app can be made broadly available, so people get the benefit of the code without needing to go to a chatbot to write it.  Second, the code can be tested, confirmed, and frozen.  This ensures that mistakes will not be introduced by rewriting the code each time it is needed.  
@@ -180,7 +136,7 @@ This provides the foundation for an informative class discussion about the relat
 
 An AI agent is a chatbot that can use tools to complete tasks. Unlike regular chatbots that only generate text, agents can call functions, access APIs, and run applications to get things done.
 
-We can create AI agents by creating MCP servers to perform whatever function we want.  The AI will then use the server whenever we ask for that function.  But in many cases we can now use the simpler Claude Skills.  Claude Skills are instructions plus perhaps auxiliary objects such as Python scripts that Claude consults when needed.  A Skill can instruct Claude to always use a certain Python script to perform a function.  The function is then performed by the Python interpreter rather than a stand-alone app or server.  This makes Claude a true general purpose agent.
+We can create AI agents by creating MCP servers to perform whatever function we want.  The AI will then use the server whenever we ask for that function.  But in many cases we can now use the simpler Claude skills.  Claude skills are instructions plus perhaps auxiliary objects such as Python scripts that Claude consults when needed.  A skill can instruct Claude to always use a certain Python script to perform a function.  The function is then performed by the Python interpreter rather than a stand-alone app or server.  This makes Claude a true general purpose agent.
 
 ## Extras
 
@@ -217,8 +173,5 @@ Rice University<br>
 </p>
 </div>  
 
-## Discussion {#giscus}
-
-Please share your thoughts, experiences, or questions about teaching AI-assisted finance in the comments below.
 
 
