@@ -94,28 +94,11 @@ The learning/building progression is captured in the following diagram. Chatbots
 
 ## Tools 
 
-At this time, the best tool is Claude Desktop with a Claude Pro account ($20/month).  Claude Opus and Sonnet are the best coding LLMs.  Also, Anthropic recently released Claude skills, which are the simplest way to add tools to a chatbot.  Using a Claude for Excel skill that Anthropic published, Claude can generate fully functioning, nicely formatted Excel workbooks.  In addition, Anthropic created the Model Context Protocol (MCP) last year, which is a way to create apps as tools, and has recently made it simpler for users to configure MCP connections.  Finally, the Pro subscription allows use of Claude Code, which is a very powerful coding agent.
+At this time, the best tool is Claude with a Pro account ($20/month).  Claude Opus and Sonnet are the best coding LLMs.  Also, Anthropic recently released Claude skills, which are the simplest way to add tools to a chatbot.  Using a 'Claude for Excel' skill that Anthropic published, Claude can generate fully functioning, nicely formatted Excel workbooks.  In addition, Anthropic created the Model Context Protocol (MCP) last year, which is a way to create apps as tools, and has recently made it simpler for users to configure MCP connections.  Finally, the Pro subscription allows use of Claude Code, which is a very powerful coding agent.
 
 Previously, I used [Julius.ai](https://julius.ai) instead of Claude. Julius provides access to Claude models, in addition to OpenAI models.  It provides a 50% academic discount, which is an advantage, but it does not provide Excel generation or MCP connections.  ChatGPT is another possibility. It has its Assistants API and Custom GPTs as an alternative to MCP connections. It can also generate Excel files, but in my experience Claude is currently doing a better job.  Furthermore, ChatGPT provides only a limited (though standard) set of Python libraries, unlike Claude, which allows users to add whatever Python libraries (in the cloud for Claude Desktop or locally for Claude Code).  
 
 My view is that Claude Desktop is currently the best tool for finance courses that use AI, and Claude Code is best for a course on AI for finance.  
-
-## Outline
-
-- Collaborating with Claude for valuation (Walmart case study)
-- Vibe coding for finance 
-  - Analysis
-  - Visualization
-  - Report generation 
-- Custom chatbots
-  - System prompt
-  - Retrieval augmented generation (Notebook LM)
-  - Corporate implementation (Deloitte case study)
-  - Custom GPTs and vibe coded chatbots 
-- Apps and agents
-  - App layout (back-end, front-end, user interface)
-  - Creating and deploying (Replit, Streamlit)
-  - Connecting to chatbots (Custom GPTs and MCP)
 
 ## Apps and Agents
 
@@ -160,9 +143,7 @@ To permanently deploy an app, we need an account at a host.  [Koyeb](https://koy
 
 A chatbot can walk students through each step.  
 
-#### Claude Code 
 
-Currently, Claude Code is the most powerful publicly available system for applying generative AI to finance.  It is a terminal-based AI agent.  Students should see it.  Also, if we are going to ask students to vibe code apps, chatbots, or agents, and if students have Claude Pro accounts, then we should make it feasible for them to use Claude Code.  Most students will be inexperienced in working in a terminal - we have to explain how to use the arrow keys, Backspace, and Delete to edit, the cd command for changing directories, etc.  Once they've seen that and installed Claude Code, they can open it (type `claude` in the terminal) and ask Claude Code to install Python and put it on the path.  Then, it can create, edit, and run Python scripts.  It can run Streamlit apps, manage connections to GitHub, Koyeb, etc.
 
 <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
 <p style="margin: 0;">

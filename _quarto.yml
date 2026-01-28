@@ -29,17 +29,11 @@ website:
       - text: Blog
         href: https://blog.kerryback.com
         target: _blank
-      - text: Spring 2025 Course
-        href: https://mgmt675-2025.kerryback.com
-        target: _blank
       - text: Spring 2026 Course
         href: https://mgmt675.kerryback.com
         target: _blank
-      - text: FMA Tutorial
+      - text: 2025 FMA Tutorial
         href: fma2025.pdf
-        target: _blank
-      - text: FMA IITA
-        href: iita2025_16x9.pdf
         target: _blank
       - text: Python Workshop
         href: https://workshop.kerryback.com
