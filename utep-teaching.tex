@@ -1,0 +1,99 @@
+\documentclass[aspectratio=169]{beamer}
+
+% Use metropolitan theme
+\usetheme{metropolis}
+
+% Packages
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% Title page information
+\title{Teaching with AI}
+
+\author{Kerry Back}
+
+
+\date{}
+
+% Footer setup
+\setbeamertemplate{frame numbering}[fraction]
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\textwidth,ht=3ex,dp=1.5ex,leftskip=0.3cm,rightskip=0.3cm]{structure}
+    UTEP, Feb 2026
+    \hfill
+    \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}
+}
+
+\begin{document}
+
+% Title slide
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Overview slide
+\begin{frame}{Questions}
+  \begin{itemize}
+  \item Should we have courses on AI, and, if so, what should they cover?
+  \item To what extent and how should we incorporate AI into other courses?
+  \item How can we use AI to enhance learning?
+  \item How can we assess students?
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{One View}
+  \begin{itemize}
+\item We should expect and encourage students to adopt AI as their go-to tool.  
+
+\item Rather than opening a spreadsheet, they should open a chat (or maybe a chat in a spreadsheet).
+
+\item Every course should be about collaborating with AI to improve decisions and outcomes.  But AI should not take center stage.  It should just be the standard tool for analysis and reporting.
+
+\item We have to assess students on whether they can defend the work they submit -- whether they can convince an audience that the reasoning and analysis is reliable.  AI can help us in the assessment process.
+  \end{itemize}\end{frame}
+
+\begin{frame}{A Course on AI}
+\begin{itemize}
+  \item At present, we need courses on AI, because it has not been integrated into all courses.
+
+\item Once it is integrated into the curriculum, we will not need stand-alone courses.
+
+\item I will describe the course I am teaching (preparing to teach) at Rice: \href{https://mgmt675.kerryback.com}{mgmt675.kerryback.com}.  Much of it should soon be standard stuff that everyone does.
+
+\item In the process, I'll talk about using AI to streamline course preparation.  I'll come back to enhancing learning.
+\end{itemize}\end{frame}
+
+\begin{frame}{Enhancing Learning: NotebookLM}
+\begin{itemize}
+\item In addition to using AI for financial analysis, students should use AI to learn.
+\item Can ask them to chat with a chatbot about a subject in lieu of reading assignments.
+\item Can use retrieval-augmented generation (chatbot answers questions from specific sources)
+\item NotebookLM is an easy way to do this.  Example:  \href{https://notebooklm.google.com/notebook/701244f5-4833-4217-875d-96380578825b}{chatbot about Pricing and Hedging Derivative Securities (online textbook by Back, Liu, and Loewenstein)}
+\item NotebookLM provides other tools, including AI-generated slide presentations.  Example: \href{https://mgmt638.kerryback.com/videos/Kapadia_Ostdiek_Weston_Zekhnini_JFQA_2019.mp4}{Presentation of Getting Paid to Hedge: Why Don’t Investors Pay
+a Premium to Hedge Downturns? by Kapadia, Ostdiek, Weston, and Zekhnini, JFQA, 2019}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{AI for Class Preparation and Research}
+Some Claude Code prompts:
+
+\begin{itemize}
+\item Using this data \ldots compute these statistics \ldots and put them in a latex table like this \ldots and insert them in my paper in \ldots
+\item Using this data \ldots generate figures like this \ldots and insert them in \ldots
+\item I don't like the way I worded things in this paragraph \ldots Please clean it up.
+\item I want to add a slide to my lecture about \ldots It should say \ldots in bullet points
+\item Use the Google API to get an image that represents \ldots and insert it into  \ldots
+\item Make this edit to \ldots and then render, commit, and push to update this website \ldots
+\item Build my latex file.  Find and fix any errors.
+\item Using sympy, simplify this integral \ldots
+\end{itemize}
+\end{frame}
+\end{document}

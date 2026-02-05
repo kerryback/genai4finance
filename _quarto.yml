@@ -10,6 +10,7 @@ project:
     - iita2025_16x9.pdf 
     - claude-dcf-example.xlsx
     - Binomial_Option_Model.mp4
+    - utep-teaching.pdf
 
   render:
     - index.qmd
@@ -38,6 +39,10 @@ website:
       - text: Python Workshop
         href: https://workshop.kerryback.com
         target: _blank
+      - text: UTEP Slides
+        href: utep-teaching.pdf
+        target: _blank
+
 
 format:
   html:
