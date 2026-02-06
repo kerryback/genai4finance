@@ -40,7 +40,7 @@
 
 \item Rather than opening a spreadsheet, they should open a chat (or maybe a chat in a spreadsheet).
 
-\item Every course should be about collaborating with AI to improve decisions and outcomes.  But AI should not take center stage.  It should just be the standard tool for analysis and reporting.
+\item Every course should be about collaborating with AI to generate analysis, recommendations, and reports.  But AI should not take center stage.  It should just be the standard tool for analysis and reporting.
 
 \item We have to assess students on whether they can defend the work they submit -- whether they can convince an audience that the reasoning and analysis is reliable.   It is possible that AI could help us in the assessment process.
   \end{baritemize}\end{frame}
@@ -222,10 +222,10 @@ Across Anthropic, Cherny says \textit{``pretty much 100\%''} of code is AI-gener
 
 \end{frame}
 
-\begin{frame}{Code Execution Approaches}
+\begin{frame}{Code Execution Locales}
 \begin{columns}[T]
-  \begin{column}{0.32\textwidth}
-\begin{shadedbox}[title=\textbf{Chat-Based}]
+  \begin{column}{0.45\textwidth}
+\begin{shadedbox}[title=\textbf{In the Cloud}]
 \begin{itemize}\small
   \item ChatGPT, Claude, Gemini
   \item Upload files, ask questions
@@ -234,8 +234,8 @@ Across Anthropic, Cherny says \textit{``pretty much 100\%''} of code is AI-gener
 \end{itemize}
 \end{shadedbox}
 \end{column}
-\begin{column}{0.32\textwidth}
-\begin{shadedbox}[title=\textbf{Local Agents}]
+\begin{column}{0.45\textwidth}
+\begin{shadedbox}[title=\textbf{Locally}]
 \begin{itemize}\small
   \item Cursor, GitHub Copilot, Claude Code
   \item LLM is in the cloud but code runs on your machine
@@ -244,16 +244,7 @@ Across Anthropic, Cherny says \textit{``pretty much 100\%''} of code is AI-gener
 \end{itemize}
 \end{shadedbox}
 \end{column}
-\begin{column}{0.32\textwidth}
-\begin{shadedbox}[title=\textbf{Cloud Agents}]
-\begin{itemize}\small
-  \item Jules, GitHub Copilot agent
-  \item Work on GitHub repos
-  \item Cloud sandbox execution
-  \item Async---runs in background
-\end{itemize}
-\end{shadedbox}
-\end{column}
+
 \end{columns}
 \end{frame}
 
@@ -292,7 +283,7 @@ Claude will write Python code, run it, show results, and let you download the ch
 
 \vspace{0.3cm}
 \begin{shadedbox}
-\centerline{\href{https://mgmt675.kerryback.com/exercises/betas.tex}{Data for Exercise}}
+\centerline{\href{https://mgmt675.kerryback.com/files/betas.tex}{Data for Exercise}}
 \end{shadedbox}
 \end{frame}
 
@@ -393,18 +384,16 @@ Claude creates an interactive artifact with file upload, regression calculations
 
 
 
-\begin{frame}{Exercise}
-  \begin{shadedbox}\centerline{Go to claude.ai or use Claude Desktop}\end{shadedbox}
-\vspace{0.5cm}
-
+\begin{frame}{Exercise for Claude.ai or Claude Desktop}
+  
 \begin{shadedbox}
 \centerline{``Create an Excel workbook to illustrate two-stage DCF analysis.''}
 \end{shadedbox}
 \end{frame}
 
-\begin{frame}{Claude Skills for Excel}
+\begin{frame}{Claude Skills}
 \begin{baritemize}
-  \item Claude ``skills'' are instructions sent to Claude when needed
+  \item Claude ``skills'' are instructions that Claude reads when needed
   \item The \texttt{xlsx} skill instructs Claude to:
   \begin{itemize}
     \item Use Excel formulas instead of hardcoded values
@@ -430,7 +419,7 @@ Claude creates an interactive artifact with file upload, regression calculations
 \vfill
 \end{frame}
 
-\begin{frame}{What is Streamlit?}
+\begin{frame}{Using Streamlit for Apps}
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 \begin{shadedbox}[title=\textbf{Streamlit Overview}]
@@ -633,46 +622,6 @@ The \textbf{system prompt} is a special message that defines the chatbot's perso
 \end{shadedbox}
 \end{frame}
 
-\begin{frame}{System Prompts Differ by Platform}
-\begin{columns}[T]
-\begin{column}{0.5\textwidth}
-\begin{shadedbox}[title=\textbf{Claude.ai / Desktop}]
-\begin{itemize}\small
-  \item Anthropic injects a system prompt
-  \item Provides current date, behavioral guidelines
-  \item Published and periodically updated
-\end{itemize}
-\end{shadedbox}
-\vspace{0.3cm}
-\begin{shadedbox}[title=\textbf{API}]
-\begin{itemize}\small
-  \item \alert{No system prompt by default}
-  \item Developer provides their own
-  \item Full control over behavior
-\end{itemize}
-\end{shadedbox}
-\end{column}
-\begin{column}{0.5\textwidth}
-\begin{shadedbox}[title=\textbf{Claude Code}]
-\begin{itemize}\small
-  \item Has its own extensive system prompt
-  \item Covers tool usage, git safety, coding practices
-  \item Maintained by Claude Code team
-\end{itemize}
-\end{shadedbox}
-\vspace{0.3cm}
-\begin{shadedbox}[title=\textbf{Custom Chatbots}]
-\begin{itemize}\small
-  \item You write the system prompt
-  \item Defines persona, expertise, rules
-  \item This is the key to customization
-\end{itemize}
-\end{shadedbox}
-\end{column}
-\end{columns}
-\end{frame}
-
-
 
 \begin{frame}{What is an AI Agent?}
 \begin{columns}
@@ -693,32 +642,6 @@ The \textbf{system prompt} is a special message that defines the chatbot's perso
 \end{columns}
 \end{frame}
 
-\begin{frame}{data-portal.rice-business.org}
-\begin{columns}
-\begin{column}{0.4\textwidth}
-  \vskip\baselineskip
-\begin{baritemize}\small
-
-  \item Prompt + System Prompt $\rightarrow$ LLM
-  \item LLM $\rightarrow$ SQL code or a question for the user
-  \item Agent $\rightarrow$ SQL code to database or $\rightarrow$ question to the user
-  \item Eventually, SQL code $\rightarrow$ database
-  \item Database $\rightarrow$ data or error message
-  \item Error message $\rightarrow$ LLM
-  \item Eventually data $\rightarrow$ user
-\end{baritemize}
-\end{column}
-\begin{column}{0.6\textwidth}
-\vspace{1cm}
-\begin{shadedbox}\begin{center}
-  Visit \href{https://data-portal.rice-business.org}{data-portal.rice-business.org}
-  \newline Get access token, Log in, Ask for data
-\end{center}\end{shadedbox}
-\vspace*{-2\baselineskip}
-\includegraphics[width=\textwidth]{mgmt675-slides/images/agent_database.png}
-\end{column}
-\end{columns}
-\end{frame}
 
 
 
@@ -755,35 +678,6 @@ The \textbf{system prompt} is a special message that defines the chatbot's perso
 \end{frame}
 
 
-\begin{frame}{The Orchestration Layer}
-\begin{shadedbox}
-The agent's control logic coordinates everything: which LLM to call, which system prompt to use, and what to do with each response.
-\end{shadedbox}
-\vspace{0.3cm}
-\begin{columns}[T]
-\begin{column}{0.5\textwidth}
-\begin{shadedbox}[title=\textbf{Different Tasks, Different Prompts}]
-\begin{itemize}\small
-  \item SQL generation $\rightarrow$ database schema prompt
-  \item Python analysis $\rightarrow$ data science prompt
-  \item Report writing $\rightarrow$ communication prompt
-  \item Each task gets specialized instructions
-\end{itemize}
-\end{shadedbox}
-\end{column}
-\begin{column}{0.5\textwidth}
-\begin{shadedbox}[title=\textbf{Different Tasks, Different LLMs}]
-\begin{itemize}\small
-  \item Simple classification $\rightarrow$ fast, cheap model
-  \item Complex reasoning $\rightarrow$ powerful model
-  \item Code generation $\rightarrow$ code-specialized model
-  \item Cost and speed optimization
-\end{itemize}
-\end{shadedbox}
-\end{column}
-\end{columns}
-\end{frame}
-
 \begin{frame}{How Coordination Works}
 \begin{shadedbox}
 The agent combines \textbf{LLM responses} with \textbf{pre-programmed logic} to decide the next action.
@@ -818,6 +712,7 @@ The agent combines \textbf{LLM responses} with \textbf{pre-programmed logic} to 
 \end{frame}
 
 
+
 \begin{frame}{data-portal.rice-business.org}
 \begin{columns}
 \begin{column}{0.4\textwidth}
@@ -845,39 +740,10 @@ The agent combines \textbf{LLM responses} with \textbf{pre-programmed logic} to 
 \end{columns}
 \end{frame}
 
-\begin{frame}[plain]
-\vfill
-\begin{center}
-{\fontsize{26}{30}\selectfont\bfseries\color{titlegray} More for Students and for Us}
-\end{center}
-\vfill
-\end{frame}
 
-\begin{frame}{Enhancing Learning: NotebookLM}
-\begin{baritemize}
-\item In addition to using AI for financial analysis, students should use AI to learn.
-\item Can ask them to chat with a chatbot about a subject in lieu of reading assignments.
-\item Can use retrieval-augmented generation (chatbot answers questions from specific sources)
-\item NotebookLM is an easy way to do this.  Example:  \href{https://notebooklm.google.com/notebook/701244f5-4833-4217-875d-96380578825b}{chatbot about Pricing and Hedging Derivative Securities (online textbook by Back, Liu, and Loewenstein)}
-\item NotebookLM provides other tools, including AI-generated slide presentations.  Example: \href{https://mgmt638.kerryback.com/videos/Kapadia_Ostdiek_Weston_Zekhnini_JFQA_2019.mp4}{Presentation of Getting Paid to Hedge: Why Don't Investors Pay
-a Premium to Hedge Downturns? by Kapadia, Ostdiek, Weston, and Zekhnini, JFQA, 2019}
-\end{baritemize}
-\end{frame}
 
-\begin{frame}{AI for Class Preparation and Research}
-Some Claude Code prompts:
 
-\begin{baritemize}
-\item Using this data \ldots compute these statistics \ldots and put them in a latex table like this \ldots and insert them in my paper in \ldots
-\item Using this data \ldots generate figures like this \ldots and insert them in \ldots
-\item I don't like the way I worded things in this paragraph \ldots Please clean it up.
-\item I want to add a slide to my lecture about \ldots It should say \ldots in bullet points
-\item Use the Google API to get an image that represents \ldots and insert it into  \ldots
-\item Make this edit to \ldots and then render, commit, and push to update this website \ldots
-\item Build my latex file.  Find and fix any errors.
-\item Using sympy, simplify this integral \ldots
-\end{baritemize}
-\end{frame}
+
 
 
 %========================================================================
@@ -947,7 +813,7 @@ Some Claude Code prompts:
 
 \begin{center}
 \begin{shadedbox}[width=0.7\textwidth]
-\centering\href{https://kerryback.com/mgmt675/exercises/betas.xlsx}{Data for Exercise}
+\centering\href{https://kerryback.com/mgmt675/files/betas.xlsx}{Data for Exercise}
 \end{shadedbox}
 \end{center}
 \end{frame}
@@ -961,7 +827,7 @@ Some Claude Code prompts:
 
 \begin{center}
 \begin{shadedbox}[width=0.7\textwidth]
-\centering\href{https://kerryback.com/mgmt675/exercises/aggregation.zip}{Data for Exercise}
+\centering\href{https://kerryback.com/mgmt675/files/aggregation.zip}{Data for Exercise}
 \end{shadedbox}
 \end{center}
 \end{frame}
@@ -1000,4 +866,29 @@ Build and deploy a Streamlit app for mean-variance portfolio optimization.
 \end{columns}
 \end{frame}
 
+\begin{frame}{AI for Class Preparation and Research}
+Some Claude Code prompts:
+
+\begin{baritemize}
+\item Using this data \ldots compute these statistics \ldots and put them in a latex table like this \ldots and insert them in my paper in \ldots
+\item Using this data \ldots generate figures like this \ldots and insert them in \ldots
+\item I don't like the way I worded things in this paragraph \ldots Please clean it up.
+\item I want to add a slide to my lecture about \ldots It should say \ldots in bullet points
+\item Use the Google API to get an image that represents \ldots and insert it into  \ldots
+\item Make this edit to \ldots and then render, commit, and push to update this website \ldots
+\item Build my latex file.  Find and fix any errors.
+\item Using sympy, simplify this integral \ldots
+\end{baritemize}
+\end{frame}
+
+\begin{frame}{Enhancing Learning: NotebookLM}
+\begin{baritemize}
+\item In addition to using AI for financial analysis, students should use AI to learn.
+\item Can ask them to chat with a chatbot about a subject in lieu of reading assignments.
+\item Can use retrieval-augmented generation (chatbot answers questions from specific sources)
+\item NotebookLM is an easy way to do this.  Example:  \href{https://notebooklm.google.com/notebook/701244f5-4833-4217-875d-96380578825b}{chatbot about Pricing and Hedging Derivative Securities (online textbook by Back, Liu, and Loewenstein)}
+\item NotebookLM provides other tools, including AI-generated slide presentations.  Example: \href{https://mgmt638.kerryback.com/videos/Kapadia_Ostdiek_Weston_Zekhnini_JFQA_2019.mp4}{Presentation of Getting Paid to Hedge: Why Don't Investors Pay
+a Premium to Hedge Downturns? by Kapadia, Ostdiek, Weston, and Zekhnini, JFQA, 2019}
+\end{baritemize}
+\end{frame}
 \end{document}
