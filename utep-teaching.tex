@@ -102,75 +102,6 @@ But technical skills alone will not cut it. The most in demand profiles today ar
 \end{frame}
 
 
-\begin{frame}{Chatbots and Agents}
-\vspace{0.5cm}
-\begin{center}
-\includegraphics[height=0.7\textheight]{mgmt675-slides/images/c3po_r2d2_transparent.png}
-\end{center}
-\end{frame}
-
-\begin{frame}{What is an AI Agent?}
-\begin{columns}
-\begin{column}{0.4\textwidth}
-\vskip\baselineskip
-\begin{baritemize}\small
-  \item A chatbot equipped with tools to perform actions beyond conversation.
-  \item Code execution (Python, etc.)
-  \item File generation (Excel, Word, PDF)
-  \item Database access
-  \item Web search and API calls
-  \item System commands (copy, move files, etc.)
-\end{baritemize}
-\end{column}
-\begin{column}{0.6\textwidth}
-\includegraphics[width=\textwidth]{mgmt675-slides/images/slide6_img1.png}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}{data-portal.rice-business.org}
-\begin{columns}
-\begin{column}{0.4\textwidth}
-  \vskip\baselineskip
-\begin{baritemize}\small
-
-  \item Prompt + System Prompt $\rightarrow$ LLM
-  \item LLM $\rightarrow$ SQL code or a question for the user
-  \item Agent $\rightarrow$ SQL code to database or $\rightarrow$ question to the user
-  \item Eventually, SQL code $\rightarrow$ database
-  \item Database $\rightarrow$ data or error message
-  \item Error message $\rightarrow$ LLM
-  \item Eventually data $\rightarrow$ user
-\end{baritemize}
-\end{column}
-\begin{column}{0.6\textwidth}
-\vspace{1cm}
-\begin{shadedbox}\begin{center}
-  Visit \href{https://data-portal.rice-business.org}{data-portal.rice-business.org}
-  \newline Get access token, Log in, Ask for data
-\end{center}\end{shadedbox}
-\vspace*{-2\baselineskip}
-\includegraphics[width=\textwidth]{mgmt675-slides/images/agent_database.png}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}{Where All Computing is Probably Headed}
-\begin{columns}
-\begin{column}{0.45\textwidth}
-\begin{baritemize}
-  \item \textbf{Terminal Era:} Unix, MS-DOS, Linux, ...
-  \item \textbf{Graphical User Interface:} Point \& click
-  \item \textbf{Chat:} AI agent does everything. Agents will change the way people use computers.
-\end{baritemize}
-\end{column}
-\begin{column}{0.55\textwidth}
-\vspace{1cm}
-\includegraphics[width=\textwidth]{mgmt675-slides/images/slide10_img1.png}
-\end{column}
-\end{columns}
-\end{frame}
 
 
 % ========================================================================
@@ -550,13 +481,15 @@ The complete workflow to create and deploy a Streamlit app---all handled by Clau
 % IMPORTED DECK: Creating Custom Chatbots
 % ========================================================================
 
-\begin{frame}[plain]
-\vfill
+
+\begin{frame}{Chatbots and Agents}
+\vspace{0.5cm}
 \begin{center}
-{\fontsize{36}{40}\selectfont\bfseries\color{titlegray} Creating Custom Chatbots}
+\includegraphics[height=0.7\textheight]{mgmt675-slides/images/c3po_r2d2_transparent.png}
 \end{center}
-\vfill
 \end{frame}
+
+
 
 \begin{frame}{What is a Chatbot?}
 \begin{columns}[T]
@@ -741,48 +674,53 @@ The \textbf{system prompt} is a special message that defines the chatbot's perso
 
 
 
-% ========================================================================
-% IMPORTED DECK: Creating AI Agents
-% ========================================================================
-
-\begin{frame}[plain]
-\vfill
-\begin{center}
-{\fontsize{36}{40}\selectfont\bfseries\color{titlegray} Creating AI Agents}
-\end{center}
-\vfill
-\end{frame}
-
-\begin{frame}{Chatbot vs Agent}
-\begin{columns}[T]
-\begin{column}{0.5\textwidth}
-\begin{shadedbox}[title=\textbf{Chatbot}]
-\begin{itemize}\small
-  \item Receives prompts
-  \item Generates text responses
-  \item That's it---just conversation
-  \item Cannot take actions
-  \item Cannot access external data
-\end{itemize}
-\end{shadedbox}
+\begin{frame}{What is an AI Agent?}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\vskip\baselineskip
+\begin{baritemize}\small
+  \item A chatbot equipped with tools to perform actions beyond conversation.
+  \item Code execution (Python, etc.)
+  \item File generation (Excel, Word, PDF)
+  \item Database access
+  \item Web search and API calls
+  \item System commands (copy, move files, etc.)
+\end{baritemize}
 \end{column}
-\begin{column}{0.5\textwidth}
-\begin{shadedbox}[title=\textbf{Agent}]
-\begin{itemize}\small
-  \item Receives prompts
-  \item Can generate text \alert{or} request actions
-  \item Has access to \textbf{tools}
-  \item Can query databases, run code, search web
-  \item Takes actions to accomplish goals
-\end{itemize}
-\end{shadedbox}
+\begin{column}{0.6\textwidth}
+\includegraphics[width=\textwidth]{mgmt675-slides/images/slide6_img1.png}
 \end{column}
 \end{columns}
-\vspace{0.3cm}
-\begin{center}
-\alert{An agent is a chatbot with tools}
-\end{center}
 \end{frame}
+
+\begin{frame}{data-portal.rice-business.org}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+  \vskip\baselineskip
+\begin{baritemize}\small
+
+  \item Prompt + System Prompt $\rightarrow$ LLM
+  \item LLM $\rightarrow$ SQL code or a question for the user
+  \item Agent $\rightarrow$ SQL code to database or $\rightarrow$ question to the user
+  \item Eventually, SQL code $\rightarrow$ database
+  \item Database $\rightarrow$ data or error message
+  \item Error message $\rightarrow$ LLM
+  \item Eventually data $\rightarrow$ user
+\end{baritemize}
+\end{column}
+\begin{column}{0.6\textwidth}
+\vspace{1cm}
+\begin{shadedbox}\begin{center}
+  Visit \href{https://data-portal.rice-business.org}{data-portal.rice-business.org}
+  \newline Get access token, Log in, Ask for data
+\end{center}\end{shadedbox}
+\vspace*{-2\baselineskip}
+\includegraphics[width=\textwidth]{mgmt675-slides/images/agent_database.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+
 
 \begin{frame}{What Are Tools?}
 \begin{shadedbox}
@@ -814,59 +752,6 @@ The \textbf{system prompt} is a special message that defines the chatbot's perso
 \end{shadedbox}
 \end{column}
 \end{columns}
-\end{frame}
-
-\begin{frame}{Example: Database Analytics Agent}
-\begin{shadedbox}
-User request: ``Analyze quarterly revenue trends for our top 5 customers and create a summary report.''
-\end{shadedbox}
-\vspace{0.3cm}
-\begin{shadedbox}[title=\textbf{What the Agent Needs to Do}]
-\begin{enumerate}\small
-  \item Write SQL to identify top 5 customers by revenue (LLM)
-  \item Execute the SQL query against the database
-  \item Write SQL to get quarterly revenue for those customers (LLM)
-  \item Execute that query
-  \item Write Python to analyze trends and create visualizations (LLM)
-  \item Execute the Python code
-  \item Analyze the results (LLM)
-  \item Write Python to generate a written report for the user (LLM)
-  \item Execute the Python code
-  \item Send the report to the user
-\end{enumerate}
-\end{shadedbox}
-\end{frame}
-
-
-\begin{frame}{Interim Communication with User}
-\begin{shadedbox}
-Sometimes the agent needs clarification or wants to provide progress updates.
-\end{shadedbox}
-\vspace{0.3cm}
-\begin{columns}[T]
-\begin{column}{0.5\textwidth}
-\begin{shadedbox}[title=\textbf{Agent Might Ask}]
-\begin{itemize}\small
-  \item ``Should I include returns/refunds in revenue?''
-  \item ``The data goes back 3 years. How many quarters?''
-  \item ``Globex has two divisions. Combine or separate?''
-\end{itemize}
-\end{shadedbox}
-\end{column}
-\begin{column}{0.5\textwidth}
-\begin{shadedbox}[title=\textbf{Progress Updates}]
-\begin{itemize}\small
-  \item ``Found top 5 customers...''
-  \item ``Retrieved quarterly data...''
-  \item ``Generating visualizations...''
-\end{itemize}
-\end{shadedbox}
-\end{column}
-\end{columns}
-\vspace{0.3cm}
-\begin{center}
-\alert{The agent can pause the loop to interact with the user}
-\end{center}
 \end{frame}
 
 
@@ -932,6 +817,33 @@ The agent combines \textbf{LLM responses} with \textbf{pre-programmed logic} to 
 \end{center}
 \end{frame}
 
+
+\begin{frame}{data-portal.rice-business.org}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+  \vskip\baselineskip
+\begin{baritemize}\small
+
+  \item Prompt + System Prompt $\rightarrow$ LLM
+  \item LLM $\rightarrow$ SQL code or a question for the user
+  \item Agent $\rightarrow$ SQL code to database or $\rightarrow$ question to the user
+  \item Eventually, SQL code $\rightarrow$ database
+  \item Database $\rightarrow$ data or error message
+  \item Error message $\rightarrow$ LLM
+  \item Eventually data $\rightarrow$ user
+\end{baritemize}
+\end{column}
+\begin{column}{0.6\textwidth}
+\vspace{1cm}
+\begin{shadedbox}\begin{center}
+  Visit \href{https://data-portal.rice-business.org}{data-portal.rice-business.org}
+  \newline Get access token, Log in, Ask for data
+\end{center}\end{shadedbox}
+\vspace*{-2\baselineskip}
+\includegraphics[width=\textwidth]{mgmt675-slides/images/agent_database.png}
+\end{column}
+\end{columns}
+\end{frame}
 
 \begin{frame}[plain]
 \vfill
