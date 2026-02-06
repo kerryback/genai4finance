@@ -65,7 +65,9 @@
       "Bash(./bin/code:*)",
       "Bash(find:*)",
       "Bash(npx @kerryback/rice-stock-data@1.0.10:*)",
-      "Bash(npm view:*)"
+      "Bash(npm view:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:openrouter.ai)"
     ],
     "deny": [],
     "ask": []
